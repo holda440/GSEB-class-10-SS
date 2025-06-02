@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4 - Literary Heritage of India - Summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .main-title {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            font-size: 28px;
+            color: #FF6600; /* Orange for main title */
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FF6600; /* Orange border */
+        }
+
+        .topic-heading {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #FF8C00; /* Dark Orange for topic headings (A, B, C...) */
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #FFDAB9; /* Light Orange (Peach Puff) for border */
+        }
+
+        .sub-topic-heading {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #007BFF; /* Bright Blue for sub-topic headings */
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sub-sub-topic-heading {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #28A745; /* Green for sub-sub-topic headings */
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        
+        /* Decorative Bullet Points Styling */
+        .content-text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #333333; /* Dark Grey for readability */
+            margin-bottom: 10px;
+            padding-left: 25px; /* Increased padding for custom bullets */
+            position: relative; /* For absolute positioning of pseudo-elements */
+        }
+
+        /* Main topic content bullet: Small Orange Diamond */
+        .topic-heading + .content-text::before, 
+        .topic-heading + p.content-text::before {
+            content: "🔸"; /* Small Orange Diamond Emoji */
+            color: #FF9800; /* Orange */
+            position: absolute;
+            left: 0;
+            top: 1px; /* Adjust alignment */
+            font-size: 1.1em;
+        }
+        
+        /* Sub-topic content bullet: Sparkles */
+        .sub-topic-heading + .content-text::before, 
+        .sub-topic-heading + p.content-text::before,
+        .sub-topic-heading + .feature-description-item::before { 
+            content: "✨"; /* Sparkles Emoji */
+            color: #FFC107; /* Amber */
+            position: absolute;
+            left: 0;
+            top: 1px;
+            font-size: 1.1em;
+        }
+
+        /* Sub-sub-topic content bullet: Pushpin */
+        .sub-sub-topic-heading + .content-text::before, 
+        .sub-sub-topic-heading + p.content-text::before,
+        .sub-sub-topic-heading + .feature-description-item::before { 
+            content: "📌"; /* Pushpin Emoji */
+            color: #4CAF50; /* Green */
+            position: absolute;
+            left: 0;
+            top: 1px;
+            font-size: 1.1em;
+        }
+        
+        /* Default bullet for general content text if not directly following a heading */
+        .content-text:not([class*='-heading'] + .content-text)::before {
+             content: "●"; /* Round shape point mark */
+             color: #757575; /* Grey */
+             position: absolute;
+             left: 0;
+             top: 1px;
+             font-size: 1.2em;
+        }
+
+        .feature-description-item {
+            margin-bottom: 8px;
+            padding-left: 25px; /* Consistent padding with other content */
+            position: relative; /* For pseudo-element */
+            font-size: 14px; /* Ensure consistency */
+            color: #333333;
+        }
+
+        /* Style feature-description-item bullets based on parent heading */
+        .sub-topic-heading + .feature-description-item::before {
+            content: "✨"; color: #FFC107; position: absolute; left: 0; top: 1px; font-size: 1.1em;
+        }
+        .sub-sub-topic-heading + .feature-description-item::before {
+            content: "📌"; color: #4CAF50; position: absolute; left: 0; top: 1px; font-size: 1.1em;
+        }
+        /* Fallback for feature-description-item if not directly under sub/sub-sub topic heading */
+        .feature-description-item:not([class*='-heading'] + .feature-description-item)::before {
+            content: "▪️"; /* Small Black Square as a fallback */
+            color: #5D4037; /* Brown */
+            position: absolute;
+            left: 0;
+            top: 1px;
+            font-size: 1.1em;
+        }
+
+
+        .feature-title {
+            font-weight: bold;
+            color: #004D40; /* Dark Teal - for feature titles */
+        }
+
+        .flowchart, .mnemonic, .infographic-box {
+            background-color: #E0F7FA; /* Lighter Cyan */
+            border: 1px solid #B2EBF2; /* Light Cyan Border */
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #006064; /* Dark Cyan Text */
+            text-align: center;
+        }
+
+        .flowchart-arrow {
+            font-size: 20px;
+            margin: 0 10px;
+            color: #006064;
+        }
+
+        .highlight {
+            color: #E91E63; /* Pink for highlighting */
+            font-weight: bold;
+        }
+
+        .one-mark-facts, .test-questions-section {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: #FFF9C4; /* Pale Yellow */
+            border-left: 5px solid #FFEB3B; /* Yellow */
+        }
+        .one-mark-facts ul, .test-questions-section ol {
+            padding-left: 20px;
+        }
+        .one-mark-facts li, .test-questions-section li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+         .one-mark-facts li::marker { /* Styling for default list markers in one-mark facts */
+            color: #FF6F00; /* Dark Orange */
+        }
+
+
+        .disclaimer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #FFEBEE; /* Light Pink */
+            border: 1px solid #FFCDD2; /* Pink Border */
+            color: #C62828; /* Dark Red */
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Mind Map Styles */
+        .mind-map-container {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px dashed #673AB7; /* Deep Purple */
+            background-color: #EDE7F6; /* Light Purple */
+            page-break-before: always; /* Start mind map on a new page when printing */
+        }
+        .mind-map-title {
+            font-family: 'Georgia', serif; /* Different font for mind map title */
+            font-size: 20px;
+            font-weight: bold;
+            color: #4527A0; /* Darker Purple */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .mind-map ul {
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        .mind-map ul li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            font-family: 'Tahoma', sans-serif; /* Different font for mind map items */
+            font-size: 12px;
+        }
+        .mind-map ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6em; /* Adjust vertical alignment */
+            border-left: 2px solid #673AB7;
+            width: 15px;
+            height: 0;
+            border-bottom: 2px solid #673AB7;
+        }
+        .mind-map ul li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 50%;
+            height: 100%;
+            border-left: 2px solid #673AB7;
+        }
+        .mind-map ul li:last-child::after {
+            height: 0.6em; /* Adjust to connect to the horizontal line */
+        }
+        .mind-map-main > li::before, .mind-map-main > li::after {
+            border: none; /* Remove lines for the first level if it's just one central topic */
+        }
+        .mind-map .level1 { font-weight: bold; color: #4527A0; font-size: 14px; }
+        .mind-map .level2 { font-weight: bold; color: #5E35B1; font-size: 13px; }
+        .mind-map .level3 { color: #7E57C2; font-size: 12px; }
+        .mind-map .level4 { color: #9575CD; font-size: 11px; }
+
+
+        .footer {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 0;
+            right: 20px; /* Adjust as needed */
+            font-size: 10px;
+            color: #777;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0.5in; /* Add margins for printing */
+                padding: 0;
+                font-size: 12pt; /* Ensure base font size is appropriate for print */
+                color: black; /* Ensure text is black for print */
+                background-color: white;
+            }
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+            }
+            .main-title {
+                 color: #BF5500; /* Darker Orange for print */
+                 border-bottom: 3px solid #BF5500;
+            }
+            .topic-heading { color: #CC7000; border-bottom: 2px solid #E0C0A0;}
+            .sub-topic-heading { color: #0056B3; } /* Darker Blue for print */
+            .sub-sub-topic-heading { color: #1E7E34; } /* Darker Green for print */
+            .content-text { color: #000000; }
+            
+            /* Print versions of custom bullets */
+            .topic-heading + .content-text::before, 
+            .topic-heading + p.content-text::before {
+                content: "♦"; color: #CC7A00; /* Darker orange diamond */
+            }
+            .sub-topic-heading + .content-text::before, 
+            .sub-topic-heading + p.content-text::before,
+            .sub-topic-heading + .feature-description-item::before {
+                content: "✶"; color: #CCA300; /* Darker amber sparkle/star */
+            }
+            .sub-sub-topic-heading + .content-text::before, 
+            .sub-sub-topic-heading + p.content-text::before,
+            .sub-sub-topic-heading + .feature-description-item::before {
+                content: "📍"; color: #38761D; /* Darker green pushpin */
+            }
+            .content-text:not([class*='-heading'] + .content-text)::before {
+                 content: "•"; color: #555555;
+            }
+            .feature-description-item:not([class*='-heading'] + .feature-description-item)::before {
+                content: "▪"; color: #402D26;
+            }
+
+
+            .feature-title { color: #003028; } /* Darker teal for feature titles in print */
+            .highlight { color: #B71C1C; font-weight: bold; } /* Darker Pink for print */
+            
+            .flowchart, .mnemonic, .infographic-box {
+                background-color: #e0e0e0;
+                border: 1px solid #cccccc;
+                color: #333333;
+                page-break-inside: avoid;
+            }
+            .one-mark-facts, .test-questions-section {
+                background-color: #f5f5f5;
+                border-left: 5px solid #dddddd;
+                page-break-inside: avoid;
+            }
+             .one-mark-facts li::marker { color: #B85C00; }
+
+            .disclaimer {
+                background-color: #ffeeee;
+                border: 1px solid #ffdddd;
+                color: #880000;
+            }
+            .mind-map-container {
+                border: 2px dashed #444444;
+                background-color: #f0eaf5;
+                page-break-before: always;
+            }
+            .mind-map-title { color: #301971; }
+            .mind-map ul li::before, .mind-map ul li::after { border-color: #444444; }
+            .mind-map .level1 { color: #301971; }
+            .mind-map .level2 { color: #3F268F; }
+            .mind-map .level3 { color: #5640A0; }
+            .mind-map .level4 { color: #6B58B0; }
+
+            .no-print {
+                display: none;
+            }
+            .footer {
+                display: block;
+            }
+            /* Page break controls */
+            .topic-heading, .mind-map-container, .one-mark-facts, .test-questions-section {
+                page-break-before: auto; /* Prefer to keep headings with content */
+            }
+            div, p, ul, ol, li {
+                page-break-inside: avoid; /* Try to avoid breaking these elements mid-page */
+            }
+             h1, h2, h3, h4, h5, h6 {
+                page-break-after: avoid; /* Try to keep headings with the text that follows */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">📖 Chapter 4 - Literary Heritage of India 📖</h1>
+
+        <div class="flowchart">
+            <strong>Evolution of Communication & Literature:</strong><br>
+            Symbols/Drawings/Sounds <span class="flowchart-arrow">➔</span> Dialects & Scripts <span class="flowchart-arrow">➔</span> Language Development <span class="flowchart-arrow">➔</span> Expression of Thoughts <span class="flowchart-arrow">➔</span> Creation of Literature 🎉
+        </div>
+
+        <h2 class="topic-heading">A. Introduction: Language and Literature</h2>
+        <p class="content-text">From ancient times, Indian literature is known for its diversity and uniqueness.</p>
+        <p class="content-text">Indian scholars divided ancient literature into <span class="highlight">Vedic</span> and <span class="highlight">Classical</span> literature. Folk literature was also popular.</p>
+        <p class="content-text">Variety of languages emerged over centuries, influencing each other and leading to literature development.</p>
+        <p class="content-text"><span class="highlight">Sanskrit</span> is a prime example: less in current use but vital for religious ceremonies.</p>
+        <p class="content-text">Language facilitates better human expression and understanding.</p>
+        <p class="content-text">India's most ancient script is of <span class="highlight">Harappan civilization</span> (undeciphered).</p>
+        
+        <h3 class="sub-topic-heading">Sanskrit Language 📜</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Grammarian:</span> Maharshi Panini was a great Sanskrit grammarian.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Key Work:</span> Panini's 'Ashtadhyayi' (4th century) is a noteworthy Sanskrit grammar book.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Significance:</span> Considered language of 'Aryans', sages, scholars. Internationally accepted as best language for computer use.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Chief Language For:</span> Knowledge, science, religion, and philosophy.
+        </div>
+
+        <hr style="border-top: 1px dashed #007BFF; margin: 20px 0;">
+
+        <h2 class="topic-heading">B. Ancient Indian Literature</h2>
+        
+        <h3 class="sub-topic-heading">Vedas (Veda means 'Knowledge') 🙏</h3>
+        <p class="content-text">There are four Vedas. They are the cornerstone of ancient Indian wisdom.</p>
+        <div class="mnemonic">
+            <strong>Remember the 4 Vedas (R-Y-S-A):</strong><br>
+            "**R**eal **Y**ogis **S**ing **A**lways"<br>
+            (Rigveda, Yajurveda, Samveda, Atharvaveda)
+        </div>
+
+        <h4 class="sub-sub-topic-heading">(1) Rigveda</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Antiquity:</span> Most ancient work/book of Indian literature.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Structure:</span> Consists of 1028 verses, divided into 10 divisions (mandalas).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Content:</span> Most verses are prayers to Gods, used during yagnas. Verses worshipping <span class="highlight">Usha</span> (Goddess of dawn) are fascinating.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Scope:</span> Describes political, social, and religious matters of Aryans in the <span class="highlight">Saptsindhu</span> region.
+        </div>
+
+        <h4 class="sub-sub-topic-heading">(2) Samveda 🎶</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Focus:</span> Composed after Rigveda, focuses on the process of recitation of verses.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Nickname:</span> Known as the <span class="highlight">Gangotri of music</span>.
+        </div>
+
+        <h4 class="sub-sub-topic-heading">(3) Yajurveda</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Nature:</span> Called a Veda of Yagnas (sacrificial rites).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Form:</span> Composed in both prose and verse.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Content:</span> Describes hymns recited during Yagyas, religious practices, and rituals.
+        </div>
+
+        <h4 class="sub-sub-topic-heading">(4) Atharvaveda</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Content:</span> Describes various types of rituals and sanskaras (sacraments/rites of passage).
+        </div>
+
+        <h3 class="sub-topic-heading">Upanishads 💭</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Focus:</span> Vivid description and analysis of the beginning of the universe, mysteries of life and death, materialistic and spiritual world.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Earliest Upanishads:</span> 'Brihdaranya' and 'Chhandogya' (in dialogue form).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Total Number:</span> 108, as mentioned in Muktiko Upanishad.
+        </div>
+
+        <h3 class="sub-topic-heading">Brahmanical Literature</h3>
+        <p class="content-text">Composed to understand Vedic literature, often in poetic form.</p>
+        <p class="content-text">Includes critical appreciation of Vedas and explanations of directive principles regarding behavior.</p>
+
+        <h4 class="sub-sub-topic-heading">Aranyakas (Forest Books) 🌳</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Origin:</span> Composed by Aryans spending their last phase of life in aranyakas (forests/ashrams).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Content:</span> Based on philosophy, result of deep thinking.
+        </div>
+
+        <h4 class="sub-sub-topic-heading">Vedangas (Limbs of Vedas)</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Branches:</span> Six branches including religious practices, rituals, grammar, astrology, and astronomy.
+        </div>
+
+        <h3 class="sub-topic-heading">Epics: Ramayana & Mahabharata ⚔️</h3>
+        <p class="content-text">Two great Indian epics, present form traced to 2nd century CE.</p>
+        <h4 class="sub-sub-topic-heading">Ramayana</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Story:</span> Ramchandra, king of Ayodhya.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Size:</span> Smaller epic than Mahabharata, narrates attractive adventure stories.
+        </div>
+        <h4 class="sub-sub-topic-heading">Mahabharata</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Size:</span> World's largest epic, one lakh verses.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Content:</span> War between Kauravas and Pandavas, numerous stories.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Bhagwad Gita:</span> Part of Mahabharata, expounds deep philosophical principles. Conveys message of 'Moksha' (salvation) through 'Gyana' (knowledge), 'Karma' (action), and 'Bhakti' (devotion).
+        </div>
+        <p class="content-text">Both epics have influenced millions and implanted motivational seeds of sanskars.</p>
+
+        <h3 class="sub-topic-heading">Puranas & Smrutis</h3>
+        <p class="content-text">Sanskrit literature produced during this period combined religious and worldly aspects.</p>
+        <p class="content-text"><span class="highlight">Puranas:</span> Played an important role in explaining initial Vedic religion of earlier times.</p>
+        <p class="content-text"><span class="highlight">Smruthi Granthas:</span> Dealt with science, philosophy (e.g., Kautilya's 'Arthshastra' - book on management, arts, mathematics, sciences), religious teachings, laws, and customs.</p>
+
+        <h3 class="sub-topic-heading">Buddhist Literature ☸️</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Language:</span> Earlier Buddhist literature written in <span class="highlight">Pali</span>.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Key Compilation:</span> 'Tripitika' (Three Baskets/Sections): Sukta Pitika, Vinaya Pitika, Abhidhamma Pitika.
+        </div>
+        <p class="content-text">Many other works composed in Buddhist literature.</p>
+
+        <h3 class="sub-topic-heading">Gupta Period Literature (Golden Period for Sanskrit Poems & Dramas) ✨</h3>
+        <p class="content-text">Great writers like Kalidas, Bhavbhuti, Bharvi, Bhartrihari, Banabhatt, Mangha.</p>
+        <h4 class="sub-sub-topic-heading">Kalidas (Known worldwide)</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Works:</span> 'Kumarsambhava', 'Raghuvansham', 'Meghdoot', 'Abhigyan Shankuntalam', 'Rutusamhar' (renowned for poetic and dramatic style).
+        </div>
+        <h4 class="sub-sub-topic-heading">Other Notable Works & Authors:</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Banabhatt:</span> 'Kadambari', 'Harshacharit' (biography of King Harsha).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Bhavbhuti:</span> 'Uttar Ramcharit'.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Bharavi:</span> 'Kiratarjuniyam'.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Vishakhadatta:</span> 'Mudra Raksha'.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Shudrak:</span> 'Mrichchhkatikam'.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Dandi:</span> 'Dashkumarcharita'.
+        </div>
+        <p class="content-text">Subjects: Political events, romance, allegories, comedies, philosophy.</p>
+
+        <h3 class="sub-topic-heading">Early Gujarati Literature 🎶</h3>
+        <p class="content-text">Verses composed in earlier form, language developed over time.</p>
+        <p class="content-text">Prospered by contributions of: Narsinh Mehta, Mirabai, Dayaram, Akho, Premchand, Pritam (verses, songs, garba, narrative poems, chhappas).</p>
+        <p class="content-text">Later scholars: Narmad, Navalram, Kishorlal Mashruwala, Pannalal Patel, Umashankar Joshi, Mahipatram Ruparam Nilkanth, Goverdhanram Tripathi.</p>
+
+        <hr style="border-top: 1px dashed #007BFF; margin: 20px 0;">
+        
+        <h2 class="topic-heading">C. Dravidian Languages Literature</h2>
+        <p class="content-text">Four main Dravidian languages: Tamil, Telugu, Kannada, Malayalam, developed own scripts and literature.</p>
+        <h3 class="sub-topic-heading">Tamil Literature  📜 (Using a scroll to denote ancient nature of Tamil lit)</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Antiquity:</span> Oldest of these, literature belongs to early centuries of the Christian era.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Sangams:</span> Three literary gatherings (Sangams) where sages and poets recited compositions (themes: politics, war, love).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Famous Works:</span>
+            <ul style="padding-left: 20px;"> <!-- Standard ul for list items within feature -->
+                <li>"Ethutokoi" (composition of 8 poems)</li>
+                <li>"Tolkappiyam" (Grammar)</li>
+                <li>"Patthuppattu" (The 10 songs)</li>
+                <li>Thiruvalluvar's 'Kural' (verse on life and religion)</li>
+                <li>'Shilppadikaram' and 'Manimekhalai' (most famous early Tamil works)</li>
+            </ul>
+        </div>
+
+        <hr style="border-top: 1px dashed #007BFF; margin: 20px 0;">
+
+        <h2 class="topic-heading">D. Medieval Literature 🏰</h2>
+        
+        <h3 class="sub-topic-heading">Early Medieval - North India</h3>
+        <p class="content-text">Language of literature was initially Sanskrit.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Kashmir Works (Sanskrit):</span>
+            <ul style="padding-left: 20px;">
+                <li>Somdeva's 'Kathasaritsagar'</li>
+                <li>Kalhana's 'Rajtarangini' (first historical books of India)</li>
+            </ul>
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Other Sanskrit Work:</span> Jaydeva's 'Geetgovind' (finest poems).
+        </div>
+        <p class="content-text">Apabhramsa languages started developing into modern Indian languages.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Early Hindi:</span> 'Prithviraj Raso' by Chandbardai (heroic deeds of Prithviraj Chauhan).
+        </div>
+
+        <h3 class="sub-topic-heading">Early Medieval - South India</h3>
+        <p class="content-text">Sanskrit literature made great strides.</p>
+        <h4 class="sub-sub-topic-heading">Kannada Literature (Jainism influence)</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Poet Pampa:</span> 'Adipuran', 'Vikramarjun vijayant'.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Poet Ponna:</span> 'Shantipuran' (life of 16th Jain tirthankar).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Poet Ranna:</span> 'Ajitnathpuran', 'Gada Yudh'.
+        </div>
+        <p class="content-text">Pampa, Ponna, Ranna are known as the <span class="highlight">trio of early Kannada literature</span>.</p>
+        <h4 class="sub-sub-topic-heading">Tamil Literature</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Poet Kamban:</span> Composed 'Ramayana' in Tamil.
+        </div>
+
+        <h3 class="sub-topic-heading">Delhi Sultanate Period</h3>
+        <p class="content-text">Promotion of Indian languages and composition.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Delhi Language Forms:</span> Khadi Boli and Brij Bhasha used for writing. Devotional songs composed.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Rajasthani Language:</span> Heroic poems and stories (e.g., 'Alha', 'Udal', 'Visaldev Raso').
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Awadhi Language:</span> 'Chandrayan' by Mulla-Daood (oldest book in Awadhi).
+        </div>
+        <p class="content-text">Critical appreciation of ancient books still written in Sanskrit.</p>
+        <h4 class="sub-sub-topic-heading">Persian Language 📜 (Court Language)</h4>
+        <p class="content-text">Many Persian words seen in Indian languages. Historians emerged.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Ziauddin Barani:</span>
+            <ul style="padding-left: 20px;">
+                <li>'Tarikh-e-Firoz Shahi' (account of Khilji and Tughluq kings)</li>
+                <li>'Fatwa-e-Jahangiri' (political theory)</li>
+            </ul>
+        </div>
+        <h4 class="sub-sub-topic-heading">Amir Khusro ✒️</h4>
+        <p class="content-text">Outstanding literary figure: poet, historian, mystic saint, music composer. Disciple of Nizamuddin Auliya.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Works:</span> 'Ashiqua', 'Nah', 'Sipiher', 'Kiratul sadayan', 'Khazain-ul-Futuh', bilingual quatrains (Hindi/Persian).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Views:</span> Praised India as 'Earthly Paradise'. Believed Hinduism resembled Islam in essence. Considered 'Hindawli' (Hindi around Delhi) his mother tongue.
+        </div>
+        
+        <h3 class="sub-topic-heading">Regional Languages & Bhakti Saints 🙏</h3>
+        <p class="content-text">Regional kings gave impetus. Bhakti saints preached in people's languages.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Kabir:</span> Great poet, works in 'Sadhukhadi', Dohas part of folklore.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Malik Muhammad Jayasi:</span> 'Padmawat' in Awadhi.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Tulsidas:</span> 'Ramcharit Manas' in Awadhi.
+        </div>
+        <h4 class="sub-sub-topic-heading">Literature in Other Languages:</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Bengali:</span> Ramayana by Kritta Vasa, lyrics by Chandidas. Saint Chaitanya (devotional songs).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Gujarati:</span> Narsinh Mehta (devotional songs).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Marathi:</span> Namdev, Saint Eknath.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Kashmiri (under Zainulabidin):</span> Mahabharata, Rajtarangini translated into Persian.
+        </div>
+
+        <h3 class="sub-topic-heading">Vijaynagar Empire 👑</h3>
+        <p class="content-text">Sanskrit literature continued. Important period for Telugu literature growth.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Raja Krishnadevarai:</span> Great king, Telugu and Sanskrit writer. Wrote 'Amukta Malayd'.
+        </div>
+
+        <h3 class="sub-topic-heading">Mughal Period Literature 🕌</h3>
+        <p class="content-text">Great development in literature, similar to art and architecture.</p>
+        <h4 class="sub-sub-topic-heading">Royal Authors & Works:</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Babar:</span> Pioneer of Turkish poetry. 'Tuzuk-e-Babar' (autobiography in Turkish, later 'Babarnama' in Persian).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Gulbadan Begum:</span> 'Humayun-nama'.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Jahangir:</span> 'Tuzuk-e-Jahangiri' (autobiography).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Aurangzeb:</span> Prolific writer.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Bahadur Shah Zafar:</span> Notable Urdu poet.
+        </div>
+        <h4 class="sub-sub-topic-heading">Hindi Literature (Akbar's Reign):</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Poets:</span> Tulsidas, Surdas.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Keshavdas:</span> Wrote on love and separation.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Rahim:</span> 'Dohas' still popular.
+        </div>
+        <h4 class="sub-sub-topic-heading">Noteworthy Books & Translations:</h4>
+        <div class="feature-description-item">
+            <span class="feature-title">Abdul Fazl:</span> 'Ain-e-Akbari' (details Indian customs, manners, religion, philosophy, economy), 'Akbarnama'. (Perhaps unparalleled historical work).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Faizi (Abul Fazl's brother):</span> Great Persian poet, translated Sanskrit works.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Akbar's Translation Department:</span> Translated Mahabharata, Ramayana, Atharvaveda, Bhagwad Gita, Panchtantra from Sanskrit into Persian.
+        </div>
+
+        <h3 class="sub-topic-heading">Birth of Urdu Language 🗣️</h3>
+        <p class="content-text">Significant medieval development. Became one of richest modern Indian languages.</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Great Poets:</span> Wali, Mir Dard, Mir Taqi Mir, Nazir Akbarabadi, Abdullahkhan, Galib, Iqbal.
+        </div>
+        <p class="content-text">Urdu prose developed early 18th century (translations from Sanskrit, original works).</p>
+        <div class="feature-description-item">
+            <span class="feature-title">Muhammad Hussain Azad:</span> 'Darbar-e-Akbari' (one of best Urdu prose works).
+        </div>
+
+        <hr style="border-top: 1px dashed #007BFF; margin: 20px 0;">
+
+        <h2 class="topic-heading">E. The Ancient Universities of India 🎓</h2>
+        
+        <div class="infographic-box">
+            <strong>Ancient Seats of Learning:</strong><br>
+            These universities were beacons of knowledge, attracting students globally. <br>
+            Nalanda (Bihar) | Takshashila (Pakistan) | Varanasi (UP) | Vallabhi (Gujarat)
+        </div>
+
+        <h3 class="sub-topic-heading">(1) Nalanda University</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Location:</span> Badgaon village, Patna district, Bihar.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Traditions:</span> Importance in Buddhist and Jain traditions (Mahavir Swami performed 14 chaturmas here).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Establishment:</span> Kumar Gupta built a monastery here (5th century CE). Fame increased thereafter.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Resources:</span> Thousands of priceless manuscripts. Pious place of Indian culture.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">International Students:</span> Students from various parts of the world. Great traveller <span class="highlight">Heun Tsang (Xuanzang)</span> visited and studied here.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Reputation (5th-11th Century CE):</span> Best education, best libraries. Students studied here and Takshashila. Heun Tsang took 657 books to China.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Infrastructure (7th Century, per Heun Tsang):</span> 7 huge halls, 300 lecture rooms, special monasteries for students.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Sustenance:</span> Villages donated for university upkeep. Free food and clothing from village earnings.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Library:</span> Book repository area known as <span class="highlight">"Dharmgunj"</span>.
+        </div>
+        <p class="content-text">A student passing out from Nalanda was considered an ideal student of India.</p>
+
+        <h3 class="sub-topic-heading">(2) Takshashila University</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Location:</span> Rawalpindi, present Pakistan. Capital city of ancient Gandhar region.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Curriculum:</span> Imparted education in 64 subjects.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Learning System:</span> Most students stayed in ashram with guru. <span class="highlight">'Jivak'</span> (disciple of Lord Buddha) learnt Ayurveda here.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Naming Belief:</span> Named after Taksha (son of Bharat, brother of Lord Ram).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Reputation (7th Century BCE onwards, flourished for centuries):</span> Renowned education centre. Students free to choose subjects. Limit of 20 students/teacher (often exceeded).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Student Body:</span> Students from distant cities (Varanasi, Rajgruha, Mithila, Ujjain). Princes of Kashi & Kausal, Panini (grammarian), Kautilya (politician), Chanakya (mentor of Chandragupta Maurya) studied here.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Specialization:</span> Best centre for higher education. Subjects: Vedas, military science, Gajvidhya (elephant lore), archery, grammar, philosophy, warlore, astronomy, astrology.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Visitor:</span> Chinese scholar <span class="highlight">Fa-Hien</span> visited in early 5th century CE.
+        </div>
+
+        <h3 class="sub-topic-heading">(3) Varanasi (Kashi) University</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Fame:</span> Place of pilgrimage (7th century CE), famous education centre.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Cultural Hub:</span> Grew as religious centre for Aryan culture in Upanishadic period.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Royal Patronage:</span> King Ajatshatru of Varanasi (great philosopher, supporter of education).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Spiritual Significance:</span> Maharshi Vedvyas had his ashram here (Vyaas Samhita). Lord Buddha chose Varanasi for propagating his teachings.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Philosophical Centre:</span> Adishankaracharya adopted new Vedanta principles here. Vallabhacharyaji & Chaitanya Mahaprabhu (Pushtimarg pioneers) gained prestige for Vaishnav sects.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Migration of Scholars:</span> Majority of scholar families from Punjab migrated to Kashi.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Buddhist Centre:</span> Monastery at Sarnath became famous education centre under Emperor Ashoka's patronage.
+        </div>
+
+        <h3 class="sub-topic-heading">(4) Vallabhi University</h3>
+        <div class="feature-description-item">
+            <span class="feature-title">Location:</span> Gujarat. Famous education centre (7th century CE).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Patronage:</span> Significant contribution from contemporary rulers of Vansh Dynasty and its people.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Religious Focus:</span> Centre of Hinayana cult of Buddhist religion.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Principals (Mid-7th C):</span> Buddhist scholars Sthirmati & Gunmati.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Student Reach:</span> Students from distant Ganga-Yamuna areas. Chinese traveller <span class="highlight">It-sing (I-tsing)</span> noted Vallabhi competed with Nalanda.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Status:</span> Capital and international port (480 AD - 775 AD).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Maitrak Dynasty:</span> Rulers patronized education (though not Buddhist, they helped the institution).
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Decline:</span> In 775 AD, Arabians attacked, Maitraks defeated, university closed down.
+        </div>
+        <div class="feature-description-item">
+            <span class="feature-title">Recognition of Scholars:</span> Names of famous scholars written on the gate. Scholars showing erudition got higher rights in Rajsabha (royal assembly).
+        </div>
+        <p class="content-text">Vallabhi was an international university in real sense, teaching almost all branches of knowledge. Maintained by charity. World-renowned for arts and science education (Vidhya).</p>
+        
+        <hr style="border-top: 1px dashed #007BFF; margin: 20px 0;">
+
+        <div class="one-mark-facts">
+            <h3 class="sub-topic-heading" style="color: #007BFF;">⚡ Quick One-Mark Facts ⚡</h3>
+            <ul>
+                <li>Maharshi Panini's Sanskrit grammar book: <strong>Ashtadhyayi</strong> (4th century).</li>
+                <li>Most ancient Veda: <strong>Rigveda</strong> (1028 verses, 10 divisions).</li>
+                <li>Veda known as "Gangotri of music": <strong>Samveda</strong>.</li>
+                <li>Number of Upanishads mentioned in Muktiko Upanishad: <strong>108</strong>.</li>
+                <li>Earliest Upanishads in dialogue form: <strong>Brihdaranya</strong> and <strong>Chhandogya</strong>.</li>
+                <li>World's largest epic: <strong>Mahabharata</strong> (one lakh verses).</li>
+                <li>Philosophical part of Mahabharata: <strong>Bhagwad Gita</strong>.</li>
+                <li>Kautilya's famous book on management and statecraft: <strong>Arthshastra</strong>.</li>
+                <li>Early Buddhist literature was written in: <strong>Pali</strong>.
+                <li>The three sections of Tripitika: <strong>Sukta, Vinaya, Abhidhamma</strong>.</li>
+                <li>Author of 'Abhigyan Shankuntalam': <strong>Kalidas</strong>.
+                <li>Author of 'Harshacharit': <strong>Banabhatt</strong>.
+                <li>Author of 'Mrichchhkatikam': <strong>Shudrak</strong>.
+                <li>Oldest Dravidian language with early literature: <strong>Tamil</strong>.
+                <li>Author of 'Kural': <strong>Thiruvalluvar</strong>.
+                <li>Author of 'Kathasaritsagar': <strong>Somdeva</strong>.
+                <li>Author of 'Rajtarangini' (historical book of Kashmir): <strong>Kalhana</strong>.
+                <li>Author of 'Geetgovind': <strong>Jaydeva</strong>.
+                <li>Author of 'Prithviraj Raso': <strong>Chandbardai</strong>.
+                <li>Trio of early Kannada literature: <strong>Pampa, Ponna, Ranna</strong>.</li>
+                <li>Poet Kamban composed 'Ramayana' in: <strong>Tamil</strong>.</li>
+                <li>Oldest book in Awadhi language: <strong>'Chandrayan'</strong> by Mulla-Daood.</li>
+                <li>Amir Khusro called India: <strong>'Earthly Paradise'</strong>.</li>
+                <li>Author of 'Padmawat': <strong>Malik Muhammad Jayasi</strong>.
+                <li>Author of 'Ramcharit Manas': <strong>Tulsidas</strong>.
+                <li>Raja Krishnadevarai wrote: <strong>'Amukta Malayd'</strong> (Telugu/Sanskrit).</li>
+                <li>Babar's autobiography 'Tuzuk-e-Babar' was originally in: <strong>Turkish</strong>.
+                <li>Author of 'Ain-e-Akbari' and 'Akbarnama': <strong>Abdul Fazl</strong>.
+                <li>Nalanda University's library area was known as: <strong>Dharmgunj</strong>.</li>
+                <li>Chinese traveller who visited Nalanda & took books to China: <strong>Heun Tsang (Xuanzang)</strong>.</li>
+                <li>Takshashila University taught how many subjects: <strong>64</strong>.</li>
+                <li>Disciple of Lord Buddha who learnt Ayurveda at Takshashila: <strong>Jivak</strong>.</li>
+                <li>Chinese scholar who visited Takshashila in early 5th century CE: <strong>Fa-Hien</strong>.</li>
+                <li>Vallabhi University was a centre for which Buddhist cult: <strong>Hinayana</strong>.
+                <li>Chinese traveller who noted Vallabhi competed with Nalanda: <strong>It-sing (I-tsing)</strong>.
+                <li>Vallabhi was attacked by Arabians in: <strong>775 AD</strong>.
+            </ul>
+        </div>
+
+        <div class="disclaimer">
+            🚨 <strong>Important Note:</strong> This summary provides key highlights for quick revision. For a thorough understanding and comprehensive exam preparation, please refer to the full PDF textbook. Critical details and nuances are best understood from the original source.
+        </div>
+
+        <div class="mind-map-container">
+            <h3 class="mind-map-title">🌳 Literary Heritage of India - Mind Map 🌳</h3>
+            <ul class="mind-map mind-map-main">
+                <li class="level1">Chapter 4 - Literary Heritage of India
+                    <ul>
+                        <li class="level2">A. Language & Literature
+                            <ul>
+                                <li class="level3">Sanskrit (Panini's Ashtadhyayi)</li>
+                                <li class="level3">Harappan Script (Undeciphered)</li>
+                            </ul>
+                        </li>
+                        <li class="level2">B. Ancient Indian Literature
+                            <ul>
+                                <li class="level3">Vedas (Rig, Sam, Yajur, Atharva)</li>
+                                <li class="level3">Upanishads (108; Brihdaranya, Chhandogya)</li>
+                                <li class="level3">Brahmanical Lit. (Aranyakas, Vedangas)</li>
+                                <li class="level3">Epics (Ramayana, Mahabharata - Bhagwad Gita)</li>
+                                <li class="level3">Puranas & Smrutis (Arthshastra)</li>
+                                <li class="level3">Buddhist Lit. (Pali, Tripitika)</li>
+                                <li class="level3">Gupta Period (Kalidas, Banabhatt, etc.)</li>
+                                <li class="level3">Early Gujarati Lit. (Narsinh Mehta)</li>
+                            </ul>
+                        </li>
+                        <li class="level2">C. Dravidian Languages Literature
+                            <ul>
+                                <li class="level3">Tamil (Oldest, Sangam Lit., Kural, Shilppadikaram)</li>
+                            </ul>
+                        </li>
+                        <li class="level2">D. Medieval Literature
+                            <ul>
+                                <li class="level3">North India (Sanskrit: Kathasaritsagar, Rajtarangini; Hindi: Prithviraj Raso)</li>
+                                <li class="level3">South India (Kannada: Pampa, Ponna, Ranna; Tamil: Kamban's Ramayana)</li>
+                                <li class="level3">Delhi Sultanate (Khadi Boli, Brij Bhasha; Persian: Ziauddin Barani, Amir Khusro)</li>
+                                <li class="level3">Regional & Bhakti (Kabir, Jayasi, Tulsidas, Bengali, Marathi)</li>
+                                <li class="level3">Vijaynagar (Telugu: Amukta Malayd)</li>
+                                <li class="level3">Mughal Period (Babar, Gulbadan, Jahangir; Hindi: Surdas, Tulsidas; Persian: Abdul Fazl, Faizi; Translations)</li>
+                                <li class="level3">Urdu Language (Wali, Mir, Galib, Iqbal; Prose: Md. Hussain Azad)</li>
+                            </ul>
+                        </li>
+                        <li class="level2">E. Ancient Universities
+                            <ul>
+                                <li class="level3">Nalanda (Bihar, Kumar Gupta, Heun Tsang, Dharmgunj)</li>
+                                <li class="level3">Takshashila (Pakistan, 64 subjects, Jivak, Panini, Kautilya, Fa-Hien)</li>
+                                <li class="level3">Varanasi/Kashi (Pilgrimage, Aryan culture, Ajatshatru, Buddha, Shankaracharya)</li>
+                                <li class="level3">Vallabhi (Gujarat, Hinayana Buddhism, Sthirmati & Gunmati, It-sing, Maitrak Dynasty)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="test-questions-section">
+            <h3 class="sub-topic-heading" style="color: #007BFF;">✍️ Test Your Knowledge ✍️</h3>
+            <ol>
+                <li>What is the meaning of 'Veda'?</li>
+                <li>Name the four Vedas.</li>
+                <li>Which ancient Indian script has not yet been deciphered?</li>
+                <li>Who wrote the Sanskrit grammar book 'Ashtadhyayi'?</li>
+                <li>Which Veda is known as the 'Gangotri of music'?</li>
+                <li>How many Upanishads are there in total, according to Muktiko Upanishad?</li>
+                <li>Name the two great Indian epics.</li>
+                <li>Which part of the Mahabharata conveys the message of Moksha through Gyana, Karma, and Bhakti?</li>
+                <li>In which language was early Buddhist literature, including the Tripitika, written?</li>
+                <li>Who is the author of 'Abhigyan Shankuntalam' and 'Meghdoot'?</li>
+                <li>Name the oldest Dravidian language whose literature belongs to the early centuries of the Christian era.</li>
+                <li>Who wrote 'Prithviraj Raso', an early work in Hindi?</li>
+                <li>Name the trio of early Kannada literature.</li>
+                <li>Who was the outstanding literary figure of the Delhi Sultanate period, known for works like 'Ashiqua' and for calling India 'Earthly Paradise'?</li>
+                <li>Who wrote 'Ramcharit Manas' in Awadhi?</li>
+                <li>Name the autobiography of Emperor Babar.</li>
+                <li>Who wrote 'Ain-e-Akbari' and 'Akbarnama'?</li>
+                <li>Which ancient university's library was known as 'Dharmgunj'?</li>
+                <li>At which ancient university did Jivak, the disciple of Lord Buddha, learn Ayurveda?</li>
+                <li>Which ancient university in Gujarat was a centre of Hinayana Buddhism and was visited by It-sing?</li>
+            </ol>
+            <h4 class="sub-sub-topic-heading" style="color: #28A745;">Answers:</h4>
+            <ol style="font-size: 12px; color: #555;">
+                <li>Knowledge</li>
+                <li>Rigveda, Samveda, Yajurveda, Atharvaveda</li>
+                <li>Harappan script</li>
+                <li>Maharshi Panini</li>
+                <li>Samveda</li>
+                <li>108</li>
+                <li>Ramayana and Mahabharata</li>
+                <li>Bhagwad Gita</li>
+                <li>Pali</li>
+                <li>Kalidas</li>
+                <li>Tamil</li>
+                <li>Chandbardai</li>
+                <li>Pampa, Ponna, and Ranna</li>
+                <li>Amir Khusro</li>
+                <li>Tulsidas</li>
+                <li>Tuzuk-e-Babar (Babarnama in Persian translation)</li>
+                <li>Abdul Fazl</li>
+                <li>Nalanda University</li>
+                <li>Takshashila University</li>
+                <li>Vallabhi University</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+</body>
+</html>
