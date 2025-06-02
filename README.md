@@ -1,1 +1,1 @@
-# gseb-ss-chapter-3
+# GUJARAT BOARD CLASS 10 SS
