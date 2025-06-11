@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 7 - Preservation of Our Heritage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Roboto&family=Source+Sans+Pro&display=swap');
+
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .chapter-heading {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .main-topic {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #f0ad4e; /* Orange */
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .topic-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(240, 173, 78, 0.75), rgba(0, 0, 0, 0));
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .sub-topic-1 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #5bc0de; /* Contrasting Blue */
+            margin-left: 20px;
+        }
+
+        .sub-topic-2 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #5cb85c; /* Contrasting Green */
+            margin-left: 40px;
+        }
+        
+        .main-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            margin-left: 25px;
+            padding-left: 20px;
+        }
+        
+        .main-text ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .main-text ul li {
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+        }
+
+        .main-text ul li::before {
+            content: "•";
+            color: #f0ad4e;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .feature-box {
+            background: #f9f9f9;
+            border-left: 5px solid #5bc0de;
+            padding: 15px;
+            margin: 15px 0 15px 25px;
+            border-radius: 5px;
+        }
+        
+        .feature-title {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #31708f;
+        }
+
+        .feature-description {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        
+        /* Custom Bullet Points */
+        .custom-list {
+            list-style: none;
+            padding-left: 10px;
+        }
+
+        .custom-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        
+        .custom-list .l1::before {
+            content: '🔸';
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        .custom-list .l2::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+        .custom-list .l3::before {
+            content: '📌';
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+        }
+
+        /* Flowchart */
+        .flowchart {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            margin: 25px 0;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        .flowchart-item {
+            background-color: #e7f5ff;
+            border: 2px solid #5bc0de;
+            padding: 10px;
+            border-radius: 8px;
+            width: 150px;
+            position: relative;
+        }
+        .flowchart-arrow {
+            font-size: 24px;
+            color: #f0ad4e;
+        }
+        
+        /* Infographics */
+        .infographic {
+            border: 2px dashed #5cb85c;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            background: #f0fff0;
+        }
+        
+        /* Note Box */
+        .note-box {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+
+        /* Mind Map */
+        .mindmap {
+            font-family: 'Source Sans Pro', sans-serif;
+            border: 2px solid #d9534f;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .mindmap-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #d9534f;
+        }
+        .mindmap ul {
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+        .mindmap ul li {
+            margin: 10px 0 10px 40px;
+            position: relative;
+            padding: 5px 10px;
+            background: #fff;
+            border-left: 2px solid #f0ad4e;
+        }
+        .mindmap > ul > li {
+            background: #fef4e6;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .mindmap ul ul li {
+            background: #eef7fa;
+        }
+        .mindmap ul ul ul li {
+            background: #f2fbf2;
+        }
+
+        /* Test Section */
+        .test-section {
+            margin-top: 30px;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .test-section h2 {
+            color: #337ab7;
+        }
+        .test-section ol {
+            padding-left: 20px;
+        }
+        .toggle-button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .answers {
+            display: none;
+            background: #e9f7ef;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #d6e9c6;
+        }
+
+        /* Print-specific styles */
+        .footer-print {
+            display: none;
+        }
+
+        @media print {
+            body {
+                font-size: 10pt;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+            section, .infographic, .mindmap, .test-section {
+                page-break-inside: avoid;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .answers {
+                display: block !important; /* Ensure answers are printed */
+            }
+            .footer-print {
+                display: block;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 9pt;
+                color: #888;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="chapter-heading">
+            Chapter 7 - Preservation of Our Heritage
+        </header>
+
+        <main>
+            <!-- Introduction Section -->
+            <section>
+                <p class="main-text">India holds a unique place in the world due to its remarkable contributions to knowledge, science, culture, and art. This rich and inimitable heritage is our identity and guide, making its preservation an utmost necessity for the present and future generations.</p>
+            </section>
+            
+            <hr class="topic-divider">
+
+            <!-- A. The Importance of Preservation -->
+            <section>
+                <div class="main-topic">A. The Importance of Preservation 🏛️</div>
+                <ul class="custom-list">
+                    <li class="l1"><span class="sub-topic-1">Need for Cultural Heritage Preservation</span>
+                        <div class="main-text">
+                            <ul>
+                                <li>India's multifarious heritage, including sculpture, architecture, and literature, brings glory to the nation.</li>
+                                <li>It connects people to their identity and glorifies the nation.</li>
+                                <li>Preservation is required to protect it from adverse natural and manmade factors.</li>
+                                <li>It inspires future generations by showcasing the works of our ancestors.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="l1"><span class="sub-topic-1">Necessity of Preservation</span>
+                        <div class="main-text">
+                            <ul>
+                                <li>Heritage is the nation's identity and a guide for future development.</li>
+                                <li>It is crucial for transmitting new consciousness and awareness across the country.</li>
+                                <li>Both the government and the public have a moral duty to conserve our heritage, which has suffered from foreign invasions and our own unawareness.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <hr class="topic-divider">
+            
+            <!-- B. Tourism and Our Heritage -->
+            <section>
+                <div class="main-topic">B. Tourism and Our Heritage ✈️🤝</div>
+                <div class="main-text">
+                    <p>Tourism plays a vital role in showcasing and preserving our heritage. Many Indian sites are on the UNESCO World Heritage list, attracting global visitors and researchers.</p>
+                </div>
+                <div class="infographic">
+                    <h3 style="color: #4cae4c; font-family: 'Arial'; font-weight: bold;">Key Benefits of Heritage Tourism</h3>
+                    <p>💰 Economic Growth (Foreign Currency)   |   🧑‍💼 Employment (Guides, Hawkers)   |   🏗️ Infrastructure Development   |   🎨 Art & Tradition Preservation   |   🌍 Global Showcase</p>
+                </div>
+            </section>
+            
+            <hr class="topic-divider">
+            
+            <!-- C. Measures for Preservation -->
+            <section>
+                <div class="main-topic">C. Legislative and Institutional Measures to Conserve Heritage 📜⚖️</div>
+                
+                <div class="feature-box">
+                    <div class="feature-title">MNEMONIC for Remembering Key Bodies/Acts:</div>
+                    <div class="feature-description" style="font-family: 'Arial'; font-weight: bold;">"<b>B</b>rave <b>I</b>ndians <b>A</b>lways <b>W</b>ork"</div>
+                    <ul class="main-text" style="margin-left:0; padding-left:0;">
+                        <li><b>B</b>ombay Natural History Society (1883)</li>
+                        <li><b>I</b>ndian Board of Wildlife (1952)</li>
+                        <li><b>A</b>ncient Monuments Act (1958)</li>
+                        <li><b>W</b>ildlife Protection Act (1972)</li>
+                    </ul>
+                </div>
+                
+                <ul class="custom-list">
+                    <li class="l1"><span class="sub-topic-1">Protection of Wildlife</span>
+                        <div class="feature-box">
+                            <div class="feature-title">Feature: Indian Board of Wildlife (1952)</div>
+                            <div class="feature-description">Constituted to protect wildlife, it provides material for conservation and suggests the development of national parks, sanctuaries, and gardens.</div>
+                        </div>
+                         <div class="feature-box">
+                            <div class="feature-title">Feature: Wildlife Protection Act (1972)</div>
+                            <div class="feature-description">Gave a firm legal status to national parks, sanctuaries, and bio-reserves to stop the destruction of vegetation and wildlife.</div>
+                        </div>
+                    </li>
+                    <li class="l1"><span class="sub-topic-1">Protection of Monuments</span>
+                        <div class="feature-box">
+                            <div class="feature-title">Feature: Ancient Monuments and Archaeological Sites and Remains Act (1958)</div>
+                            <div class="feature-description">Aimed at preserving antique artistic works, religious places, and historical sites. It mandates government permission for any archaeological excavation, stopping illegal digging.</div>
+                        </div>
+                         <div class="feature-box">
+                            <div class="feature-title">Feature: Department of Archaeological Survey of India (ASI)</div>
+                            <div class="feature-description">Responsible for the maintenance and preservation of over 5000 monuments. A key principle is to maintain monuments in a way that retains their original shape, size, and condition. <br><i>Example: Successfully shifted the Sangameshwar and Papnasham temples in Andhra Pradesh to save them from submergence due to the Nagarjun Sagar Project.</i></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            
+            <hr class="topic-divider">
+            
+            <!-- D. Our Collective Role -->
+            <section>
+                <div class="main-topic">D. Our Collective Role in Preservation 🧑‍🤝‍🧑</div>
+                <ul class="custom-list">
+                    <li class="l1"><span class="sub-topic-1">Role in Preserving Museums 🏛️</span>
+                        <ul class="custom-list">
+                            <li class="l2"><span class="sub-topic-2">Indian Treasure Trove Act, 1876</span>
+                               <div class="main-text">
+                                   <p>Mandates that any citizen who finds an ancient or antique article must notify the archaeological department, helping preserve valuable items that might otherwise be lost.</p>
+                               </div>
+                            </li>
+                            <li class="l2"><span class="sub-topic-2">Famous Museums in India</span>
+                                <div class="main-text" style="font-size:12px; font-weight:normal;">
+                                    <table border="1" style="width:100%; border-collapse: collapse; text-align:center;">
+                                        <tr style="background-color: #5bc0de; color: white;"><th>Name</th><th>City</th><th>State</th></tr>
+                                        <tr><td>National Museum</td><td>New Delhi</td><td>Delhi</td></tr>
+                                        <tr><td>Indian Museum</td><td>Kolkata</td><td>West Bengal</td></tr>
+                                        <tr><td>Chhatrapati Shivaji Maharaj Vastu Museum</td><td>Mumbai</td><td>Maharashtra</td></tr>
+                                        <tr><td>Salarganj Museum</td><td>Hyderabad</td><td>Andhra Pradesh</td></tr>
+                                        <tr><td>Lalbhai Dalpatbhai Museum</td><td>Ahmedabad</td><td>Gujarat</td></tr>
+                                        <tr><td>Shri Mahavir Jain Aradhana Kendra</td><td>Gandhinagar</td><td>Gujarat</td></tr>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="l1"><span class="sub-topic-1">Our Role as Citizens</span>
+                        <div class="main-text">
+                            <p>Preservation is a combined duty. Teachers, students, and the public should learn about and protect our heritage sites. NGOs and schools can create awareness through visits, speeches, and exhibitions.</p>
+                        </div>
+                         <ul class="custom-list">
+                            <li class="l2"><span class="sub-topic-2">Cleanliness and Preservation of Tourist Spots ✅❌</span>
+                               <div class="main-text">
+                                   <p><b>Do's:</b> Use dustbins, dispose of waste properly, appreciate monuments respectfully. <br>
+                                   <b>Don'ts:</b> Do not use plastic, litter, write on monuments, spit, or pollute surrounding areas.</p>
+                               </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            
+            <hr class="topic-divider">
+            
+            <!-- E. India: Unity in Diversity -->
+            <section>
+                <div class="main-topic">E. India: Unity in Diversity 🇮🇳</div>
+                <div class="main-text">
+                    <ul>
+                        <li>India’s diversity in caste, religion, language, and culture is its unique identity. Despite this variety, India stands united.</li>
+                        <li>This is rooted in the ancient feeling of "Vasudhav Kutumbakam" (The whole world is a family).</li>
+                        <li>Swami Vivekananda, at the World Religious Conference in Chicago, proudly represented a religion that taught "tolerance, compassion and universal fraternity to the world."</li>
+                        <li>India is a secular country where Hinduism, Islam, Buddhism, Jainism, and Christianity coexist, reflecting a broad and inclusive outlook.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="topic-divider">
+            
+            <!-- Quick Facts -->
+            <section>
+                <div class="main-topic">Quick Review: One-Mark Facts 🎯</div>
+                <div class="main-text">
+                    <ul>
+                        <li><b>Indian Board of Wildlife constituted:</b> 1952</li>
+                        <li><b>Ancient Monuments Act passed:</b> 1958</li>
+                        <li><b>Wildlife Protection Act enacted:</b> 1972</li>
+                        <li><b>Oldest society for wildlife protection:</b> Bombay Natural History Society (established 1883).</li>
+                        <li><b>ASI protects:</b> Over 5000 monuments.</li>
+                        <li><b>Cause of Taj Mahal's marble turning pale:</b> Air pollution from Mathura oil refinery.</li>
+                        <li><b>Indian Museum location:</b> Kolkata</li>
+                        <li><b>Salarganj Museum location:</b> Hyderabad</li>
+                        <li><b>Famous quote by Swami Vivekananda:</b> "I am proud to say that, I represent the religion that has taught the lessons of tolerance, compassion and universal fraternity to the world."</li>
+                        <li><b>Ancient Indian concept of global unity:</b> "Vasudhav Kutumbakam"</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="note-box">
+                <strong>A Note to Students:</strong> This summary provides a comprehensive overview for effective revision. However, for a complete and thorough understanding, it is highly recommended to read the original chapter from the PDF. The details in the textbook are crucial for scoring well in exams.
+            </div>
+
+            <!-- Mind Map -->
+            <section class="mindmap page-break">
+                <div class="mindmap-title">MIND MAP: Preservation of Our Heritage</div>
+                <ul>
+                    <li>Preservation of Heritage
+                        <ul>
+                            <li>Why Preserve?
+                                <ul>
+                                    <li>National Identity & Glory</li>
+                                    <li>Guide for Future</li>
+                                    <li>Inspire Generations</li>
+                                </ul>
+                            </li>
+                            <li>Threats
+                                <ul>
+                                    <li>Natural Factors</li>
+                                    <li>Manmade Factors (Pollution, Vandalism)</li>
+                                    <li>Negligence & Unawareness</li>
+                                </ul>
+                            </li>
+                            <li>Key Preservation Measures
+                                <ul>
+                                    <li>Legislative Acts (Wildlife 1972, Monuments 1958)</li>
+                                    <li>Institutional Bodies (ASI, Indian Board of Wildlife)</li>
+                                    <li>Community Role (Awareness, Cleanliness)</li>
+                                </ul>
+                            </li>
+                            <li>Heritage & Tourism
+                                <ul>
+                                    <li>Economic Benefits</li>
+                                    <li>Employment Generation</li>
+                                    <li>Global Recognition</li>
+                                </ul>
+                            </li>
+                            <li>Unity in Diversity
+                                <ul>
+                                    <li>Vasudhav Kutumbakam</li>
+                                    <li>Secularism & Tolerance</li>
+                                    <li>Amalgamation of Cultures</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Test Section -->
+            <section class="test-section page-break">
+                <h2>Test Your Knowledge 📝</h2>
+                <p>Answer the following questions to check your understanding of the chapter.</p>
+                <ol>
+                    <li>When was the Indian board of wildlife constituted?</li>
+                    <li>Which act was enacted in 1958 for the preservation of heritage sites?</li>
+                    <li>Name the organization responsible for the maintenance of more than 5000 monuments in India.</li>
+                    <li>What was the primary cause of the white marble of the Taj Mahal turning pale and dull?</li>
+                    <li>Where is the 'Indian Museum' located?</li>
+                    <li>Which ancient Indian principle means "the whole world is a family"?</li>
+                    <li>The successful shifting of Sangameshwar and Papnasham temples was an achievement of which body?</li>
+                    <li>The 'Bombay Natural History Society' was established in which year?</li>
+                    <li>What is the main function of the Wildlife Protection Act of 1972?</li>
+                    <li>In which city did Swami Vivekananda deliver his famous speech at the "World Religious Conference"?</li>
+                    <li>The Chhatrapati Shivaji Maharaj Museum is located in which city?</li>
+                    <li>What does the Indian Treasure Trove Act of 1876 require from a citizen?</li>
+                    <li>Which two temples in Andhra Pradesh were shifted to save them from submergence?</li>
+                    <li>Name a major benefit of tourism related to local communities.</li>
+                    <li>What is a major "don't" when visiting a historical monument?</li>
+                </ol>
+                <button class="toggle-button no-print" onclick="document.getElementById('answers').style.display='block'">Show Answers</button>
+                <div id="answers" class="answers">
+                    <h3>Answers</h3>
+                    <ol>
+                        <li>The Indian board of wildlife was constituted in 1952.</li>
+                        <li>The Ancient Monuments and Archaeological Sites and Remains Act.</li>
+                        <li>The Department of Archaeological Survey of India (ASI).</li>
+                        <li>Air pollution caused by the Mathura oil refinery and nearby industries.</li>
+                        <li>Kolkata.</li>
+                        <li>Vasudhav Kutumbakam.</li>
+                        <li>The Department of Archaeological Survey of India (ASI).</li>
+                        <li>1883.</li>
+                        <li>To give a firm legal status to national parks, sanctuaries, and bio-reserves and to protect wildlife.</li>
+                        <li>Chicago (US).</li>
+                        <li>Mumbai.</li>
+                        <li>To immediately notify the officer of the archaeological department if they find any ancient or antique article.</li>
+                        <li>Sangameshwar temple and Papnasham temples.</li>
+                        <li>It provides employment to local people (e.g., as guides, hawkers, in hotels).</li>
+                        <li>Do not spoil historical monuments by writing, drawing, or littering.</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer-print">
+            © Notes By Dr. VarisAli Holda
+        </footer>
+    </div>
+
+</body>
+</html>
