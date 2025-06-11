@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6 - Places of Indian Cultural Heritage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Concert+One&family=Patrick+Hand&display=swap');
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+
+        .main-heading {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .main-topic-heading {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f0ad4e; /* Orange */
+            margin-top: 30px;
+            page-break-before: auto;
+            page-break-inside: avoid;
+        }
+
+        .sub-topic-heading {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0275d8; /* Deep Blue */
+            margin-left: 20px;
+        }
+
+        .content-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            margin-left: 40px;
+            font-weight: normal;
+        }
+        
+        .content-text li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+        }
+
+        .content-text li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #5cb85c;
+            font-weight: bold;
+        }
+        
+        .feature-description {
+            margin-left: 40px;
+            font-size: 14px;
+        }
+
+        .feature {
+            font-weight: bold;
+            color: #5bc0de;
+        }
+
+        .description {
+            font-weight: normal;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+
+        /* --- Decorative Bullets --- */
+        .main-point { list-style: none; padding-left: 0; }
+        .main-point > li::before { content: '🔸 '; font-size: 18px; }
+
+        .sub-point { list-style: none; padding-left: 20px; }
+        .sub-point > li::before { content: '✨ '; font-size: 16px; }
+
+        .detail-point { list-style: none; padding-left: 40px; }
+        .detail-point > li::before { content: '📌 '; font-size: 14px; }
+        
+        /* --- Infographics and Flowcharts --- */
+        .flowchart-container, .infographic-container {
+            border: 2px dashed #0275d8;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 40px;
+            background-color: #f7faff;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+        .flowchart-title, .infographic-title {
+            font-family: 'Arial', bold;
+            font-size: 16px;
+            color: #d9534f;
+            margin-bottom: 10px;
+        }
+        .flowchart-box {
+            background: #e9f5ff;
+            border: 1px solid #a3d5ff;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 5px;
+            font-family: 'Arial', bold;
+        }
+        .arrow {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0275d8;
+            margin: 0 10px;
+        }
+        .infographic-item {
+            display: inline-block;
+            margin: 0 15px;
+            font-family: 'Arial', bold;
+        }
+        
+        /* --- Mnemonic Box --- */
+        .mnemonic-box {
+            background-color: #fffbe6;
+            border-left: 5px solid #f0ad4e;
+            padding: 15px;
+            margin: 20px 40px;
+            font-style: italic;
+            font-size: 14px;
+            page-break-inside: avoid;
+        }
+
+        /* --- Section for Quick Facts, Mind Map, Test --- */
+        .final-section {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 40px;
+            page-break-before: always; /* Start this section on a new page */
+        }
+        .final-section h3 {
+            color: #d9534f;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        
+        /* --- Mind Map Styling --- */
+        .mindmap {
+            list-style: none;
+            padding: 0;
+            font-family: 'Patrick Hand', cursive;
+        }
+        .mindmap ul {
+            list-style: none;
+            padding-left: 30px;
+        }
+        .mindmap li {
+            position: relative;
+            padding-left: 20px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .mindmap li::before, .mindmap li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+        .mindmap li::before {
+            border-left: 2px solid #f0ad4e;
+            height: 100%;
+            top: -10px;
+            width: 1px;
+        }
+        .mindmap li::after {
+            border-top: 2px solid #f0ad4e;
+            height: 1px;
+            top: 10px;
+            width: 15px;
+        }
+        .mindmap > li::before, .mindmap > li::after {
+            display: none; /* No lines for the root element */
+        }
+        .mindmap .root { font-size: 22px; font-weight: bold; color: #d9534f; font-family: 'Concert One', cursive; }
+        .mindmap .level1 { font-size: 20px; font-weight: bold; color: #0275d8; }
+        .mindmap .level2 { font-size: 18px; color: #5cb85c; }
+        .mindmap .level3 { font-size: 16px; color: #5bc0de; }
+        
+        /* --- Test Section --- */
+        .test-questions ol {
+            padding-left: 20px;
+        }
+        .test-questions li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .answers {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        .answers button {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            background-color: #0275d8;
+            color: white;
+            border-radius: 3px;
+        }
+        .answer-key {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* --- Footer for Print --- */
+        .print-footer {
+            display: none;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .container {
+                border: none;
+                box-shadow: none;
+                max-width: 100%;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+            .print-footer {
+                display: block;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10pt;
+                color: #888;
+            }
+            hr {
+                margin: 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">6 - Places of Indian Cultural Heritage</h1>
+        
+        <h2 class="main-topic-heading">A. CAVE ARCHITECTURE 🗿</h2>
+        <ul class="main-point">
+            <li>
+                <span class="sub-topic-heading">Ajanta Caves</span>
+                <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location:</span>
+                            <span class="description">Aurangabad district, Maharashtra.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Famous For:</span>
+                            <span class="description">Exceptional wall paintings (Caves 1, 2, 10, 16, 17) and sculptures.</span>
+                        </div>
+                    </li>
+                     <li>
+                        <div class="feature-description">
+                            <span class="feature">Theme & Types:</span>
+                            <span class="description">Buddhist religion. Divided into Chaityas (prayer halls 🙏) and Viharas (monasteries 🧘).</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Rediscovery:</span>
+                            <span class="description">By English Captain John Smith in 1819 A.D.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Ellora Caves</span>
+                <div class="infographic-container">
+                    <div class="infographic-title">Ellora Caves Distribution (Total 34)</div>
+                    <div class="infographic-item">
+                        <span style="font-size: 24px; color: #f0ad4e;">☸️</span><br><b>Buddhist (1-12)</b>
+                    </div>
+                    <div class="infographic-item">
+                        <span style="font-size: 24px; color: #d9534f;">🕉️</span><br><b>Hindu (13-29)</b>
+                    </div>
+                    <div class="infographic-item">
+                        <span style="font-size: 24px; color: #5cb85c;"> जैन </span><br><b>Jain (30-34)</b>
+                    </div>
+                </div>
+                <div class="mnemonic-box">
+                    🧠 <b>Mnemonic to remember cave types:</b> "<b>B</b>eautiful <b>H</b>indu <b>J</b>ewels" (Buddhist, Hindu, Jain)
+                </div>
+                <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                             <span class="feature">Location:</span>
+                             <span class="description">Aurangabad district, Maharashtra.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                             <span class="feature">Highlight:</span>
+                             <span class="description">Kailash Temple (Cave 16), a monolithic temple carved from a single rock, built during the Rashtrakuta dynasty.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Elephanta Caves</span>
+                <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                             <span class="feature">Location:</span>
+                             <span class="description">12 km from Mumbai in the Arabian Sea. Locally known as 'Dhara puri'.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                             <span class="feature">Key Sculpture:</span>
+                             <span class="description">The magnificent 'Trimurti' (Brahma, Vishnu, Mahesh) in Cave No. 1.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                             <span class="feature">Recognition:</span>
+                             <span class="description">UNESCO World Heritage site since 1987.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <hr>
+
+        <h2 class="main-topic-heading">B. TEMPLES AND MEMORIALS 🏛️</h2>
+        <ul class="main-point">
+            <li>
+                <span class="sub-topic-heading">Mahabalipuram</span>
+                <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location & Patronage:</span>
+                            <span class="description">60 km from Chennai, Tamilnadu. Built by Narsinh Varman-I (Pallava dynasty).</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Features:</span>
+                            <span class="description">Famous for 7 Chariot Temples (Pancha Rathas), rock sculptures, and seashore temples.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Temples at Khajuraho</span>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location & Patronage:</span>
+                            <span class="description">Chattarpur, Madhya Pradesh. Built by Chandela Rajputs (950-1050 AD).</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Architecture:</span>
+                            <span class="description">Naagar style, built with granite stone. The 64 Yoginis temple is the main temple.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Sun Temple, Konark</span>
+                <div class="infographic-container">
+                    <div class="infographic-title">Chariot of the Sun God ☀️</div>
+                    <div class="infographic-item">
+                        <span style="font-size: 24px;">🐎x7</span><br><b>7 Horses</b>
+                    </div>
+                    <div class="infographic-item">
+                        <span style="font-size: 24px;">☸️x12</span><br><b>12 Wheels</b><br>(12 Months)
+                    </div>
+                    <div class="infographic-item">
+                        <span style="font-size: 24px;"> spokes x8</span><br><b>8 Spokes/Wheel</b><br>(8 Prahars of day)
+                    </div>
+                </div>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location & Patronage:</span>
+                            <span class="description">Puri, Odisha. Built by King Narsinh Varman-I (Ganga Dynasty) in the 13th century.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Nickname:</span>
+                            <span class="description">Known as "Black Pagoda" due to its dark-colored stone.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Bruhdeshwar Temple</span>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location & Patronage:</span>
+                            <span class="description">Tanjur, Tamilnadu. Built by Rajraja-I of the Chola dynasty (1003-1010 AD).</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Architecture:</span>
+                            <span class="description">A prime example of Dravidian architecture, dedicated to Lord Shiva. It has a 200 ft high summit (vimana).</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <hr>
+        
+        <h2 class="main-topic-heading">C. MEDIEVAL & MUGHAL ARCHITECTURE 🕌</h2>
+        <div class="flowchart-container">
+            <div class="flowchart-title">Key Monuments & Builders</div>
+            <div class="flowchart-box">Qutubbudin Aibak</div> <span class="arrow">→</span>
+            <div class="flowchart-box">Qutub Minar (Start)</div><br>
+            <div class="flowchart-box">Akbar</div> <span class="arrow">→</span>
+            <div class="flowchart-box">Agra Fort, Fatehpur Sikri, Humayun's Tomb (Construction)</div><br>
+            <div class="flowchart-box">Shah Jahan</div> <span class="arrow">→</span>
+            <div class="flowchart-box">Taj Mahal, Red Fort (Delhi)</div>
+        </div>
+        <ul class="main-point">
+            <li>
+                <span class="sub-topic-heading">Hampi</span>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location & History:</span>
+                            <span class="description">Karnataka. Capital of the Vijaynagar kingdom. Golden period under Krishnadevaraya.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Features:</span>
+                            <span class="description">Known for huge, magnificent pillars carved from single stones, Vithala temple, and Virupaksha temple.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Qutub Minar</span>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location & Dimensions:</span>
+                            <span class="description">Delhi. India's tallest stone minaret at 72.5 meters.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Builders:</span>
+                            <span class="description">Started by Qutubbudin Aibak, completed by his son-in-law Iltutmish.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Taj Mahal</span>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Location & Builder:</span>
+                            <span class="description">Agra, UP. Built by Shah Jahan in memory of his queen Mumtaz Mahal.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Construction:</span>
+                            <span class="description">Took 22 years (1631-1653 AD). One of the Seven Wonders of the World.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Red Fort (Delhi)</span>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Builder & Date:</span>
+                            <span class="description">Built by Shah Jahan in 1638 AD.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Key Structures Inside:</span>
+                            <span class="description">Diwan-e-Aam, Diwan-e-Khas, Rang Mahal, and the famous Peacock Throne (taken by Nadir Shah).</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Fatehpur Sikri</span>
+                 <ul class="sub-point">
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Founder & Purpose:</span>
+                            <span class="description">Founded by Akbar as his capital city, in memory of Sufi saint Shaikh Salim Chisti.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-description">
+                            <span class="feature">Key Structures:</span>
+                            <span class="description">Buland Darwaza (50m high), Jama Masjid, Palace of Jodhabai, Panch Mahal.</span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <hr>
+
+        <h2 class="main-topic-heading">D. HERITAGE SITES OF GUJARAT 🦁</h2>
+        <ul class="main-point">
+            <li>
+                <span class="sub-topic-heading">Ancient Cities (Indus Valley)</span>
+                <ul class="detail-point">
+                    <li><b>Dholaveera:</b> Located in Kutch, known for ideal town planning and bead-making factories.</li>
+                    <li><b>Lothal:</b> An ancient port city and a major center of trade and commerce.</li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Key Cities & Monuments</span>
+                <ul class="detail-point">
+                    <li><b>Ahmedabad:</b> A historical city with sites like Sidi Saiyed Jali, Jama Masjid, and Shaking Minarets.</li>
+                    <li><b>Patan:</b> Famous for 'Rani ni vav' (Queen's Step-well), a UNESCO World Heritage site built by Queen Udaymati.</li>
+                    <li><b>Champaner-Pavagadh:</b> A UNESCO site known for its blend of Hindu-Muslim architecture, including the Jama Masjid.</li>
+                    <li><b>Junagadh:</b> Home to Ashoka's rock edicts, Buddhist caves, and the tomb of Bahauddin Vazir.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="final-section">
+            <h3>📝 One-Mark Facts for Quick Revision</h3>
+            <ul class="content-text">
+                <li>Ajanta Caves were rediscovered in <b>1819 AD</b> by John Smith.</li>
+                <li>Ellora has a total of <b>34 caves</b> (Buddhist, Hindu, and Jain).</li>
+                <li>Kailash Temple (Ellora) was built by the <b>Rashtrakuta</b> dynasty.</li>
+                <li>Elephanta Caves were named by the <b>Portuguese</b>.</li>
+                <li>Khajuraho temples were built by the <b>Chandela</b> Rajputs.</li>
+                <li>Konark Sun Temple is also known as the <b>'Black Pagoda'</b>.</li>
+                <li>Bruhdeshwar Temple was built by King <b>Rajraja-I</b> of the Chola dynasty.</li>
+                <li>Hampi was the capital of the <b>Vijaynagar</b> kingdom.</li>
+                <li>Agra Fort was built by Emperor <b>Akbar</b> in 1565 AD.</li>
+                <li>The Taj Mahal construction took <b>22 years</b> to complete.</li>
+                <li>Fatehpur Sikri was founded by <b>Akbar</b>.</li>
+                <li>Rani ni Vav (Patan, Gujarat) was declared a UNESCO World Heritage site in <b>2014</b>.</li>
+                <li>The local name for Elephanta Caves is <b>'Dhara puri'</b>.</li>
+            </ul>
+
+            <div style="background: #fff; padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px solid #eee;">
+                <p><strong>Important Note:</strong> This summary provides a quick overview for revision. For a complete and thorough understanding, please refer to the full chapter in your textbook. The details, contexts, and nuances in the original text are crucial for comprehensive exam preparation.</p>
+            </div>
+        </div>
+
+        <div class="final-section" style="page-break-before: always;">
+            <h3>🗺️ Chapter Mind Map</h3>
+            <ul class="mindmap">
+                <li class="root">Places of Indian Cultural Heritage
+                    <ul>
+                        <li class="level1">Cave Architecture
+                            <ul>
+                                <li class="level2">Ajanta Caves
+                                    <ul>
+                                        <li class="level3">Buddhist Art, Paintings</li>
+                                    </ul>
+                                </li>
+                                <li class="level2">Ellora Caves
+                                    <ul>
+                                        <li class="level3">Buddhist, Hindu, Jain</li>
+                                        <li class="level3">Kailash Temple (Cave 16)</li>
+                                    </ul>
+                                </li>
+                                <li class="level2">Elephanta Caves
+                                    <ul>
+                                        <li class="level3">Trimurti Sculpture</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="level1">Temples & Memorials
+                            <ul>
+                                <li class="level2">Mahabalipuram (Pallava)</li>
+                                <li class="level2">Khajuraho (Chandela)</li>
+                                <li class="level2">Konark Sun Temple (Ganga)</li>
+                                <li class="level2">Bruhdeshwar Temple (Chola)</li>
+                                <li class="level2">Pattadakal (Chalukya)</li>
+                            </ul>
+                        </li>
+                        <li class="level1">Medieval & Mughal Sites
+                             <ul>
+                                <li class="level2">Hampi (Vijaynagar)</li>
+                                <li class="level2">Qutub Minar (Delhi)</li>
+                                <li class="level2">Agra Fort (Akbar)</li>
+                                <li class="level2">Taj Mahal (Shah Jahan)</li>
+                                <li class="level2">Red Fort, Delhi (Shah Jahan)</li>
+                                <li class="level2">Fatehpur Sikri (Akbar)</li>
+                            </ul>
+                        </li>
+                        <li class="level1">Heritage of Gujarat
+                            <ul>
+                                <li class="level2">Dholaveera & Lothal</li>
+                                <li class="level2">Champaner-Pavagadh</li>
+                                <li class="level2">Ahmedabad (Sidi Saiyed Jali)</li>
+                                <li class="level2">Patan (Rani ni Vav)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="final-section test-questions" style="page-break-before: always;">
+            <h3>✍️ Test Your Knowledge</h3>
+            <ol>
+                <li>In which state are the Ajanta caves located?</li>
+                <li>The Kailash temple at Ellora was built during the reign of which dynasty?</li>
+                <li>Who rediscovered the Ajanta caves in 1819 A.D.?</li>
+                <li>The famous 'Trimurti' sculpture is the main attraction of which cave site?</li>
+                <li>The Sun Temple of Konark is also known by what name?</li>
+                <li>Who founded the city of Fatehpur Sikri?</li>
+                <li>The Taj Mahal was built by Shah Jahan in memory of whom?</li>
+                <li>Hampi, a UNESCO World Heritage site, was the capital of which great kingdom?</li>
+                <li>Which monument in Delhi was started by Qutubbudin Aibak and completed by Iltutmish?</li>
+                <li>Rani ni Vav, a famous step-well, is located in which city of Gujarat?</li>
+                <li>The temples at Khajuraho were primarily built by which Rajput clan?</li>
+                <li>How many caves are there in total at Ellora?</li>
+                <li>Which monument in Agra is also known as the 'Red Fort' and was built by Akbar?</li>
+                <li>The local fishermen of Mumbai call the Elephanta Caves by what name?</li>
+                <li>The Bruhdeshwar Temple at Tanjur is dedicated to which deity?</li>
+            </ol>
+            <div class="answers">
+                <button onclick="toggleAnswers()">Show/Hide Answers</button>
+                <div id="answer-key" class="answer-key">
+                    <p>
+                        1. Maharashtra<br>
+                        2. Rashtrakuta dynasty<br>
+                        3. Captain John Smith<br>
+                        4. Elephanta Caves<br>
+                        5. Black Pagoda<br>
+                        6. Akbar<br>
+                        7. His queen, Mumtaz Mahal<br>
+                        8. Vijaynagar kingdom<br>
+                        9. Qutub Minar<br>
+                        10. Patan<br>
+                        11. Chandela Rajputs<br>
+                        12. 34<br>
+                        13. Fort of Agra<br>
+                        14. Dhara puri<br>
+                        15. Lord Shiva
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="print-footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+    <script>
+        function toggleAnswers() {
+            var answers = document.getElementById('answer-key');
+            if (answers.style.display === 'none' || answers.style.display === '') {
+                answers.style.display = 'block';
+            } else {
+                answers.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
