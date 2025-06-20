@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 22 - Nutritional System in Nature</title>
+    <style>
+        /* General Body and Print Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Handjet&family=Patrick+Hand&display=swap');
+
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Print-specific Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white; /* Ensure background is white for printing */
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .footer {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10px;
+                color: #888;
+                display: block !important; /* Make sure it shows on print */
+            }
+        }
+        
+        .footer {
+            display: none; /* Hidden by default */
+        }
+        
+        /* Typography and Colors */
+        h1 {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 { /* Main Points: A, B, C... */
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: orange;
+            margin-top: 30px;
+        }
+
+        h3 { /* Sub-topics */
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #007BFF; /* Contrasting blue */
+            margin-top: 15px;
+        }
+        
+        h4 { /* Feature titles */
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #28a745; /* Green */
+            margin-top: 10px;
+        }
+
+        p, ul li {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        /* Custom Bullet Points */
+        ul.main-text-list > li::before {
+            content: '●';
+            color: #ff9800;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        h3::before { content: '🔸 '; }
+        h4::before { content: '✨ '; }
+        .feature-description::before { content: '📌 '; display: inline-block; margin-right: 5px; }
+
+        /* Structural Elements */
+        hr.topic-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+        
+        .avoid-break {
+            page-break-inside: avoid;
+        }
+
+        /* Special Content Blocks */
+        .info-box {
+            background-color: #e3f2fd;
+            border-left: 5px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .experiment-box {
+            background-color: #fff3e0;
+            border: 2px dashed #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .experiment-box h3 { color: #e65100; }
+        .experiment-box p { text-align: left; }
+        
+        /* Flowchart Styles */
+        .flowchart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+        .flowchart-box {
+            border: 2px solid #007BFF;
+            padding: 10px 15px;
+            border-radius: 8px;
+            background-color: #f0f8ff;
+            min-width: 100px;
+        }
+        .flowchart-arrow {
+            font-size: 24px;
+            color: #ff5722;
+            align-self: center;
+        }
+
+        /* Mind Map Styles */
+        .mindmap-container {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+        .mindmap {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+        }
+        .mindmap ul {
+            padding-left: 40px;
+            position: relative;
+        }
+        .mindmap li {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        /* Connecting lines for Mind Map */
+        .mindmap li::before, .mindmap li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+        .mindmap li::before {
+            border-top: 2px solid #ccc;
+            width: 20px;
+            top: 20px;
+        }
+        .mindmap li::after {
+            border-left: 2px solid #ccc;
+            height: 100%;
+            width: 0px;
+            top: 0;
+        }
+        .mindmap > li:first-child::after {
+            top: 20px;
+        }
+        .mindmap li:last-child::after {
+            height: 20px;
+        }
+        .mindmap > li { padding-left: 0; }
+        .mindmap > li::before, .mindmap > li::after { display: none; }
+        
+        .mindmap-node {
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 20px;
+            color: white;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 18px;
+            border: 2px solid;
+        }
+        .mindmap-node.level-1 { background-color: #ff6f61; border-color: #c43e31; }
+        .mindmap-node.level-2 { background-color: #64b5f6; border-color: #2185d0; }
+        .mindmap-node.level-3 { background-color: #81c784; border-color: #4a944e; }
+        .mindmap-node.level-4 { background-color: #ffd54f; border-color: #c8a415; color: #333;}
+        
+        /* Test Section */
+        .test-section h3 { color: #d32f2f; }
+        .test-question {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .answers {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .answers h4 { color: #388e3c; }
+        
+        /* Final Note */
+        .final-note {
+            background-color: #fffde7;
+            border: 1px solid #fbc02d;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chapter 22 - Nutritional System in Nature 🌿</h1>
+
+    <div class="info-box">
+        💡 <strong>Core Idea:</strong> Nature possesses a perfect, self-governing, and self-sustaining system to nourish vegetation. Plants get all they need from natural elements (earth, water, air, sun) without human help.
+    </div>
+
+    <h2>A. The Four Pillars of Nature's Nutritional System</h2>
+    <p>Padmashri Dr. Subhash Palekar classified nature's system into four key arrangements:</p>
+    <ul class="main-text-list">
+        <li>Regulation of nutrients through the <strong>Food Cycle</strong>.</li>
+        <li>Provision of nutrients to roots via <strong>Capillary Action</strong>.</li>
+        <li>Water provision through <strong>Rain by Cyclone</strong>.</li>
+        <li>Soil enrichment by the <strong>Activities of Local Earthworms</strong>.</li>
+    </ul>
+
+    <hr class="topic-divider">
+    
+    <div class="avoid-break">
+        <h2>B. Regulation of Nutrients Through the Food Cycle ♻️</h2>
+        <p>This is governed by a fundamental law: <em>"Whatever elements come from wherever they have to return there."</em></p>
+
+        <h3>(1) Carbon Cycle 🌬️</h3>
+        <ul class="main-text-list">
+            <li>Plants take Carbon (as CO₂) from the air for photosynthesis to create food.</li>
+            <li>This carbon is returned to the air through two main processes:
+                <ul>
+                    <li><strong>Decomposition:</strong> Bacteria break down dead plants, releasing CO₂.</li>
+                    <li><strong>Combustion:</strong> Burning plants releases CO₂ as smoke.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="flowchart">
+            <div class="flowchart-box">Air (CO₂)</div>
+            <div class="flowchart-arrow">→</div>
+            <div class="flowchart-box">Plant (Photosynthesis)</div>
+            <div class="flowchart-arrow">→</div>
+            <div class="flowchart-box">Decomposition / Burning</div>
+            <div class="flowchart-arrow">→</div>
+            <div class="flowchart-box">Air (CO₂)</div>
+        </div>
+
+        <h3>(2) Water Cycle 💧</h3>
+        <ul class="main-text-list">
+            <li>71% of the Earth is covered with water.</li>
+            <li>The sun's heat causes evaporation from oceans, forming clouds.</li>
+            <li>Clouds release water as rain over land.</li>
+            <li>Water flows back to the ocean via rivers or seeps into the ground (groundwater), eventually returning to the sea.</li>
+        </ul>
+
+        <h3>(3) Energy Cycle ☀️</h3>
+        <ul class="main-text-list">
+            <li>The <strong>Sun</strong> is the ultimate source of energy.</li>
+            <li>Green leaves of plants capture and store solar energy.</li>
+            <li>Herbivores obtain this energy by eating plants.</li>
+            <li>The energy is released back into the system when the plant decomposes or is burned.</li>
+        </ul>
+
+        <h3>(4) Humus (Organic Matter) 🌱</h3>
+        <ul class="main-text-list">
+            <li>Humus is vital organic matter where constant biological and chemical processes occur.</li>
+            <li>It's formed from the decomposition of biomass by millions of microbes.</li>
+            <li><strong>The Symbiotic Relationship:</strong>
+                <ul>
+                    <li>Plant roots release sucrose (sugar), which feeds the microbes.</li>
+                    <li>In return, these microbes create humus near the roots, making nutrients available to the plant.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <div class="experiment-box avoid-break">
+            <h3>🔬 Experiment: Proving Nature's Balance</h3>
+            <p><strong>Method:</strong> Weigh 10 green leaves and 10 dry leaves. Note the difference. Burn the dry leaves and weigh the remaining ashes.</p>
+            <p><strong>Summary:</strong></p>
+            <ul class="main-text-list">
+                <li>The weight difference between green and dry leaves is <strong>water</strong> (returned to the atmosphere).</li>
+                <li>When burned, fire (<strong>solar energy</strong>) and smoke (<strong>carbon dioxide</strong> from air) are released.</li>
+                <li>The remaining ashes are the minerals the plant took from the <strong>earth</strong>.</li>
+            </ul>
+            <p><strong>Conclusion:</strong> All elements taken from nature (air, water, earth, sun) ultimately return to their original state, maintaining a perfect balance.
+            </p>
+        </div>
+    </div>
+    
+    <hr class="topic-divider">
+
+    <div class="avoid-break">
+        <h2>C. Nutrient & Water Provision to Roots ⬆️</h2>
+        <h3>(1) Arrangement by Capillary Action</h3>
+        <h4>✨ Feature:</h4> <p class="feature-description">Upward movement of water and minerals.</p>
+        <h4>✨ Description:</h4> <p class="feature-description">After the rainy season, stored groundwater begins to rise through the tiny gaps in the soil (capillary action). As it rises, it dissolves minerals from the deep soil and delivers this nutrient-rich solution directly to the plant's roots.</p>
+
+        <h3>(2) Rain by Cyclone (Thunderstorm) ⛈️</h3>
+        <h4>✨ Feature:</h4> <p class="feature-description">Monsoonal rainfall generation.</p>
+        <h4>✨ Description:</h4> <p class="feature-description">Crucial for water availability in India. After March 21, intense sun heats the Indian Ocean, creating a low-pressure area. Air circulates around this low-pressure zone, forming a cyclone that brings monsoon rains.</p>
+        <h4>✨ Agricultural Impact:</h4> <p class="feature-description">Crops in chemical farming are more damaged by cyclones. Naturally grown (organic) plants are stronger and more resilient.</p>
+    </div>
+    
+    <hr class="topic-divider">
+    
+    <div class="avoid-break">
+        <h2>D. The Role of Local Earthworms 🪱</h2>
+        <h3>(1) Characteristics of Local Earthworms</h3>
+        <ul class="main-text-list">
+            <li>They eat soil.</li>
+            <li>They don't migrate; they become dormant in the soil if food is scarce.</li>
+            <li>They are highly resilient, surviving extreme heat (deserts) and cold (Himalayas).</li>
+        </ul>
+        
+        <h3>(2) Contribution to Healthy Soil</h3>
+        <h4>✨ Feature:</h4> <p class="feature-description">Soil Engineers.</p>
+        <h4>✨ Description:</h4> <p class="feature-description">They create billions of holes, making soil porous. These tunnels are lined with enzymes, preventing collapse. This process drastically improves water seepage, reduces soil erosion, and raises the groundwater level.</p>
+
+        <h4>✨ Feature:</h4> <p class="feature-description">Nutrient Factories.</p>
+        <h4>✨ Description:</h4> <p class="feature-description">They consume soil, sand, and even pathogens, and their excreta (castings or 'Hagaar') is incredibly rich in plant-available nutrients and beneficial microbes. It also contains antibodies that boost plant immunity, leading to healthier plants, animals, and humans.</p>
+
+        <h3>(3) The Need for a Micro-Environment</h3>
+        <h4>✨ Feature:</h4> <p class="feature-description">Optimal living conditions.</p>
+        <h4>✨ Description:</h4> <p class="feature-description">For earthworms to be active, a specific "micro-environment" is needed. This is the air between plants with a daytime temperature of <strong>24°C - 32°C</strong> and relative humidity of <strong>65% - 72%</strong>. This is created using natural inputs like jivamrit, ghanjivamrit, and aachhadan (mulch).</p>
+    </div>
+    
+    <hr class="topic-divider">
+
+    <div class="info-box avoid-break">
+        <h3>📌 One-Mark Facts for Quick Review</h3>
+        <ul class="main-text-list">
+            <li>Percentage of Earth covered by water: <strong>71%</strong></li>
+            <li>Main source of energy for Earth: <strong>The Sun</strong></li>
+            <li>Lifespan of a local earthworm (mentioned in the text): <strong>15 years</strong></li>
+            <li>A 40-year-old tree releases <strong>200 liters</strong> of water vapor per day.</li>
+            <li>Earthworm excreta is called: <strong>Hagaar</strong> (castings).</li>
+            <li>Required temperature for micro-environment: <strong>24°C to 32°C</strong>.</li>
+            <li>Required humidity for micro-environment: <strong>65% to 72%</strong>.</li>
+        </ul>
+    </div>
+    
+    <div class="final-note">
+        <strong>Important Note:</strong> This summary is a study aid designed for quick revision. For a complete and thorough understanding, please refer to the original chapter text in your PDF or textbook.
+    </div>
+
+    <!-- Printable Mind Map -->
+    <div class="page-break avoid-break">
+        <h2 style="text-align:center; color: #333; margin-top: 50px;">Printable Mind Map 🗺️</h2>
+        <div class="mindmap-container">
+            <ul class="mindmap">
+                <li><span class="mindmap-node level-1">Nutritional System in Nature</span>
+                    <ul>
+                        <li><span class="mindmap-node level-2">A. Food Cycle</span>
+                            <ul>
+                                <li><span class="mindmap-node level-3">Carbon Cycle 🌬️</span></li>
+                                <li><span class="mindmap-node level-3">Water Cycle 💧</span></li>
+                                <li><span class="mindmap-node level-3">Energy Cycle ☀️</span></li>
+                                <li><span class="mindmap-node level-3">Humus 🌱</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="mindmap-node level-2">B. Capillary Action</span>
+                             <ul>
+                                <li><span class="mindmap-node level-3">Upward nutrient flow</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="mindmap-node level-2">C. Rain by Cyclone</span>
+                             <ul>
+                                <li><span class="mindmap-node level-3">Monsoon formation</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="mindmap-node level-2">D. Earthworms 🪱</span>
+                             <ul>
+                                <li><span class="mindmap-node level-3">Characteristics</span></li>
+                                <li><span class="mindmap-node level-3">Contribution</span>
+                                    <ul>
+                                        <li><span class="mindmap-node level-4">Soil Porosity</span></li>
+                                        <li><span class="mindmap-node level-4">Nutrient-rich Castings</span></li>
+                                    </ul>
+                                </li>
+                                 <li><span class="mindmap-node level-3">Micro-environment</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Test Questions Section -->
+    <div class="page-break avoid-break">
+        <div class="test-section">
+            <h3 style="text-align:center;">Test Your Knowledge! 🧠</h3>
+            
+            <p class="test-question">1. What percentage of the Earth's surface is covered by water?</p>
+            <p> (A) 62%   (B) 78%   (C) 71%   (D) 50%</p>
+
+            <p class="test-question">2. What is the primary source of energy for the Earth's ecosystems?</p>
+            <p> (A) Earth's core   (B) The Sun   (C) The Moon   (D) Water</p>
+
+            <p class="test-question">3. According to the text, what is the lifespan of a local earthworm?</p>
+            <p> (A) 10 years   (B) 15 years   (C) 20 years   (D) 5 years</p>
+            
+            <p class="test-question">4. Which process is NOT part of the food cycle described in the chapter?</p>
+            <p> (A) Carbon Cycle   (B) Nitrogen Cycle   (C) Water Cycle   (D) Energy Cycle</p>
+            
+            <p class="test-question">5. How is carbon, taken by a plant from the air, returned to the atmosphere?</p>
+            <p> (A) Only through burning   (B) Only through animal consumption   (C) Through decomposition and burning   (D) It never returns</p>
+            
+            <p class="test-question">6. The upward movement of water and dissolved minerals from deep soil to the roots is called:</p>
+            <p> (A) Gravitational pull   (B) Photosynthesis   (C) Capillary action   (D) Evaporation</p>
+            
+            <p class="test-question">7. What is the name for the nutrient-rich waste produced by earthworms?</p>
+            <p> (A) Humus   (B) Sucrose   (C) Biomass   (D) Hagaar</p>
+            
+            <p class="test-question">8. What do microbes receive from plant roots in exchange for making humus?</p>
+            <p> (A) Water   (B) Sucrose   (C) Oxygen   (D) Carbon Dioxide</p>
+            
+            <p class="test-question">9. Cyclones are formed due to an area of _______ over the ocean.</p>
+            <p> (A) High pressure   (B) Low pressure   (C) High humidity   (D) Low temperature</p>
+            
+            <p class="test-question">10. What is the ideal temperature range for the micro-environment needed by earthworms?</p>
+            <p> (A) 15°C - 25°C   (B) 24°C - 32°C   (C) 35°C - 42°C   (D) 10°C - 20°C</p>
+            
+            <div class="answers">
+                <h4>✅ Answers</h4>
+                <p>1. (C) 71%</p>
+                <p>2. (B) The Sun</p>
+                <p>3. (B) 15 years</p>
+                <p>4. (B) Nitrogen Cycle (It's a real cycle, but not one of the main ones detailed in this chapter's summary)</p>
+                <p>5. (C) Through decomposition and burning</p>
+                <p>6. (C) Capillary action</p>
+                <p>7. (D) Hagaar</p>
+                <p>8. (B) Sucrose</p>
+                <p>9. (B) Low pressure</p>
+                <p>10. (B) 24°C - 32°C</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    © Notes By Dr. VarisAli Holda
+</div>
+
+</body>
+</html>
