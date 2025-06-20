@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 23: Road Safety and Motorists</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+
+        .main-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 24pt;
+            color: #D35400;
+            border-bottom: 3px solid #F39C12;
+            padding-bottom: 15px;
+        }
+
+        .main-topic {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 18pt;
+            color: orange;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .sub-topic {
+            font-family: Arial, sans-serif;
+            font-size: 16pt;
+            color: #005A9C; /* Contrasting Blue */
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .content-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .content-list li {
+            font-family: Arial, sans-serif;
+            font-size: 16pt;
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .content-list li::before {
+            position: absolute;
+            left: 0;
+            top: 5px;
+        }
+
+        /* Decorative Bullets */
+        .bullet-diamond::before { content: '🔸'; }
+        .bullet-sparkle::before { content: '✨'; font-size: 14pt; }
+        .bullet-pin::before { content: '📌'; font-size: 14pt; }
+        .bullet-round::before { content: '●'; color: #333; top: 2px; }
+
+        .feature-description-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+            font-size: 16pt;
+            page-break-inside: avoid;
+        }
+
+        .feature-description-table th, .feature-description-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .feature-description-table th {
+            background-color: #4A90E2;
+            color: white;
+            font-weight: bold;
+        }
+
+        .feature-description-table td {
+            background-color: #f9f9f9;
+        }
+
+        .info-box {
+            background-color: #FFFACD;
+            border: 1px dashed #F1C40F;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .info-box h3 {
+            margin-top: 0;
+            color: #D35400;
+        }
+
+        .flowchart {
+            background-color: #EBF5FB;
+            border: 2px solid #85C1E9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .flowchart-box {
+            background-color: white;
+            border: 1px solid #3498DB;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            max-width: 80%;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        .flowchart-arrow {
+            font-size: 24pt;
+            color: #3498DB;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .mnemonic-box {
+            background-color: #E8F8F5;
+            border: 2px solid #76D7C4;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 16pt;
+            page-break-inside: avoid;
+        }
+
+        .section-break {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin-top: 40px;
+        }
+
+        /* Mind Map Styling */
+        .mindmap {
+            border: 2px dashed #005A9C;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background: #F8FDFF;
+            page-break-inside: avoid;
+        }
+
+        .mindmap h2 {
+            text-align: center;
+            font-family: 'Caveat', cursive;
+            font-size: 28pt;
+            color: #D35400;
+        }
+        
+        .mindmap ul {
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .mindmap ul li {
+            margin: 10px 0;
+            font-family: 'Caveat', cursive;
+            font-size: 18pt;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .mindmap ul li::before, .mindmap ul li::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+        }
+
+        .mindmap ul li::before {
+            border-left: 2px solid #4A90E2;
+            height: 100%;
+            top: -10px;
+        }
+
+        .mindmap ul li:last-child::before {
+            height: 25px;
+        }
+        
+        .mindmap ul li::after {
+            border-top: 2px solid #4A90E2;
+            height: 20px;
+            top: 15px;
+            width: 20px;
+        }
+        
+        /* Test Questions Styling */
+        .test-section {
+            margin-top: 30px;
+            page-break-before: always;
+        }
+        .test-section h2 {
+            color: #005A9C;
+            text-align: center;
+        }
+        .test-question {
+            margin-bottom: 15px;
+            font-size: 16pt;
+        }
+        .answers-section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+
+        /* Print-specific styles */
+        .footer {
+            display: none;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .main-container {
+                width: 100%;
+                max-width: none;
+            }
+            .footer {
+                display: block;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10pt;
+                color: #555;
+            }
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+
+        <h1>23 - Road Safety and Motorists</h1>
+
+        <div class="main-topic">A. Duties of Drivers (Motorists) and Riders 🚗</div>
+        <ul class="content-list">
+            <li class="bullet-diamond">A driver must be in a fit condition to operate a vehicle.</li>
+                <ul class="content-list">
+                    <li class="bullet-sparkle">Physically and mentally fit.</li>
+                    <li class="bullet-sparkle">Not under any kind of intoxication (e.g., alcohol, drugs).</li>
+                </ul>
+            <li class="bullet-diamond">Maintain full concentration and avoid distractions.</li>
+                <ul class="content-list">
+                    <li class="bullet-sparkle">Keep a constant eye on the road and traffic.</li>
+                    <li class="bullet-sparkle">Do not get distracted by passengers, animals, goods, or phone calls.</li>
+                </ul>
+            <li class="bullet-diamond">Ensure the safety of all road users.</li>
+                <ul class="content-list">
+                    <li class="bullet-sparkle">Drive with special care for vulnerable road users: pedestrians 🚶, cyclists 🚴, children, and the elderly.</li>
+                    <li class="bullet-sparkle">Take care of your own safety and that of others when boarding or alighting.</li>
+                    <li class="bullet-sparkle">Ensure all passengers (and self) wear seat belts.</li>
+                    <li class="bullet-sparkle">Motorcycle riders and pillion riders MUST wear a helmet.</li>
+                </ul>
+            <li class="bullet-diamond">Maintain the vehicle in good condition.</li>
+                <ul class="content-list">
+                    <li class="bullet-sparkle">Do not drive a vehicle with dangerous defects.</li>
+                    <li class="bullet-sparkle">Before starting, check mirrors, tyres, and brakes.</li>
+                </ul>
+             <li class="bullet-diamond">Follow proper road conduct.</li>
+                <ul class="content-list">
+                    <li class="bullet-sparkle">Do not stop in a way that obstructs traffic.</li>
+                    <li class="bullet-sparkle">Do not honk unnecessarily, especially in quiet zones.</li>
+                    <li class="bullet-sparkle">Be careful when opening doors to avoid collisions with passing traffic.</li>
+                </ul>
+        </ul>
+        
+        <div class="mnemonic-box no-break">
+            Remember the driver's duty with <strong>SAFE</strong>
+            <p style="margin-top:10px;">
+            <strong>S</strong> - <strong>S</strong>afety First (for self, passengers, and vulnerable users) <br>
+            <strong>A</strong> - <strong>A</strong>lert & Attentive (no distractions, no intoxication) <br>
+            <strong>F</strong> - <strong>F</strong>it to Drive (physically and mentally) <br>
+            <strong>E</strong> - <strong>E</strong>quipment Check (mirrors, tyres, brakes, safety gear)
+            </p>
+        </div>
+
+        <div class="main-topic">B. Driving Licence 💳</div>
+        <p class="sub-topic">Age Limits for Obtaining a Licence</p>
+        <div class="info-box no-break">
+            <table class="feature-description-table">
+                <thead>
+                    <tr>
+                        <th>Feature (Vehicle Type)</th>
+                        <th>Description (Age Requirement)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Two-wheeler without gear (MCWoG)</strong><br>(Engine up to 50cc)</td>
+                        <td>✅ <strong>16 years</strong> or older, with guardian's written consent.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Light Motor Vehicle (LMV) & other vehicles</strong><br>(e.g., cars, geared motorcycles)</td>
+                        <td>✅ <strong>18 years</strong> or older.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Heavy Transport Vehicle</strong><br>(e.g., trucks, buses)</td>
+                        <td>✅ <strong>20 years</strong> or older, AND must hold an LMV licence for more than one year.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="main-topic">C. Lane Traffic Rules 🛣️</div>
+        <ul class="content-list">
+            <li class="bullet-diamond">Always drive in your designated lane.</li>
+            <li class="bullet-diamond">Generally, light, medium-speed, and heavy vehicles should use the leftmost lane.</li>
+            <li class="bullet-diamond">Only change lanes when it is safe, after giving a proper signal in advance.</li>
+            <li class="bullet-diamond">Do not cross a continuous white or yellow line.</li>
+            <li class="bullet-diamond">When a broken line is next to a solid line, vehicles on the side of the broken line may cross to overtake, returning to their lane immediately after.</li>
+        </ul>
+        
+        <div class="flowchart no-break">
+            <h3 style="margin-top:0; color:#005A9C;">Flowchart: Changing Lanes Safely</h3>
+            <div class="flowchart-box">Need to Change Lane?</div>
+            <div class="flowchart-arrow">↓</div>
+            <div class="flowchart-box">Check Mirrors & Blind Spots: Is it SAFE?</div>
+            <div class="flowchart-arrow">↓ YES</div>
+            <div class="flowchart-box">Signal Your Intention in Advance</div>
+            <div class="flowchart-arrow">↓</div>
+            <div class="flowchart-box">Change Lane Smoothly</div>
+            <div class="flowchart-arrow" style="float: left; margin-left: 15%;">↑ NO</div>
+            <div class="flowchart-box" style="float: right; width: 40%; margin-right: 15%; background-color: #FADBD8;">Wait & Stay in Your Lane</div>
+            <div style="clear:both;"></div>
+        </div>
+
+        <div class="main-topic">D. Intersections & Roundabouts 🔄</div>
+         <ul class="content-list">
+            <li class="bullet-round">Slow down when approaching a crossroad, junction, or roundabout.</li>
+            <li class="bullet-round">Give priority to vehicles coming from your right.</li>
+            <li class="bullet-round">Use signals when changing lanes within or exiting a roundabout.</li>
+        </ul>
+
+        <hr class="section-break">
+
+        <div class="main-topic">E. Importance of Safety Gear ⛑️💺</div>
+        <p class="sub-topic">Importance of Helmet</p>
+        <ul class="content-list">
+            <li class="bullet-round">During an accident, a helmet absorbs the impact, reducing the force on the skull.</li>
+            <li class="bullet-round">It prevents the brain from striking the inside of the skull, which can cause severe injury or immediate death.</li>
+        </ul>
+        <div class="info-box no-break">
+            <h3>Do you know? 🧠</h3>
+            <ul class="content-list">
+                <li class="bullet-pin"><strong>Section-129 (Motor Vehicle Act):</strong> Makes it mandatory for every two-wheeler driver and pillion rider (above 4 years) to wear a standard helmet.</li>
+                <li class="bullet-pin"><strong>Section-194 (D):</strong> Not wearing a helmet is punishable by a fine and can lead to a 3-month suspension of the driving licence.</li>
+            </ul>
+        </div>
+        
+        <p class="sub-topic">Importance of Seat Belt</p>
+        <ul class="content-list">
+            <li class="bullet-round">In a crash, a seat belt prevents the occupant from colliding with the car's interior (steering wheel, windscreen).</li>
+            <li class="bullet-round">It is the most effective way to prevent fatal injuries in a road accident.</li>
+            <li class="bullet-round">The "Child Restraint System" is crucial for protecting children.</li>
+        </ul>
+        <div class="info-box no-break">
+            <h3>Do you know? 🧠</h3>
+            <ul class="content-list">
+                <li class="bullet-pin"><strong>Section-194 (B) (Motor Vehicle Act):</strong> Driving or travelling in a motorcar without wearing a seat belt is a punishable offence.</li>
+            </ul>
+        </div>
+
+        <hr class="section-break">
+
+        <div class="main-topic">F. One-Mark Facts for Quick Review ⚡</div>
+         <ul class="content-list">
+            <li class="bullet-round"><strong>16 Years:</strong> Minimum age for a licence for a two-wheeler up to 50cc without gear (MCWoG).</li>
+            <li class="bullet-round"><strong>18 Years:</strong> Minimum age for a Light Motor Vehicle (LMV) licence.</li>
+            <li class="bullet-round"><strong>20 Years:</strong> Minimum age for a heavy vehicle licence (must have LMV licence for 1+ year).</li>
+            <li class="bullet-round"><strong>Priority at Roundabouts:</strong> Give way to traffic from the <strong>right</strong>.</li>
+            <li class="bullet-round"><strong>Main Lane for Heavy Vehicles:</strong> The <strong>leftmost</strong> lane.</li>
+            <li class="bullet-round"><strong>Section 129:</strong> Mandates wearing a <strong>helmet</strong>.</li>
+            <li class="bullet-round"><strong>Section 194 (B):</strong> Punishment for not wearing a <strong>seat belt</strong>.</li>
+            <li class="bullet-round"><strong>Section 194 (D):</strong> Punishment for not wearing a <strong>helmet</strong>, including licence suspension.</li>
+        </ul>
+        
+        <div class="info-box no-print" style="background-color: #eaf2f8; border-color: #aed6f1;">
+            <h3>📝 Important Note for Students</h3>
+            <p>This summary is designed for quick revision and to highlight key concepts. For a thorough understanding and to ensure you don't miss any details for your exams, it is highly recommended to <strong>read the complete chapter from your textbook PDF</strong>.</p>
+        </div>
+        
+        <div class="page-break"></div>
+
+        <div class="mindmap">
+            <h2>Chapter Mind Map</h2>
+            <ul>
+                <li><strong>Road Safety & Motorists</strong>
+                    <ul>
+                        <li><strong>Duties of a Driver</strong>
+                            <ul>
+                                <li>Be Fit (Mental/Physical)</li>
+                                <li>Be Alert (No Distractions)</li>
+                                <li>No Intoxication</li>
+                                <li>Ensure Safety (Self & Others)</li>
+                                <li>Check Vehicle Condition</li>
+                            </ul>
+                        </li>
+                        <li><strong>Driving Licence</strong>
+                            <ul>
+                                <li>Age 16: MCWoG (up to 50cc)</li>
+                                <li>Age 18: LMV (Cars, Bikes)</li>
+                                <li>Age 20: Heavy Vehicles</li>
+                            </ul>
+                        </li>
+                        <li><strong>Traffic Rules</strong>
+                            <ul>
+                                <li>Lane Discipline (Stay Left)</li>
+                                <li>Changing Lanes (Signal Safely)</li>
+                                <li>Intersections (Slow Down, Yield to Right)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Safety Gear</strong>
+                            <ul>
+                                <li>Helmet (Protects Brain)
+                                    <ul>
+                                        <li>Sec 129 & 194(D)</li>
+                                    </ul>
+                                </li>
+                                <li>Seat Belt (Prevents Impact)
+                                    <ul>
+                                        <li>Sec 194(B)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>Test Your Knowledge! 🧠</h2>
+            <div class="test-question"><strong>1.</strong> What is the minimum age to get a licence for a two-wheeler with an engine capacity up to 50cc without gear?</div>
+            <div class="test-question"><strong>2.</strong> In which lane should heavy vehicles generally be driven?</div>
+            <div class="test-question"><strong>3.</strong> When at a roundabout, which vehicle should be given priority?</div>
+            <div class="test-question"><strong>4.</strong> According to the Motor Vehicle Act, who must wear a helmet on a two-wheeler?</div>
+            <div class="test-question"><strong>5.</strong> What is the minimum age to obtain a licence for a heavy transport vehicle?</div>
+            <div class="test-question"><strong>6.</strong> A driver should not cross a ___________ white or yellow line on the road.</div>
+            <div class="test-question"><strong>7.</strong> What is the main purpose of wearing a seat belt in a car?</div>
+            <div class="test-question"><strong>8.</strong> Under which section of the Motor Vehicle Act is travelling without a seat belt punishable?</div>
+            <div class="test-question"><strong>9.</strong> What is one of the first things a driver should check before starting the vehicle?</div>
+            <div class="test-question"><strong>10.</strong> Driving without a helmet can lead to a fine and suspension of the driving licence for how long?</div>
+            
+            <details class="answers-section no-break">
+                <summary style="cursor:pointer; font-weight:bold;">Click to See Answers</summary>
+                <ol>
+                    <li>16 years.</li>
+                    <li>The leftmost lane.</li>
+                    <li>The vehicle coming from the right.</li>
+                    <li>The driver and the pillion rider (above 4 years of age).</li>
+                    <li>20 years (provided they have held an LMV licence for over a year).</li>
+                    <li>Continuous / Solid.</li>
+                    <li>To prevent the occupant from colliding with the interior of the car during a crash.</li>
+                    <li>Section-194 (B).</li>
+                    <li>Rear and side-view mirrors, tyres, and brakes.</li>
+                    <li>Three months.</li>
+                </ol>
+            </details>
+        </div>
+
+    </div>
+    <div class="footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+</body>
+</html>
