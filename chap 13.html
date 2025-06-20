@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 13 - Manufacturing Industries</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Pacifico&family=Caveat&display=swap');
+
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: orange;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        h4 {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        p, li {
+            font-size: 14px;
+        }
+
+        .main-text {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .main-text li::before {
+            content: '⚫';
+            color: #555;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .feature-box {
+            background-color: #f9f9f9;
+            border: 1px solid #e3e3e3;
+            border-left: 5px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .feature-box .feature {
+            font-weight: bold;
+            color: #17a2b8;
+        }
+
+        .divider {
+            border-bottom: 2px dashed #ccc;
+            margin: 40px 0;
+        }
+
+        .mnemonic-box, .info-box {
+            background-color: #fffbe6;
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .mnemonic-box h4, .info-box h4 {
+            color: #856404;
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .flowchart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .flowchart-box {
+            border: 2px solid #007bff;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #e7f3ff;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .flowchart-arrow {
+            font-size: 24px;
+            color: #007bff;
+            align-self: center;
+        }
+
+        .bullet-hierarchy ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .bullet-hierarchy > ul > li::before {
+            content: '🔸';
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .bullet-hierarchy > ul > ul > li::before {
+            content: '✨';
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .bullet-hierarchy > ul > ul > ul > li::before {
+            content: '📌';
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        /* Mind Map Styling */
+        .mindmap-container {
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #f0fff0;
+            border-radius: 10px;
+        }
+
+        .mindmap {
+            list-style-type: none;
+            padding: 0;
+        }
+        .mindmap ul {
+            list-style-type: none;
+            position: relative;
+            padding-left: 40px;
+        }
+        .mindmap li {
+            padding: 5px 0 5px 20px;
+            position: relative;
+        }
+        .mindmap li::before, .mindmap li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+        .mindmap li::before {
+            border-left: 2px solid #4CAF50;
+            height: 100%;
+            top: 0;
+            width: 1px;
+        }
+        .mindmap li:last-child::before {
+            height: 25px;
+        }
+        .mindmap li::after {
+            border-top: 2px solid #4CAF50;
+            height: 1px;
+            top: 25px;
+            width: 20px;
+        }
+        .mindmap-root {
+            font-family: 'Pacifico', cursive;
+            font-size: 24px;
+            color: #4CAF50;
+            text-align: center;
+        }
+        .mindmap-main-topic {
+            font-family: 'Caveat', cursive;
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF5722;
+        }
+        .mindmap-sub-topic {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #03A9F4;
+        }
+        .mindmap-detail {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            color: #673AB7;
+        }
+
+        .test-section {
+            background-color: #fde8e8;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .test-section h3 {
+            color: #721c24;
+            text-align: center;
+        }
+        .answers {
+            margin-top: 20px;
+            background-color: #e2e3e5;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .final-note {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .footer {
+            display: none; /* Hidden by default */
+        }
+        
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .container {
+                border: none;
+                box-shadow: none;
+            }
+            .no-print {
+                display: none;
+            }
+            .divider, .mindmap-container, .test-section, .final-note {
+                page-break-inside: avoid;
+            }
+            h2 {
+                page-break-before: auto;
+                page-break-after: avoid;
+            }
+            .footer {
+                display: block;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10pt;
+                color: #888;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chapter 13 - Manufacturing Industries</h1>
+
+        <h2>A. INTRODUCTION & IMPORTANCE 🏭</h2>
+        <h3>What is an Industry?</h3>
+        <ul class="main-text">
+            <li>The process where natural resources are transformed into usable goods using human intellect, cultural, and economic capacity.</li>
+        </ul>
+        <h3>Importance of Industries</h3>
+        <ul class="main-text">
+            <li>The backbone of a nation's economic development and prosperity.</li>
+            <li>Industrially developed nations (USA, Russia, Japan) have strong economies.</li>
+            <li>They enable a country to harness its natural resources effectively, adding value instead of selling them cheap.</li>
+            <li>In India, manufacturing industries contribute about 29% to the national production.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>B. HISTORY OF INDIAN INDUSTRY 📜</h2>
+        <h3>Ancient & Pre-British Era</h3>
+        <ul class="main-text">
+            <li><b>Indus Valley Civilization:</b> Traditions of making cotton textiles, clay utensils, bronze items, and beads.</li>
+            <li><b>Up to 18th Century:</b> India was a leader in shipbuilding, handicrafts, and cottage industries. High global demand for Indian cotton, muslin, and metalwork.</li>
+        </ul>
+        <h3>Impact of British Rule</h3>
+        <ul class="main-text">
+            <li>The Britishers' policy of sourcing raw materials from India and selling finished goods back at high prices led to the collapse of the Indian market.</li>
+            <li>This severely damaged the indigenous textile industry and the livelihood of Indian craftsmen.</li>
+        </ul>
+        <h3>Key Milestones in Modern Industry</h3>
+        <ul class="main-text">
+            <li><b>1853:</b> First (failed) attempt at an iron furnace.</li>
+            <li><b>1854:</b> First successful cotton textile mill established. 🚀</li>
+            <li><b>1855:</b> First jute mill established at Risra (near Kolkata).</li>
+            <li><b>1907:</b> A new era began with the founding of the Tata Iron and Steel Company (TISCO) at Jamshedpur.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>C. CLASSIFICATION OF INDUSTRIES 📊</h2>
+        <div class="flowchart">
+            <div class="flowchart-box">Basis of Classification</div>
+            <div class="flowchart-arrow">➡️</div>
+            <div class="flowchart-box">Human Labour</div>
+            <div class="flowchart-arrow">➡️</div>
+            <div class="flowchart-box">Ownership</div>
+            <div class="flowchart-arrow">➡️</div>
+            <div class="flowchart-box">Source of Raw Material</div>
+        </div>
+        <div class="bullet-hierarchy">
+        <ul>
+            <li><b>Based on Human Labour</b>
+                <ul>
+                    <li><b>Large Scale:</b> Industries providing high employment, e.g., Cotton Textile Industry.</li>
+                    <li><b>Small Scale:</b> Industries with fewer labourers under individual ownership, e.g., Sugar (khandsari) industry.</li>
+                </ul>
+            </li>
+            <li><b>Based on Ownership</b>
+                <ul>
+                    <li>Private, Public, Collaborative, and Cooperative groups.</li>
+                </ul>
+            </li>
+            <li><b>Based on Source of Raw Material</b>
+                <ul>
+                    <li><b>Agro-Based Industries:</b> Use agricultural products as raw material.</li>
+                    <li><b>Mineral-Based Industries:</b> Use minerals as raw material.</li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        
+        <div class="divider"></div>
+
+        <h2>D. AGRO-BASED INDUSTRIES 🌾</h2>
+
+        <h3>Cotton Textile Industry 👕</h3>
+        <div class="feature-box">
+            <span class="feature">Feature:</span> Largest employer in India, providing jobs to about 3.5 crore people. <br>
+            <span class="feature">Description:</span> India ranks second in the world (after China) in the export of cotton textiles. It is a key industry for both production and employment.
+        </div>
+        <div class="bullet-hierarchy">
+            <ul>
+                <li><b>Major Centres</b>
+                    <ul>
+                        <li><b>Mumbai:</b> Known as the "Cottonopolis of India".</li>
+                        <li><b>Ahmedabad:</b> Called the "Manchester of the East" or "Denim City of India".</li>
+                        <li>Other centres include Coimbatore, Kanpur, Kolkata, Indore, and Ujjain.</li>
+                    </ul>
+                </li>
+                <li><b>Challenges Faced</b>
+                    <ul>
+                        <li>Inadequate supply of high-quality cotton.</li>
+                        <li>Use of old and outdated machinery.</li>
+                        <li>Irregular electricity supply.</li>
+                        <li>Stiff competition from synthetic fibres and global markets.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3>Jute Textile Industry 👜</h3>
+        <div class="feature-box">
+            <span class="feature">Feature:</span> India is the largest producer of jute and second-largest exporter (after Bangladesh). <br>
+            <span class="feature">Description:</span> West Bengal is the dominant producer, accounting for about 80% of the country's total jute production. Most mills are located on the banks of the Hooghly river due to the need for water, cheap labour, and port facilities.
+        </div>
+
+        <h3>Silk Textile Industry 🧣</h3>
+        <div class="feature-box">
+            <span class="feature">Feature:</span> India is the second-largest producer of silk in the world (after China). <br>
+            <span class="feature">Description:</span> Produces four unique types of silk. Faces tough competition from China in the international market.
+        </div>
+        <div class="mnemonic-box">
+            <h4>Remember the 4 Types of Indian Silk! 💡</h4>
+            <p><b>M</b>y <b>E</b>lephant <b>T</b>akes <b>M</b>angoes (<b>M</b>ulberry, <b>E</b>ri, <b>T</b>asar, <b>M</b>uga)</p>
+        </div>
+
+        <h3>Other Agro-Based Industries</h3>
+        <div class="bullet-hierarchy">
+            <ul>
+                <li><b>Woollen Textile Industry:</b> Centered in Punjab, Maharashtra, and Rajasthan. Exports woollen cloth and carpets.</li>
+                <li><b>Sugar Industry:</b> Second largest agrarian industry. Factories located near sugarcane fields as cane must be processed within 24 hours. Major states are Maharashtra and UP.</li>
+                <li><b>Paper Industry:</b> Uses softwood, bamboo, and grass. Spread across states like Andhra Pradesh, Maharashtra, and West Bengal.</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <h2>E. MINERAL-BASED INDUSTRIES ⛏️</h2>
+
+        <h3>Iron and Steel Industry 🔩</h3>
+        <div class="feature-box">
+            <span class="feature">Feature:</span> Considered the "axis" or "key industry" of modern economic development. <br>
+            <span class="feature">Description:</span> Forms the base for manufacturing machines and infrastructure. India ranks 5th in the world in iron and steel production. Most major plants are managed by the Steel Authority of India Limited (SAIL).
+        </div>
+        <h4>Major Steel Plants:</h4>
+        <p>Jamshedpur (TISCO), Kulti, Durgapur, Bhilai, Rourkela, Bokaro, Salem, and a mini plant in Hajira (Gujarat).</p>
+
+        <h3>Aluminium Refining Industry ✈️</h3>
+        <div class="feature-box">
+            <span class="feature">Feature:</span> Highly electricity-intensive, consuming 40-50% of production costs. <br>
+            <span class="feature">Description:</span> Bauxite is the primary ore. The industry thrives where bauxite and cheap hydro-electricity are available. Used in cars, railways, and aircraft. Located in states like Odisha and West Bengal.
+        </div>
+        
+        <h3>Other Key Mineral-Based Industries</h3>
+        <div class="bullet-hierarchy">
+            <ul>
+                <li><b>Copper Refining:</b> Essential for the electrical industry. Domestic production is insufficient, leading to imports.</li>
+                <li><b>Chemical Industry:</b> Gujarat is a leading state. Includes organic (petrochemicals) and inorganic chemicals.</li>
+                <li><b>Cement Industry:</b> India is the 2nd largest producer. Factories are located near raw material sources (limestone, coal) due to weight.</li>
+                <li><b>Plastic Industry:</b> Known as the 'Sunrise Industry' due to its growing demand and versatility.</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <h2>F. TRANSPORT & ELECTRONIC INDUSTRIES 🚆📱</h2>
+        
+        <h3>Transport Equipment Industry</h3>
+        <div class="bullet-hierarchy">
+            <ul>
+                <li><b>Railways:</b> Produces its own engines (diesel, electric) and coaches. Heritage steam engines run for tourism.</li>
+                <li><b>Road Vehicles:</b> India is 5th in commercial vehicle production. Exports vehicles and spare parts.</li>
+                <li><b>Ship Building:</b> Major public sector shipyards at Vishakhapatnam, Kochi, Mumbai.</li>
+                <li><b>Air Craft:</b> Helicopter production units exist, but passenger aircraft manufacturing has not yet started.</li>
+            </ul>
+        </div>
+        
+        <h3>Electronic Industry</h3>
+        <div class="feature-box">
+            <span class="feature">Feature:</span> Bengaluru is the capital, known as the "Silicon Valley of India". <br>
+            <span class="feature">Description:</span> Started in 1905 with radio/telephone manufacturing. Bharat Electronics Limited (BEL) was a major milestone. The industry's future is considered very optimistic.
+        </div>
+
+        <div class="divider"></div>
+
+        <h2>G. INDUSTRIAL POLLUTION & REMEDIES 🌍</h2>
+        <h3>Environmental Degradation</h3>
+        <ul class="main-text">
+            <li>Industries cause four main types of pollution: air (harmful gases), water (effluents), land, and noise.</li>
+            <li>This degradation reduces the quality of the environment.</li>
+        </ul>
+        <h3>Remedies to Curb Pollution</h3>
+        <div class="info-box">
+            <h4>💡 Key Strategies for a Greener Industry 💡</h4>
+            <p><b>PLAN</b> industrial development properly. <br> <b>SELECT</b> high-quality equipment and cleaner fuels. <br> <b>FILTER</b> air pollutants using scrubbers and precipitators. <br> <b>TREAT</b> industrial wastewater before releasing it into rivers. </p>
+        </div>
+
+        <div class="divider"></div>
+        
+        <h2>H. QUICK RECAP: ONE-MARK FACTS 🎯</h2>
+        <ul class="main-text">
+            <li>Contribution of manufacturing to national production: ~29%.</li>
+            <li>First successful cotton mill: 1854.</li>
+            <li>"Cottonopolis of India": Mumbai.</li>
+            <li>"Manchester of the East": Ahmedabad.</li>
+            <li>India's rank in jute production: 1st.</li>
+            <li>India's rank in silk production: 2nd.</li>
+            <li>India's rank in steel production: 5th.</li>
+            <li>Key ore for Aluminium: Bauxite.</li>
+            "Sunrise Industry": Plastic Industry.
+            <li>India's rank in cement production: 2nd.</li>
+            <li>"Silicon Valley of India": Bengaluru.</li>
+            <li>Most iron & steel plants are managed by: SAIL (Steel Authority of India Limited).</li>
+            <li>First fertilizer factory: Ranipat, Tamil Nadu (1906).</li>
+        </ul>
+
+        <div class="final-note">
+            <p><strong>Note:</strong> This summary is designed for quick revision and to highlight key concepts. For a thorough understanding and to score well in exams, it is highly recommended to read the complete PDF chapter provided by your institution.</p>
+        </div>
+
+        <!-- Printable Mind Map -->
+        <div class="mindmap-container">
+            <ul class="mindmap">
+                <li class="mindmap-root">
+                    Manufacturing Industries
+                    <ul>
+                        <li><span class="mindmap-main-topic">Classification</span>
+                            <ul>
+                                <li><span class="mindmap-sub-topic">By Labour</span>
+                                    <ul>
+                                        <li><span class="mindmap-detail">Small & Large Scale</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="mindmap-sub-topic">By Raw Material</span>
+                                    <ul>
+                                        <li><span class="mindmap-detail">Agro-Based</span></li>
+                                        <li><span class="mindmap-detail">Mineral-Based</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="mindmap-main-topic">Agro-Based</span>
+                            <ul>
+                                <li><span class="mindmap-sub-topic">Cotton Textile</span></li>
+                                <li><span class="mindmap-sub-topic">Jute Textile</span></li>
+                                <li><span class="mindmap-sub-topic">Silk & Woollen</span></li>
+                                <li><span class="mindmap-sub-topic">Sugar & Paper</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="mindmap-main-topic">Mineral-Based</span>
+                            <ul>
+                                <li><span class="mindmap-sub-topic">Iron & Steel</span></li>
+                                <li><span class="mindmap-sub-topic">Aluminium & Copper</span></li>
+                                <li><span class="mindmap-sub-topic">Chemical & Cement</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="mindmap-main-topic">Other Industries</span>
+                             <ul>
+                                <li><span class="mindmap-sub-topic">Transport</span></li>
+                                <li><span class="mindmap-sub-topic">Electronics</span></li>
+                            </ul>
+                        </li>
+                         <li><span class="mindmap-main-topic">Impact & Remedies</span>
+                             <ul>
+                                <li><span class="mindmap-sub-topic">Pollution</span></li>
+                                <li><span class="mindmap-sub-topic">Solutions</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Test Questions -->
+        <div class="test-section">
+            <h3>Test Your Knowledge! 🧠</h3>
+            <ol>
+                <li>Which city is known as the "Cottonopolis of India"?</li>
+                <li>India holds which rank in the world for jute production?</li>
+                <li>Which of these is NOT a type of silk produced in India: Mulberry, Eri, Tasar, Angora?</li>
+                <li>The sugar industry is considered which type of industry based on its raw material?</li>
+                <li>What is the key raw material for the aluminium industry?</li>
+                <li>The first successful cotton textile mill in India was established in which year?</li>
+                <li>Which organization manages most of India's large-scale iron and steel plants?</li>
+                <li>Which city is called the "Silicon Valley of India"?</li>
+                <li>What percentage of production cost in the aluminium industry is incurred in electricity?</li>
+                <li>The plastic industry is also known by what popular name?</li>
+                <li>Where was the first jute mill in India established?</li>
+                <li>In which state are the maximum woollen textile mills located?</li>
+                <li>Why are sugar factories located near sugarcane growing centres?</li>
+                <li>India ranks second after which country in cement production?</li>
+                <li>What is the main reason for the concentration of jute mills along the Hooghly river?</li>
+            </ol>
+            <div class="answers">
+                <h4>Answers:</h4>
+                <ol>
+                    <li>Mumbai</li>
+                    <li>First (1st)</li>
+                    <li>Angora</li>
+                    <li>Agro-based industry</li>
+                    <li>Bauxite</li>
+                    <li>1854</li>
+                    <li>SAIL (Steel Authority of India Limited)</li>
+                    <li>Bengaluru</li>
+                    <li>40% to 50%</li>
+                    <li>'Sunrise Industry'</li>
+                    <li>Risra (near Kolkata)</li>
+                    <li>Punjab</li>
+                    <li>Because sugarcane needs to be processed within 24 hours of reaping to avoid loss of sugar content.</li>
+                    <li>China</li>
+                    <li>Availability of ample water for purification, cheap labour, and port facilities for export.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+
+</body>
+</html>
