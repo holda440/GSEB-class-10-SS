@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14: Transportation, Communication and Trade</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Roboto&family=Caveat&display=swap');
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-family: 'Arial', sans-serif;
+            color: #d9534f;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .main-topic {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff6600; /* Orange */
+            margin-top: 30px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .sub-topic {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0275d8; /* Blue */
+            margin-top: 15px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .sub-sub-topic {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5cb85c; /* Green */
+            margin-top: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .content-text {
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+            margin-left: 25px;
+        }
+        
+        .content-text li {
+            list-style-type: '○ ';
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        .feature-table {
+            margin-left: 25px;
+            margin-top: 10px;
+            border-collapse: collapse;
+            width: 95%;
+        }
+
+        .feature-table td, .feature-table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .feature-table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0275d8;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .feature-table tr:nth-child(even){background-color: #f2f2f2;}
+        .feature-table tr:hover {background-color: #ddd;}
+
+        .divider {
+            border-bottom: 2px dashed #cccccc;
+            margin: 40px 0;
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+        
+        .section-container {
+            page-break-inside: avoid;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Flowchart Styles */
+        .flowchart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        .flow-box {
+            border: 2px solid #5bc0de;
+            background-color: #eef9fd;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 10px;
+            min-width: 150px;
+        }
+        .flow-arrow {
+            font-size: 24px;
+            color: #5bc0de;
+            margin: 0 10px;
+            align-self: center;
+        }
+        .flow-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #31708f;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        /* Infographic - Pie Chart */
+        .pie-chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            gap: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            width: fit-content;
+        }
+        .pie-chart {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: conic-gradient(
+                #29a329 0% 2%,      /* Waterways 2% */
+                #ffcc00 2% 8%,      /* Airways 6% */
+                #ff6666 8% 17%,     /* Railways 9% */
+                #4d79ff 17% 100%    /* Roadways 83% */
+            );
+        }
+        .legend {
+            font-size: 14px;
+        }
+        .legend div {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+        }
+        
+        /* Mnemonic Box */
+        .mnemonic-box {
+            background-color: #fffbe6;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+
+        /* One Mark Facts & Note Section */
+        .quick-facts, .note, .test-section {
+            background-color: #f0f8ff;
+            border: 1px solid #b0e0e6;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        .quick-facts h2, .note h2, .test-section h2 {
+            color: #4682b4;
+            margin-top: 0;
+        }
+        .quick-facts ul {
+            list-style-type: '💡 ';
+            padding-left: 20px;
+        }
+
+        /* Mind Map Styles */
+        .mindmap {
+            font-family: 'Caveat', cursive;
+            padding: 20px;
+            border: 2px solid #87CEEB;
+            border-radius: 10px;
+            background: #F0F8FF;
+        }
+        .mindmap ul {
+            position: relative;
+            list-style: none;
+            padding-left: 40px;
+        }
+        .mindmap li {
+            position: relative;
+            padding: 8px 0 8px 30px;
+            font-size: 18px;
+        }
+        .mindmap li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20px;
+            border-left: 2px solid #1E90FF;
+            height: 100%;
+            width: 20px;
+        }
+        .mindmap li:last-child::before {
+            height: 20px;
+        }
+        .mindmap li::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: -20px;
+            border-top: 2px solid #1E90FF;
+            width: 30px;
+        }
+        .mindmap .node {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #fff;
+            border: 2px solid #1E90FF;
+            font-weight: bold;
+        }
+        .mindmap .central-node {
+            background: #FF6347;
+            color: #fff;
+            border-color: #FF4500;
+            font-size: 24px;
+        }
+        .mindmap .level-1 { background: #98FB98; border-color: #3CB371; font-size: 20px; }
+        .mindmap .level-2 { background: #FFD700; border-color: #FFA500; font-size: 16px; }
+        .mindmap .level-3 { background: #ADD8E6; border-color: #87CEEB; font-size: 14px; }
+        
+        /* Test Questions */
+        .test-question {
+            margin-bottom: 15px;
+        }
+        #answer-key {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+        
+        /* Print Styles */
+        .footer {
+            display: none;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .container {
+                width: 100%;
+                margin: 0;
+                padding: 1cm;
+                box-shadow: none;
+            }
+            .no-print {
+                display: none;
+            }
+            .footer {
+                display: block;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10pt;
+                color: #888;
+            }
+            .mindmap, .quick-facts, .test-section {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chapter 14 - Transportation, Communication and Trade</h1>
+
+        <div class="section-container">
+            <p class="main-topic">A. TRANSPORTATION 🚚 🚂 🚢 ✈️</p>
+            <p class="sub-topic">🔸 What is Transportation?</p>
+            <ul class="content-text">
+                <li>The movement of people and goods from one place to another is called transportation.</li>
+                <li>It plays a crucial role in economic and physical progress, linking distant places and enabling national integration, industrialization, and urbanization.</li>
+            </ul>
+
+            <p class="sub-topic">🔸 Evolution of Transportation</p>
+            <ul class="content-text">
+                <li><b>Early Man:</b> Lived a wanderer's life, carrying things himself.</li>
+                <li><b>Post-Agriculture:</b> Started a sedentary life, using animals (beasts of burden).</li>
+                <li><b>Modern Period:</b> Widespread use of auto vehicles.</li>
+            </ul>
+            
+            <p class="sub-topic">🔸 Factors Affecting Transportation</p>
+            <ul class="content-text">
+                <li><b>Physical Factors:</b> Location, climate, relief (terrain).</li>
+                <li><b>Cultural Factors:</b> Technical development, economic growth, market & capital investments, political decisions.</li>
+            </ul>
+            
+            <p class="sub-topic">🔸 India's National Transportation System Ratio</p>
+            <div class="pie-chart-container">
+                <div class="pie-chart"></div>
+                <div class="legend">
+                    <div><span class="legend-color" style="background-color: #4d79ff;"></span>Roadways - 83%</div>
+                    <div><span class="legend-color" style="background-color: #ff6666;"></span>Railways - 9%</div>
+                    <div><span class="legend-color" style="background-color: #ffcc00;"></span>Airways - 6%</div>
+                    <div><span class="legend-color" style="background-color: #29a329;"></span>Waterways - 2%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        
+        <div class="section-container">
+            <p class="sub-topic">✨ 1. Roads or Land Transportation</p>
+            <p class="content-text">Roads are the most widespread and crucial mode for connecting people, goods, and areas, offering services that are cheap, safe, and time-saving.</p>
+
+            <div class="flow-title">Classification of Indian Roadways</div>
+            <div class="flowchart">
+                <div class="flow-box">National Highways</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-box">State Highways</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-box">District Roads</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-box">Village Roads</div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-box">Border Roads</div>
+            </div>
+
+            <table class="feature-table">
+                <tr>
+                    <th>Type of Road</th>
+                    <th>Features & Description</th>
+                </tr>
+                <tr>
+                    <td><b>National Highway (NH)</b></td>
+                    <td>Connects state capitals, major cities, ports, and neighboring countries. Responsibility of the Central Government. <b>NH-44 (Srinagar to Kanyakumari)</b> is the longest.</td>
+                </tr>
+                <tr>
+                    <td><b>State Highway (SH)</b></td>
+                    <td>Connects district headquarters with state capitals and national highways. Responsibility of State Governments.</td>
+                </tr>
+                <tr>
+                    <td><b>District Roads</b></td>
+                    <td>Connects taluka headquarters and main villages with the district headquarters. Maintained by district panchayats.</td>
+                </tr>
+                 <tr>
+                    <td><b>Village (Approach) Roads</b></td>
+                    <td>Connects villages to other roads. Maintained by Gram Panchayat. The <b>Pradhan Mantri Gram Sadak Yojana</b> aims to convert these into metalled roads.</td>
+                </tr>
+                 <tr>
+                    <td><b>Border Roads</b></td>
+                    <td>Constructed and maintained by the <b>Border Road Organisation (BRO, est. 1960)</b> in remote border areas for defence and protection.</td>
+                </tr>
+                <tr>
+                    <td><b>Expressways</b></td>
+                    <td>Also called <b>Drut Gati Marg</b>. High-speed, multi-lane (4 or 6) highways with no obstructions (overbridges for crossings). Example: Ahmedabad-Vadodara Expressway. Toll tax is collected.</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="divider"></div>
+
+        <div class="section-container">
+            <p class="sub-topic">✨ 2. Railways 🚂</p>
+            <p class="sub-sub-topic">📌 Key Features</p>
+            <ul class="content-text">
+                <li>India's largest national institution, ranking <b>first in Asia</b> and <b>second in the world</b> in railway network size.</li>
+                <li>Crucial for agriculture, industry, trade, national security, and cultural unity.</li>
+                <li>First railway in India: <b>1853</b>, between Mumbai and Thane.</li>
+            </ul>
+             <p class="sub-sub-topic">📌 Railway Gauges</p>
+             <ul class="content-text">
+                 <li><b>Broad Gauge:</b> The widest, now the standard.</li>
+                 <li><b>Metre Gauge & Narrow Gauge:</b> Being converted to broad gauge to save time and money.</li>
+            </ul>
+             <p class="sub-sub-topic">📌 Important Facts</p>
+             <ul class="content-text">
+                 <li><b>Konkan Railway:</b> A marvel of engineering, built through mountainous regions with many tunnels.</li>
+                 <li><b>Vivek Express:</b> Longest railway route in India (Dibrugarh to Kanyakumari).</li>
+                 <li><b>Metro Rail:</b> Operational in major cities like Kolkata, Delhi, and Jaipur. Work started for Ahmedabad-Gandhinagar.</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+
+        <div class="section-container">
+            <p class="sub-topic">✨ 3. Waterways 🚢</p>
+             <p class="sub-sub-topic">📌 Advantages</p>
+             <ul class="content-text">
+                <li>The cheapest mode of transport as no construction or maintenance costs are incurred for the route itself.</li>
+             </ul>
+             <p class="sub-sub-topic">📌 Types of Waterways</p>
+             <ul class="content-text">
+                 <li><b>Internal Waterways:</b> Using rivers and canals within the country. More developed in Assam, West Bengal, and Bihar.</li>
+                 <li><b>Oceanic Waterways:</b> Using the sea and oceans for transport along the coast and internationally.</li>
+            </ul>
+
+            <div class="mnemonic-box">
+                <b>💡 Mnemonic to Remember National Waterways:</b><br>
+                "<b>G</b>anga <b>B</b>rought <b>W</b>ater, <b>G</b>ave <b>K</b>nowledge to <b>B</b>rahmani" <br>
+                (<b>G</b>anga, <b>B</b>rahmaputra, <b>W</b>est Coast Canal, <b>G</b>odavari-<b>K</b>rishna, <b>B</b>rahmani River)
+            </div>
+
+            <table class="feature-table">
+                <tr>
+                    <th>National Waterway</th>
+                    <th>Route & Length</th>
+                </tr>
+                <tr>
+                    <td><b>NW 1</b></td>
+                    <td>Ganga River: Haldia – Allahabad (1620 km)</td>
+                </tr>
+                <tr>
+                    <td><b>NW 2</b></td>
+                    <td>Brahmaputra River: Dhubri – Sadiya (891 km)</td>
+                </tr>
+                <tr>
+                    <td><b>NW 3</b></td>
+                    <td>West Coast Canal: Kollam – Kottapuram (250 km)</td>
+                </tr>
+                <tr>
+                    <td><b>NW 4</b></td>
+                    <td>Godavari-Krishna River: Kakinada – Puducherry (1078 km)</td>
+                </tr>
+                 <tr>
+                    <td><b>NW 5</b></td>
+                    <td>Brahmani River: Goenkhali – Talcher (588 km)</td>
+                </tr>
+            </table>
+
+            <p class="sub-sub-topic">📌 Oceanic Waterways & Ports</p>
+             <ul class="content-text">
+                 <li>India has a long coastline of about <b>7516 km</b>.</li>
+                 <li>There are <b>13 major</b> and about <b>200 minor</b> ports.</li>
+                 <li><b>Gujarat's Coastline:</b> ~1600 km. <b>Kandla</b> is its largest port. <b>Bhavnagar</b> has an automatic lock-gate system.</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section-container">
+            <p class="sub-topic">✨ 4. Airways ✈️</p>
+            <ul class="content-text">
+                <li>The <b>speediest</b> but also the <b>costliest</b> mode of transport.</li>
+                <li>Ideal for reaching distant, remote, and inaccessible areas (e.g., dense forests, mountains).</li>
+                <li>The Airport Authority of India manages 127 airports (15 international, 87 domestic, 25 civilian terminals).</li>
+                <li><b>Pavan Hans Helicopters Ltd.</b> provides services to ONGC and the government.</li>
+            </ul>
+        </div>
+        
+        <div class="divider"></div>
+        
+        <div class="section-container">
+            <p class="sub-topic">✨ 5. Other Means of Transportation</p>
+             <p class="sub-sub-topic">📌 Pipelines</p>
+             <ul class="content-text">
+                 <li>Used to transport liquids and gases like water, mineral oil, and natural gas.</li>
+                 <li>Key pipeline: Naharkatia (Assam) to Barauni (Bihar); Salaya (Gujarat) to Mathura (UP).</li>
+             </ul>
+             <p class="sub-sub-topic">📌 Ropeways</p>
+             <ul class="content-text">
+                 <li>Connect summits in mountainous regions to transport goods and passengers.</li>
+                 <li>Locations in India: Darjeeling, Kullu-Manali, Haridwar.</li>
+                 <li>Locations in Gujarat: <b>Pavagadh, Saputara, Ambaji.</b> Work has started at Girnar (Junagadh).</li>
+            </ul>
+        </div>
+        
+        <div class="page-break"></div>
+        <div class="divider"></div>
+
+        <div class="section-container">
+            <p class="main-topic">B. COMMUNICATION 📞 ✉️ 🛰️</p>
+            <p class="content-text">Communication is the arrangement to send or collect information from one place to another. It is vital for daily life, disaster relief, and national unity.</p>
+            
+            <div class="flow-title">Types of Communication Systems</div>
+            <div class="flowchart">
+                <div class="flow-box">Individual Communication</div>
+                <div class="flow-arrow">↔️</div>
+                <div class="flow-box">Mass Communication</div>
+            </div>
+
+            <table class="feature-table">
+                <tr>
+                    <th>Communication Type</th>
+                    <th>Features & Description</th>
+                </tr>
+                <tr>
+                    <td><b>Individual Communication</b></td>
+                    <td>One-to-one communication. Effective gadgets include the <b>internet, smartphones, e-mail</b>, enabling e-commerce, currency exchange, and social media connectivity.</td>
+                </tr>
+                <tr>
+                    <td><b>Mass Communication</b></td>
+                    <td>Communicating with a large audience simultaneously.
+                        <ul>
+                           <li><b>Print Media:</b> Newspapers, magazines, pamphlets.</li>
+                           <li><b>Electronic Media:</b> Akashwani (radio) and Doordarshan (television). Prasar Bharti is the autonomous body.</li>
+                        </ul>
+                    </td>
+                </tr>
+                 <tr>
+                    <td><b>Satellite Communication</b></td>
+                    <td>Artificial satellites like <b>INSAT</b> (Indian National Satellite) and <b>IRS</b> (Indian Remote Sensing Satellite) are used for weather forecasting, disaster warnings, telecasts, and research. Launched by vehicles like <b>PSLV</b> (Polar Satellite Launch Vehicle).</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="divider"></div>
+
+        <div class="section-container">
+            <p class="main-topic">C. TRADE 💹</p>
+            <p class="content-text">India's diversity in climate, resources, and industrial output necessitates trade.</p>
+            
+            <div class="flow-title">Types of Trade</div>
+            <div class="flowchart">
+                <div class="flow-box">Internal Trade</div>
+                <div class="flow-arrow">↔️</div>
+                <div class="flow-box">International Trade</div>
+            </div>
+
+            <table class="feature-table">
+                <tr>
+                    <th>Trade Type</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><b>Internal Trade</b></td>
+                    <td>Trade of commodities within a country, between different states. E.g., Punjab exports wheat to other states and imports salt from Gujarat.</td>
+                </tr>
+                <tr>
+                    <td><b>International Trade</b></td>
+                    <td>Trade between different countries of the world.
+                        <ul>
+                           <li><b>Trade Balance:</b> The difference between exports and imports.
+                                <ul>
+                                    <li><b>Positive:</b> Exports > Imports (Increases foreign exchange).</li>
+                                    <li><b>Negative:</b> Imports > Exports.</li>
+                                </ul>
+                           </li>
+                           <li><b>India's Imports:</b> Petroleum, mineral oil, machinery, pearls, gemstones.</li>
+                           <li><b>India's Exports:</b> Iron ore, engineering goods (cycles, fans), computer software, chemicals, leather goods, textiles, tea, coffee.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="note">
+            <h2>A Note to Students</h2>
+            <p>This summary provides a quick overview of the key concepts from the chapter. For a complete and thorough understanding, it is highly recommended to read the full chapter from your textbook. This will help you grasp all the details and prepare effectively for your exams. Good luck! ✨</p>
+        </div>
+        
+        <div class="quick-facts">
+            <h2>One-Mark Facts for Quick Review</h2>
+            <ul>
+                <li>The first railway in India was started in <b>1853</b> between Mumbai and Thane.</li>
+                <li>The longest National Highway in India is <b>NH-44</b>.</li>
+                <li>The <b>Border Road Organisation (BRO)</b> was established in <b>1960</b>.</li>
+                <li>India's railway network is the <b>1st largest in Asia</b> and <b>2nd largest in the world</b>.</li>
+                <li>The longest railway route in India is the <b>Vivek Express</b> (Dibrugarh-Kanyakumari).</li>
+                <li>India's coastline is approximately <b>7516 km</b> long.</li>
+                <li><b>Kandla</b> is the largest port in Gujarat.</li>
+                <li>The Airport Authority of India manages <b>127 airports</b>.</li>
+                <li>Ropeways in Gujarat are located at <b>Pavagadh, Saputara, and Ambaji</b>.</li>
+                <li><b>Prasar Bharti</b> is the autonomous body for Akashwani and Doordarshan.</li>
+                <li><b>INSAT</b> stands for Indian National Satellite.</li>
+                <li>A positive trade balance means <b>exports are greater than imports</b>.</li>
+                <li><b>Bhotia</b> people work as porters during the ascent of Everest.</li>
+                <li>The road system of India is the <b>third largest</b> in the world (after USA and China).</li>
+            </ul>
+        </div>
+        
+        <div class="mindmap">
+            <ul>
+                <li><span class="node central-node">Ch 14: Transport, Communication & Trade</span>
+                    <ul>
+                        <li><span class="node level-1">A. Transportation</span>
+                            <ul>
+                                <li><span class="node level-2">Roads</span>
+                                    <ul>
+                                        <li><span class="node level-3">NH, SH, District, Village, Border</span></li>
+                                        <li><span class="node level-3">Expressways (Drut Gati Marg)</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="node level-2">Railways</span>
+                                    <ul>
+                                        <li><span class="node level-3">1st in Asia, 2nd in World</span></li>
+                                        <li><span class="node level-3">Vivek Express, Konkan Railway</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="node level-2">Waterways</span>
+                                    <ul>
+                                        <li><span class="node level-3">Internal (5 National Waterways)</span></li>
+                                        <li><span class="node level-3">Oceanic (13 Major Ports)</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="node level-2">Airways</span>
+                                    <ul>
+                                        <li><span class="node level-3">Speediest & Costliest</span></li>
+                                        <li><span class="node level-3">Airport Authority of India</span></li>
+                                    </ul>
+                                </li>
+                                 <li><span class="node level-2">Other</span>
+                                    <ul>
+                                        <li><span class="node level-3">Pipelines & Ropeways</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="node level-1">B. Communication</span>
+                             <ul>
+                                <li><span class="node level-2">Individual</span>
+                                     <ul>
+                                        <li><span class="node level-3">Internet, Smartphones, Email</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="node level-2">Mass</span>
+                                     <ul>
+                                        <li><span class="node level-3">Print Media (Newspapers)</span></li>
+                                        <li><span class="node level-3">Electronic Media (TV, Radio)</span></li>
+                                    </ul>
+                                </li>
+                                 <li><span class="node level-2">Satellite</span>
+                                     <ul>
+                                        <li><span class="node level-3">INSAT, IRS, PSLV</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="node level-1">C. Trade</span>
+                             <ul>
+                                <li><span class="node level-2">Internal Trade</span>
+                                    <ul>
+                                        <li><span class="node level-3">Within the country</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="node level-2">International Trade</span>
+                                     <ul>
+                                        <li><span class="node level-3">Between countries</span></li>
+                                        <li><span class="node level-3">Imports, Exports, Trade Balance</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="test-section">
+            <h2>Test Your Knowledge! 📝</h2>
+            <div class="test-question">
+                <b>1.</b> What percentage of the total national transportation system do roadways form?
+            </div>
+            <div class="test-question">
+                <b>2.</b> Which National Highway is the longest in India, connecting Srinagar to Kanyakumari?
+            </div>
+            <div class="test-question">
+                <b>3.</b> The responsibility for the construction and maintenance of State Highways lies with the ________.
+            </div>
+            <div class="test-question">
+                <b>4.</b> India's first railway line was established in 1853 between which two cities?
+            </div>
+            <div class="test-question">
+                <b>5.</b> Which type of waterway is the route from Dhubri to Sadiya on the Brahmaputra River?
+            </div>
+            <div class="test-question">
+                <b>6.</b> Which port in Gujarat is known for having an automatic lock-gate system?
+            </div>
+            <div class="test-question">
+                <b>7.</b> Which organization provides helicopter services to ONGC?
+            </div>
+            <div class="test-question">
+                <b>8.</b> What are the two main divisions of the mass communication system?
+            </div>
+            <div class="test-question">
+                <b>9.</b> What does a 'negative trade balance' indicate?
+            </div>
+            <div class="test-question">
+                <b>10.</b> Which group of people work as porters during the ascent to Everest?
+            </div>
+            <div class="test-question">
+                <b>11.</b> What is the name of the scheme aimed at improving village road connectivity?
+            </div>
+            <div class="test-question">
+                <b>12.</b> Which is the cheapest mode of transportation?
+            </div>
+            <div class="test-question">
+                <b>13.</b> Name the autonomous body responsible for transmissions by Akashwani and Doordarshan.
+            </div>
+             <div class="test-question">
+                <b>14.</b> The Indian road system is the ________ largest in the world.
+            </div>
+             <div class="test-question">
+                <b>15.</b> Which of the following is NOT a location for a ropeway in Gujarat? (A) Pavagadh, (B) Saputara, (C) Girnar, (D) Vadodara
+            </div>
+
+            <div id="answer-key">
+                <h3>Answer Key</h3>
+                <p>1. 83%   |   2. National Highway No. 44 (NH-44)   |   3. State Governments   |   4. Mumbai and Thane   |   5. National Waterway 2 (NW-2)   |   6. Bhavnagar   |   7. Pavan Hans Helicopters Ltd.   |   8. Print Media and Electronic Media   |   9. Imports are greater than exports   |   10. Bhotia people   |   11. Pradhan Mantri Gram Sadak Yojana   |   12. Waterways   |   13. Prasar Bharti   |   14. Third   |   15. (D) Vadodara</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+
+</body>
+</html>
