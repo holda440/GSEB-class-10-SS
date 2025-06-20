@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 17: Poverty and Unemployment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Pacifico&family=Caveat&display=swap');
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .chapter-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+        }
+
+        .main-topic {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f0ad4e; /* Orange */
+            margin-top: 30px;
+        }
+
+        .sub-topic-1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #337ab7; /* Blue */
+            margin-left: 20px;
+        }
+
+        .sub-topic-2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            color: #5cb85c; /* Green */
+            margin-left: 40px;
+        }
+        
+        .main-text {
+            font-size: 12px;
+            margin-left: 60px;
+            line-height: 1.6;
+        }
+
+        .main-text li {
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .main-text li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: #f0ad4e;
+            font-size: 14px;
+        }
+        
+        .feature-desc-table {
+            margin-left: 40px;
+            margin-top: 15px;
+            border-collapse: collapse;
+            width: 90%;
+            page-break-inside: avoid;
+        }
+
+        .feature-desc-table th, .feature-desc-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .feature-desc-table th {
+            background-color: #f2f2f2;
+            color: #337ab7;
+            font-weight: bold;
+        }
+
+        .divider {
+            border-bottom: 2px dashed #ccc;
+            margin: 40px 0;
+        }
+        
+        .infographic, .flowchart, .mnemonic-box {
+            background-color: #f9f9f9;
+            border: 1px solid #e3e3e3;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 40px;
+            page-break-inside: avoid;
+        }
+
+        .infographic h3, .flowchart h3, .mnemonic-box h3 {
+            text-align: center;
+            color: #d9534f;
+            font-size: 14px;
+            margin-top: 0;
+        }
+        
+        .flowchart-item {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #5bc0de;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px auto;
+            width: 80%;
+        }
+
+        .flowchart-arrow {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+        
+        .mnemonic-box p {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            color: #5cb85c;
+        }
+
+        .one-mark-facts {
+            background-color: #ffffe0;
+            border: 2px solid #f0ad4e;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        .final-note {
+            background-color: #dff0d8;
+            border-left: 5px solid #5cb85c;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        
+        /* Mind Map Styling */
+        .mindmap {
+            padding: 20px;
+            page-break-before: always;
+        }
+        .mindmap ul {
+            position: relative;
+            list-style: none;
+            padding-left: 40px;
+        }
+        .mindmap ul::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ccc;
+        }
+        .mindmap li {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .mindmap li::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 10px;
+            width: 20px;
+            height: 2px;
+            background: #ccc;
+        }
+        .mindmap span {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .mindmap .level-1 { background: #d9534f; font-family: 'Arial', sans-serif; }
+        .mindmap .level-2 { background: #f0ad4e; font-family: 'Caveat', cursive; font-size: 18px; }
+        .mindmap .level-3 { background: #5cb85c; font-family: 'Pacifico', cursive; font-size: 14px; }
+        .mindmap .level-4 { background: #337ab7; font-family: 'Arial', sans-serif; font-size: 12px; }
+        
+        .test-section { page-break-before: always; }
+        .answers { margin-top: 15px; border-top: 1px solid #ccc; padding-top: 10px; }
+        .answers ol li { color: #5cb85c; font-weight: bold; }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                font-size: 10pt;
+            }
+            .container {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+            .footer {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 9pt;
+                color: #888;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            .avoid-break {
+                page-break-inside: avoid;
+            }
+        }
+        .footer { display: none; }
+        @media print { .footer { display: block; } }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="chapter-title">
+            17 - Economic Problems and Challenges: Poverty and Unemployment
+        </div>
+
+        <p class="main-topic">A. Understanding Poverty  गरीबी को समझना 🧐</p>
+        <p class="sub-topic-1">🔸 What is Poverty?</p>
+        <ul class="main-text">
+            <li>'Comprehensive Poverty' is a situation where a large number of people are deprived of basic life requirements like food, clothes, shelter, education, and health services.</li>
+            <li>People living in this condition are called 'poor'.</li>
+        </ul>
+        
+        <p class="sub-topic-1">🔸 People Living Below Poverty Line (BPL) - Features</p>
+        <table class="feature-desc-table avoid-break">
+            <thead>
+                <tr>
+                    <th>📌 Feature</th>
+                    <th>📝 Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Food Insecurity</td>
+                    <td>Unable to get two meals a day. Suffer from malnutrition.</td>
+                </tr>
+                <tr>
+                    <td>Lack of Shelter</td>
+                    <td>No permanent dwelling; forced to live in shabby slums.</td>
+                </tr>
+                <tr>
+                    <td>Low Income</td>
+                    <td>Income is less than the determined expected income.</td>
+                </tr>
+                 <tr>
+                    <td>Low Life Expectancy</td>
+                    <td>Life span is less than the National Average.</td>
+                </tr>
+                <tr>
+                    <td>Illiteracy</td>
+                    <td>Generally illiterate and lack information about government schemes.</td>
+                </tr>
+                 <tr>
+                    <td>Child Labour</td>
+                    <td>Children take up responsibility for the family instead of studying.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="sub-topic-1">🔸 The Concept of Poverty Line</p>
+        <ul class="main-text">
+            <li>First propounded by Byod Orr (Director of WHO).</li>
+            <li>It's a benchmark based on expenditure for food, clothing, education, health, and intake of calories.</li>
+            <li>This line is not static; it changes with time, location, and circumstances.</li>
+        </ul>
+
+        <p class="sub-topic-1">🔸 Types of Poverty</p>
+        <p class="sub-topic-2">▪️ Absolute Poverty</p>
+        <ul class="main-text">
+            <li>People who cannot afford basic necessities like food grains, pulses, and milk at the lowest market rates.</li>
+        </ul>
+        <p class="sub-topic-2">▪️ Relative Poverty</p>
+        <ul class="main-text">
+            <li>Income of one group is significantly lower than other groups in society. E.g., Person A with ₹10,000 income is relatively poor compared to Person B with ₹20,000. This is common in developed countries.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <p class="main-topic">B. Poverty in India 🇮🇳</p>
+        <p class="sub-topic-1">🔸 Poverty Statistics and Data</p>
+        <div class="infographic avoid-break">
+            <h3>📊 Poverty in India at a Glance</h3>
+            <ul class="main-text" style="margin-left:20px;">
+                <li><b>Planning Commission (2011-12):</b> Poverty line set at per capita monthly expenditure of ₹816 (rural) and ₹1000 (urban).</li>
+                <li><b>Poverty Rate:</b> Reduced from 29.8% (2009-10) to <b>21.9%</b> (2011-12).</li>
+                <li><b>Total Poor (2011-12):</b> 26.93 crore people (21.65 crore in rural areas, 5.28 crore in urban areas).</li>
+                <li><b>World Bank (2012):</b> International poverty line at <b>1.90 US$</b> per day.</li>
+                <li><b>State-wise Scenario:</b>
+                    <ul>
+                        <li><b>Poorest State:</b> Chhattisgarh (36.93%)</li>
+                        <li><b>Lowest Poverty:</b> Goa (5.09%)</li>
+                        <li><b>Gujarat:</b> 16.63%</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <p class="sub-topic-1">🔸 "The Poor Live in Wealthy India"</p>
+        <ul class="main-text">
+            <li>This phrase highlights the paradox that India is rich in natural resources, but a large part of its population is poor due to lack of skills, education, and defective planning, which prevents the optimal utilization of these resources for public welfare.</li>
+        </ul>
+        
+        <p class="sub-topic-1">🔸 Reasons for Poverty</p>
+        <ul class="main-text">
+            <li>🌾 Insufficient development in agriculture & irrigation.</li>
+            <li>🧑‍🏭 Lack of alternative employment apart from farming.</li>
+            <li>📚 Lack of knowledge, skills, and education in rural areas.</li>
+            <li>💸 Unproductive expenditure due to social customs and traditions.</li>
+            <li>📉 Collapse of cottage and small-scale industries after economic reforms.</li>
+            <li>📈 Population growth leading to increased labor supply and unemployment.</li>
+        </ul>
+        
+        <div class="divider"></div>
+
+        <p class="main-topic">C. Strategy for Poverty Eradication 🎯</p>
+        <div class="flowchart">
+            <h3>💡 Path to Poverty Eradication</h3>
+            <div class="flowchart-item">Step 1: Rural Development (Gramoday se Bharat Uday)</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-item">Step 2: Create Employment Opportunities</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-item">Step 3: Improve Basic Needs & Agriculture Sector</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-item">Step 4: Increase Income Flow</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-item">✨ Poverty Decreases</div>
+        </div>
+        
+        <p class="sub-topic-1">🔸 Five-Pronged Strategy</p>
+        <ul class="main-text">
+            <li><b>(1) Industrial Development:</b> Post-independence focus on heavy industries ("Gareebi Hatao") was an "optimistic bubbler" as benefits didn't trickle down.</li>
+            <li><b>(2) Taxation & PDS:</b> High taxes on luxury goods and providing essential commodities to the poor through Fair Price Shops (FPS).</li>
+            <li><b>(3) Agricultural Reforms:</b> Implemented land ceiling acts to improve conditions for farm laborers.</li>
+            <li><b>(4) Promoting Agro-based & Cottage Industries:</b> Stressed on labor-intensive industries to increase employment.</li>
+            <li><b>(5) Improving Infrastructure:</b> Focused on education, health, irrigation, and communication to curb migration to cities.</li>
+        </ul>
+
+        <p class="sub-topic-1">🔸 Poverty Alleviation Programmes (PAP)</p>
+        <p class="sub-topic-2">▪️ Main Objective: Provide direct financial benefits and employment to improve the economic condition of the poor.</p>
+        
+        <table class="feature-desc-table avoid-break">
+            <thead>
+                <tr>
+                    <th>📌 Programme Name</th>
+                    <th>📝 Key Feature & Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pradhan Mantri Krishi Sinchai Yojna (PMKSY)</td>
+                    <td><b>Irrigation for All:</b> Aims to provide water to every field using drip irrigation and check dams to save farmers from debt.</td>
+                </tr>
+                <tr>
+                    <td>Pradhan Mantri Fasal Bima Yojna (PMFBY)</td>
+                    <td><b>Crop Insurance:</b> Provides economic support to farmers against crop loss due to natural calamities.</td>
+                </tr>
+                <tr>
+                    <td>E-Nam Yojna</td>
+                    <td><b>Online Market:</b> An online platform for farmers to sell produce directly, avoiding brokers and getting better prices.</td>
+                </tr>
+                <tr>
+                    <td>Gramoday se Bharat Uday</td>
+                    <td><b>Farmer-centric Schemes:</b> Provides help for fencing, cattle shelters, and finance for mechanization to prevent losses and debt.</td>
+                </tr>
+                <tr>
+                    <td>MAA Annapurna Yojna</td>
+                    <td><b>Food Security:</b> Provides 35 kg of food grains to the absolute poor and 5 kg at subsidized rates to the middle class in Gujarat.</td>
+                </tr>
+                <tr>
+                    <td>MANREGA</td>
+                    <td><b>Guaranteed Employment:</b> Guarantees 100 days of wage employment per year to rural households for unskilled manual work.</td>
+                </tr>
+                <tr>
+                    <td>Mission Mangalam</td>
+                    <td><b>Women Empowerment:</b> Organizes women into Self-Help Groups (Sakhi Mandals) and provides skill training for self-employment.</td>
+                </tr>
+                <tr>
+                    <td>Jyoti Gramodyog Vikas Yojna</td>
+                    <td><b>Rural Self-Employment:</b> Provides economic help to unemployed youth to set up industries, linked with "Start up India".</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="divider"></div>
+
+        <p class="main-topic">D. Understanding Unemployment बेरोजगारी 🚶‍♂️</p>
+        <p class="sub-topic-1">🔸 What is Unemployment?</p>
+        <ul class="main-text">
+            <li>A person who is an adult (15-60 years), is willing and able to work at the prevalent market wage rate, but does not get a job.</li>
+        </ul>
+        
+        <div class="mnemonic-box avoid-break">
+            <h3>🧠 Mnemonic for Types of Unemployment</h3>
+            <p>S. F. S. D. I. E.</p>
+            <p>"Some Friends Should Definitely Investigate Education"</p>
+        </div>
+
+        <p class="sub-topic-1">🔸 Types of Unemployment</p>
+        <table class="feature-desc-table avoid-break">
+            <thead>
+                <tr>
+                    <th>📌 Type</th>
+                    <th>📝 Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>S</b>easonal</td>
+                    <td>Unemployment for a few months in a year, especially in agriculture due to lack of irrigation.</td>
+                </tr>
+                <tr>
+                    <td><b>F</b>rictional</td>
+                    <td>Temporary unemployment when workers change jobs or new technology is introduced.</td>
+                </tr>
+                <tr>
+                    <td><b>S</b>tructural</td>
+                    <td>Mismatch between job seekers' skills and jobs available, due to economic structural changes.</td>
+                </tr>
+                 <tr>
+                    <td><b>D</b>isguised</td>
+                    <td>More people work in a job than required. Removing some workers doesn't affect production (common in agriculture).</td>
+                </tr>
+                <tr>
+                    <td><b>I</b>ndustrial</td>
+                    <td>Unemployment due to changes in the industrial sector (e.g., recession, technological shifts).</td>
+                </tr>
+                 <tr>
+                    <td><b>E</b>ducated</td>
+                    <td>A person has a secondary education or degree but remains unemployed.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="sub-topic-1">🔸 Reasons for Unemployment</p>
+        <ul class="main-text">
+            <li>📈 High rate of population growth.</li>
+            <li>📖 Focus on theoretical knowledge over practical/technical skills.</li>
+            <li>🚜 Lack of alternative employment during the off-season in agriculture.</li>
+            <li>📉 Weak condition of cottage and small-scale industries.</li>
+            <li>💼 Lack of courage and investment to start new businesses.</li>
+        </ul>
+        
+        <div class="divider"></div>
+
+        <p class="main-topic">E. Efforts to Reduce Unemployment 🛠️</p>
+        <p class="sub-topic-1">🔸 Government Initiatives</p>
+        <ul class="main-text">
+            <li><b>High Economic Growth:</b> Aiming for 10% annual economic development.</li>
+            <li><b>Skill Development:</b> Ambitious programmes like "Make in India," "Skill India," and "Digital India" to enhance youth skills.</li>
+            <li><b>Entrepreneurship:</b> Promoting new businesses through schemes like "Start up India" with low-interest loans.</li>
+            <li><b>Rural Focus:</b> Creating employment in villages through construction, agriculture-related activities (poultry, dairy), and afforestation to reduce migration.</li>
+            <li><b>Employment Exchanges:</b> Centres that act as a bridge between the unemployed and employers, providing information and guidance. The helpline number is 1800-425-1514.</li>
+        </ul>
+        
+        <p class="sub-topic-1">🔸 World Labour Market 🌍</p>
+        <ul class="main-text">
+            <li>Refers to the migration of labor between countries for jobs, business, or education.</li>
+            <li><b>Brain Drain:</b> The migration of highly skilled and intelligent people from their home country in search of better opportunities, causing a loss of talent.</li>
+            <li>Globalization has increased the demand for professionals skilled in IT, communication, biotechnology, etc.</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div class="one-mark-facts avoid-break">
+            <h3>⭐ Quick Facts for One-Mark Questions ⭐</h3>
+            <ul>
+                <li><b>Poverty Line Concept By:</b> Byod Orr (WHO Director).</li>
+                <li><b>Poorest State in India:</b> Chhattisgarh (36.93% poverty).</li>
+                <li><b>State with Lowest Poverty:</b> Goa (5.09%).</li>
+                <li><b>Poverty Rate in India (2011-12):</b> 21.92%.</li>
+                <li><b>International Poverty Line (World Bank):</b> 1.90 US$ per day.</li>
+                <li><b>MANREGA Guarantee:</b> 100 days of employment.</li>
+                <li><b>"MAA Annapurna Yojna" State:</b> Gujarat.</li>
+                <li><b>Unemployment Age Group:</b> 15-60 years.</li>
+                <li><b>Employment Exchange Helpline:</b> 1800-425-1514.</li>
+                <li><b>Scheme for Women SHGs:</b> Mission Mangalam.</li>
+                 <li><b>Scheme for "Ideal Village":</b> Sansad Adarsh Gram Yojna.</li>
+            </ul>
+        </div>
+        
+        <div class="final-note">
+            <p><strong>Note for Students:</strong> This summary is designed for quick revision and to highlight key concepts. For a complete and thorough understanding, it is highly recommended to read the full PDF chapter. This will ensure you don't miss any nuances and are fully prepared for your exams.</p>
+        </div>
+
+        <!-- Mind Map Section -->
+        <div class="mindmap page-break">
+            <h2 style="text-align:center; color:#d9534f;">Chapter 17: Mind Map</h2>
+            <ul>
+                <li><span class="level-1">Poverty & Unemployment</span>
+                    <ul>
+                        <li><span class="level-2">Poverty ( गरीबी)</span>
+                            <ul>
+                                <li><span class="level-3">Concept</span>
+                                    <ul>
+                                        <li><span class="level-4">BPL Features</span></li>
+                                        <li><span class="level-4">Poverty Line</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="level-3">Types</span>
+                                     <ul>
+                                        <li><span class="level-4">Absolute</span></li>
+                                        <li><span class="level-4">Relative</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="level-3">Reasons</span>
+                                    <ul>
+                                        <li><span class="level-4">Low Agri Dev.</span></li>
+                                        <li><span class="level-4">Population</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="level-3">Solutions (PAPs)</span>
+                                    <ul>
+                                        <li><span class="level-4">MANREGA</span></li>
+                                        <li><span class="level-4">PMKSY</span></li>
+                                        <li><span class="level-4">MAA Annapurna</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="level-2">Unemployment (बेरोजगारी)</span>
+                            <ul>
+                                <li><span class="level-3">Meaning</span>
+                                    <ul>
+                                        <li><span class="level-4">Age 15-60</span></li>
+                                        <li><span class="level-4">Willing to work</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="level-3">Types</span>
+                                     <ul>
+                                        <li><span class="level-4">Seasonal</span></li>
+                                        <li><span class="level-4">Disguised</span></li>
+                                        <li><span class="level-4">Educated</span></li>
+                                     </ul>
+                                </li>
+                                <li><span class="level-3">Reasons</span>
+                                    <ul>
+                                        <li><span class="level-4">Lack of Skills</span></li>
+                                        <li><span class="level-4">Population</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="level-3">Solutions</span>
+                                    <ul>
+                                        <li><span class="level-4">Skill India</span></li>
+                                        <li><span class="level-4">Start up India</span></li>
+                                        <li><span class="level-4">Rural Dev.</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Test Questions Section -->
+        <div class="test-section">
+            <h2 style="text-align:center; color:#337ab7;">Test Your Knowledge! ✍️</h2>
+            <ol>
+                <li>Which state in India has the highest rate of poverty?</li>
+                <li>What was the poverty rate in India in 2011-12, in crores of people?</li>
+                <li>Which scheme was started to empower women through self-help groups?</li>
+                <li>Which state has the highest rate of unemployment mentioned in the text?</li>
+                <li>Which scheme was implemented under the Food Security Act in Gujarat to provide grains?</li>
+                <li>Which scheme encourages unemployed youth to become entrepreneurs with new ideas?</li>
+                <li>What is the term for unemployment that occurs due to a lack of irrigation facilities in certain months?</li>
+                <li>What is the full form of MANREGA?</li>
+                <li>The migration of talented and intelligent people to other countries is known as _____.</li>
+                <li>What is the helpline number for Employment Exchange Centres?</li>
+                <li>Who first propounded the concept of the poverty line?</li>
+                <li>What is the international poverty line according to the World Bank?</li>
+            </ol>
+
+            <div class="answers">
+                <h4>Answers:</h4>
+                <ol>
+                    <li>Chhattisgarh</li>
+                    <li>26.93 crores</li>
+                    <li>Mission Mangalam Yojna</li>
+                    <li>Kerala (as per the list of states with more unemployment)</li>
+                    <li>Ma Annapurna Yojna</li>
+                    <li>Start up India</li>
+                    <li>Seasonal unemployment</li>
+                    <li>Mahatma Gandhi National Rural Employment Guarantee Act</li>
+                    <li>Brain Drain</li>
+                    <li>1800-425-1514</li>
+                    <li>Byod Orr</li>
+                    <li>1.90 US $ per day</li>
+                </ol>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+</body>
+</html>
