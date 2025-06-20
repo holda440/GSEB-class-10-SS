@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9 - Forests and Wildlife Resources</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .main-topic {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f0ad4e; /* Orange */
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .sub-topic {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0275d8; /* Blue */
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .sub-sub-topic {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #5cb85c; /* Green */
+            margin-left: 20px;
+        }
+
+        .content-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .content-text ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-text li::before {
+            content: '🔹';
+            color: #0275d8;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .feature-desc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            page-break-inside: avoid;
+        }
+
+        .feature-desc-table th, .feature-desc-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .feature-desc-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .info-box {
+            background-color: #eef7ff;
+            border-left: 5px solid #0275d8;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .warning-box {
+             background-color: #fff0f0;
+            border-left: 5px solid #d9534f;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+
+        .flowchart {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px dashed #f0ad4e;
+            border-radius: 10px;
+            page-break-inside: avoid;
+        }
+
+        .flowchart-box {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #0275d8;
+            background-color: #eef7ff;
+            border-radius: 8px;
+            margin: 10px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .flowchart-connector {
+            font-size: 24px;
+            color: #f0ad4e;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        
+        .infographic-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .infographic-table th, .infographic-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .infographic-table th {
+            background-color: #5cb85c;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+
+        /* Mind Map Styling */
+        .mindmap {
+            padding: 20px;
+            border: 2px dashed #d9534f;
+            border-radius: 10px;
+            margin-top: 30px;
+            page-break-inside: avoid;
+            page-break-before: always;
+        }
+        .mindmap ul {
+            position: relative;
+            padding: 1rem 0;
+            white-space: nowrap;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .mindmap ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .mindmap li {
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 1rem .5rem 0 .5rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .mindmap li::before, .mindmap li::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            border-top: 2px solid #ccc;
+            width: 50%;
+            height: 1rem;
+        }
+        .mindmap li::after {
+            right: auto;
+            left: 50%;
+            border-left: 2px solid #ccc;
+        }
+        .mindmap li:only-child::after, .mindmap li:only-child::before {
+            display: none;
+        }
+        .mindmap li:only-child {
+            padding-top: 0;
+        }
+        .mindmap li:first-child::before, .mindmap li:last-child::after {
+            border: 0 none;
+        }
+        .mindmap li:last-child::before {
+            border-right: 2px solid #ccc;
+            border-radius: 0 5px 0 0;
+        }
+        .mindmap li:first-child::after {
+            border-radius: 5px 0 0 0;
+        }
+        .mindmap ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 2px solid #ccc;
+            width: 0;
+            height: 1rem;
+        }
+        .mindmap li span {
+            border: 2px solid #6c757d;
+            padding: .5rem 1rem;
+            display: inline-block;
+            border-radius: 5px;
+            background: #fff;
+            color: #333;
+            font-weight: bold;
+        }
+        .mindmap li.root > span {
+            background-color: #d9534f;
+            color: white;
+            border-color: #d9534f;
+        }
+        .mindmap li.primary > span {
+            background-color: #f0ad4e;
+            color: white;
+            border-color: #f0ad4e;
+        }
+        .mindmap li.secondary > span {
+            background-color: #0275d8;
+            color: white;
+            border-color: #0275d8;
+        }
+
+        .test-section {
+            margin-top: 30px;
+            page-break-before: always;
+        }
+        .test-section ol {
+            padding-left: 20px;
+        }
+        .test-section li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .answers {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+        
+        .final-note {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #fdf7e3;
+            border: 1px solid #f0ad4e;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Print Specific Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 12pt;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            .footer {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10pt;
+                color: #888;
+                display: block !important;
+            }
+            h1 { font-size: 20pt; }
+            .main-topic { font-size: 16pt; page-break-before: auto; page-break-after: avoid; }
+            .sub-topic { font-size: 14pt; }
+            .content-text, .feature-desc-table { font-size: 12pt; }
+            .info-box, .warning-box, .flowchart, .infographic-table, .mindmap {
+                page-break-inside: avoid;
+            }
+            .test-section, .mindmap {
+                page-break-before: always;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        .footer {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Chapter 9 - Forests and Wildlife Resources 🌳🐅</h1>
+
+    <div class="info-box">
+        💡 **Introduction:** Human existence and development are deeply dependent on natural resources. Forests, defined as an accumulation of trees, scrubs, or grass, are vital. This chapter explores forests and wildlife, their classification, threats, and conservation methods.
+    </div>
+
+    <hr class="separator">
+
+    <div class="main-topic" id="forest-classification">A. Classification of Forests</div>
+    
+    <div class="flowchart">
+        <div style="font-size: 16px; font-weight: bold; margin-bottom: 20px;">📊 Flowchart: Forest Classification in India</div>
+        <div>
+            <div class="flowchart-box" style="background-color: #f0ad4e; color: white;">Forests in India</div>
+        </div>
+        <div>↓</div>
+        <div>
+            <div class="flowchart-box">By Administration</div>
+            <div class="flowchart-connector">AND</div>
+            <div class="flowchart-box">By Ownership, Admin & Management</div>
+        </div>
+        <div>
+            <div style="display: inline-block; vertical-align: top; text-align: center; margin: 0 40px;">
+                ↓<br>
+                <div class="flowchart-box" style="font-size: 12px;">(1) Reserved Forests</div>
+                <div class="flowchart-box" style="font-size: 12px;">(2) Protected Forests</div>
+                <div class="flowchart-box" style="font-size: 12px;">(3) Unclassified Forests</div>
+            </div>
+            <div style="display: inline-block; vertical-align: top; text-align: center; margin: 0 40px;">
+                ↓<br>
+                <div class="flowchart-box" style="font-size: 12px;">(1) State Forest</div>
+                <div class="flowchart-box" style="font-size: 12px;">(2) Communal Forest</div>
+                <div class="flowchart-box" style="font-size: 12px;">(3) Private Forest</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sub-topic">🔸 Types of forests according to administration</div>
+    <div class="content-text">
+        <table class="feature-desc-table">
+            <tr>
+                <th>Type</th>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td rowspan="2"><b>(1) Reserved Forests</b></td>
+                <td>✨ Control</td>
+                <td>Directly under government control.</td>
+            </tr>
+            <tr>
+                <td>✨ Restrictions</td>
+                <td>Strict restrictions on lumbering, wood collection, and pasturing.</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><b>(2) Protected Forests</b></td>
+                <td>✨ Supervision</td>
+                <td>Looked after by the Administration.</td>
+            </tr>
+            <tr>
+                <td>✨ Permissions</td>
+                <td>Local people are permitted to collect wood and graze animals without harming trees.</td>
+            </tr>
+            <tr>
+                <td><b>(3) Unclassified Forests</b></td>
+                <td>✨ Status</td>
+                <td>Still not classified; no restrictions on tree felling or animal grazing.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-topic">🔸 Classification of forests according to ownership, administration and management</div>
+    <div class="content-text">
+        <table class="feature-desc-table">
+            <tr>
+                <th>Type</th>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>(1) State Forest</b></td>
+                <td>📌 Ownership</td>
+                <td>Controlled by Central or State Government. Most forests in India fall under this category.</td>
+            </tr>
+            <tr>
+                <td><b>(2) Communal (Community) Forest</b></td>
+                <td>📌 Ownership</td>
+                <td>Controlled by Local Self Government institutions (e.g., Gram Panchayat, Municipalities).</td>
+            </tr>
+            <tr>
+                <td rowspan="2"><b>(3) Private Forest</b></td>
+                <td>📌 Ownership</td>
+                <td>Owned by individuals.</td>
+            </tr>
+            <tr>
+                <td>📌 Location & Condition</td>
+                <td>Found in Odisha, Meghalaya, Punjab, etc. Often in a haphazard or barren condition.</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="separator">
+
+    <div class="main-topic" id="deforestation">B. Deforestation 🪓</div>
+    <div class="sub-topic">🔸 Meaning and Impact</div>
+    <div class="content-text">
+        <ul>
+            <li><b>Meaning:</b> Deforestation is the destruction of forests, a global problem resulting from human progress.</li>
+            <li><b>Impacts:</b>
+                <ul>
+                    <li>Increased CO₂ in the atmosphere, intensifying the greenhouse effect.</li>
+                    <li>Soil erosion and decreased farm fertility.</li>
+                    <li>Loss of habitat for countless living organisms.</li>
+                    <li>Wild animals move towards urban areas, leading to human-wildlife conflict.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="sub-topic">🔸 Remedies for Forest Conservation 🛡️</div>
+    <div class="content-text">
+        <ul>
+            <li><b>Research & Alternatives:</b> Find alternatives to wood (e.g., solar energy, natural gas) to reduce usage.</li>
+            <li><b>Afforestation:</b> Compel industries using forest raw materials to practice afforestation. Plant new trees of the same species where cutting is unavoidable.</li>
+            <li><b>Ban & Control:</b> Implement a total ban on cutting immature trees. Strictly control activities like eco-tourism to prevent damage.</li>
+            <li><b>Awareness & Education:</b> Organize widespread public awareness programs. Include forest conservation in the school and college syllabus.</li>
+            <li><b>Community Forestry:</b> Develop Social and Agro-forestry to meet fodder and firewood needs.</li>
+            <li><b>Fire Management:</b> Create a national-level force or system for dousing forest fires.</li>
+            <li><b>Pollution Control:</b> Ensure proper clearance of litter left by pilgrims and tourists in forested areas.</li>
+            <li><b>Pasture Management:</b> Demarcate and reserve specific areas for animal pasture to prevent overgrazing.</li>
+        </ul>
+    </div>
+
+    <hr class="separator">
+
+    <div class="main-topic" id="wildlife">C. Wildlife Diversity and Conservation 🐼</div>
+    
+    <div class="sub-topic">🔸 India's Rich Wildlife Diversity</div>
+    <div class="content-text">
+        <ul>
+            <li>India's diverse climate and physiography support a vast variety of insects, birds, animals, and vegetation.</li>
+            <li><b>Global Rank:</b> India stands 12th in the world in terms of bio-diversity.</li>
+            <li><b>Species Count:</b> Home to about 81,251 species of animals and birds.</li>
+            <li><b>Unique Fauna:</b> Includes animals from Asia, Europe, and Africa. Notable species are the black bear, one-horned rhino, snow leopard, Red Panda, tiger, and lion.</li>
+            <li><b>Migratory Birds:</b> Places like Keoladev National Park (Rajasthan) and Nal Sarovar (Gujarat) host migratory birds in winter.</li>
+        </ul>
+    </div>
+
+    <div class="sub-topic">🔸 Reasons for the Destruction of Wildlife</div>
+    <div class="warning-box">
+        <h4>🚨 Key Threats to Wildlife</h4>
+        <ul>
+            <li><b>Habitat Loss:</b> Human interference in grasslands and forests destroys natural habitats.</li>
+            <li><b>Hunting & Poaching:</b> Hunting for skin, bones, horns, or for hobbies and bio-medicines.</li>
+            <li><b>Over-exploitation:</b> Human greed leads to over-exploitation of forests for roads, mining, and new settlements, displacing animals.</li>
+            <li><b>Forest Fires:</b> Engulf many species and destroy eggs and young ones.</li>
+        </ul>
+    </div>
+    
+    <div class="sub-topic">🔸 Wildlife Protection Schemes 🐘</div>
+     <div class="content-text">
+        <p>India has launched several projects to protect endangered species:</p>
+        <table class="feature-desc-table">
+            <tr>
+                <th>Project</th>
+                <th>Year Started</th>
+                <th>Objective</th>
+            </tr>
+            <tr>
+                <td><b>Tiger Project 🐅</b></td>
+                <td>1971</td>
+                <td>To save tigers from extinction due to illegal hunting and deforestation. Implemented in about 44 regions.</td>
+            </tr>
+            <tr>
+                <td><b>Elephant Project 🐘</b></td>
+                <td>1992</td>
+                <td>To protect elephants, their habitats, and migratory corridors. Implemented in 26 protection zones.</td>
+            </tr>
+             <tr>
+                <td><b>Rhino Project 🦏</b></td>
+                <td>Ongoing</td>
+                <td>To protect the One-Horned Rhino, mostly found in Assam. 'Rhino Vision 2020' aimed to increase their number to 3000.</td>
+            </tr>
+             <tr>
+                <td><b>Crocodile Project 🐊</b></td>
+                <td>1970s</td>
+                <td>To save freshwater alligators from extinction.</td>
+            </tr>
+             <tr>
+                <td><b>Vulture Project 🦅</b></td>
+                <td>2004</td>
+                <td>Started due to an unusual decrease in the population of 9 sub-species of vultures.</td>
+            </tr>
+             <tr>
+                <td><b>Snow Leopard Project 🐆</b></td>
+                <td>2000</td>
+                <td>To increase knowledge and awareness among local people to protect the snow leopard found at high altitudes.</td>
+            </tr>
+        </table>
+    </div>
+    
+    <hr class="separator">
+    
+    <div class="main-topic" id="protected-areas">D. Sanctuaries, National Parks, and Bio-reserves</div>
+    <p class="content-text">These three terms refer to protected areas but have key differences in their level of protection and objectives.</p>
+    
+    <div class="infographic-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Sanctuary</th>
+                    <th>National Park</th>
+                    <th>Bio-reserve Zone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Main Focus</b></td>
+                    <td>Protection of a specific species.</td>
+                    <td>Protection of an entire ecosystem.</td>
+                    <td>Protection of physical and cultural diversity of a region.</td>
+                </tr>
+                <tr>
+                    <td><b>Human Activity</b></td>
+                    <td>Permitted within certain limits (e.g., grazing with permission).</td>
+                    <td>Complete ban on grazing and most human activities.</td>
+                    <td>External human movements are totally restricted. Local communities are often part of the system.</td>
+                </tr>
+                <tr>
+                    <td><b>Protection Level</b></td>
+                    <td>Protected.</td>
+                    <td>More protected.</td>
+                    <td>Most protected, formed as per international norms.</td>
+                </tr>
+                <tr>
+                    <td><b>Area Size</b></td>
+                    <td>Varies.</td>
+                    <td>Varies, but usually larger than a sanctuary.</td>
+                    <td>Very large, often over 5000 sq. km.</td>
+                </tr>
+                 <tr>
+                    <td><b>Examples</b></td>
+                    <td>Perriyar, Eturnagaram</td>
+                    <td>Kaziranga, Corbett, Gir</td>
+                    <td>Nilgiri, Sundarban, Rann of Kachchh</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr class="separator">
+
+    <div class="main-topic" id="quick-facts">E. One-Mark Facts for Quick Review ⚡</div>
+    <div class="info-box">
+        <ul>
+            <li>Virgin vegetation in India is found in the Himalayas, Sundervan, and Thar desert.</li>
+            <li>India is home to ~81,251 animal species and ranks 12th in global bio-diversity.</li>
+            <li>The <b>Tiger</b> is now extinct from Gujarat's forests.</li>
+            <li>The <b>Cheetah</b> is totally extinct from the forests of India.</li>
+            <li>The <b>Red Panda</b> is found in the cold forests of the eastern Himalayas.</li>
+            <li>The <b>Ganga River Dolphin</b> (Susu) is an endangered freshwater species.</li>
+            <li><b>Tiger Project</b> was started in <b>1971</b>.</li>
+            <li><b>Elephant Project</b> was started in <b>1992</b>.</li>
+            <li>The <b>Rann of Kachchh</b> in Gujarat was declared a Bio-reserve in <b>2008</b>.</li>
+            <li><b>Henotaro</b> (Indian Vulture) is found in arid regions of Gujarat.</li>
+            <li><b>Dugong</b> is an aquatic animal found along the western sea coast of India.</li>
+            <li>India has <b>18</b> Bio-protection Zones, <b>103</b> National Parks, and <b>531</b> Sanctuaries.</li>
+        </ul>
+    </div>
+    
+    <div class="final-note">
+        <p><b>Important Note:</b> This summary provides a quick overview of the key concepts for exam preparation. For a thorough understanding and to cover all details, please review the complete PDF chapter carefully.</p>
+    </div>
+    
+    <div class="mindmap">
+        <h2 style="text-align:center; font-family: Arial; color: #d9534f;">Chapter Mind Map</h2>
+        <ul>
+            <li class="root">
+                <span>Forests & Wildlife</span>
+                <ul>
+                    <li class="primary">
+                        <span>Forest Resources</span>
+                        <ul>
+                            <li class="secondary"><span>Classification</span></li>
+                            <li class="secondary"><span>Deforestation</span></li>
+                            <li class="secondary"><span>Conservation</span></li>
+                        </ul>
+                    </li>
+                    <li class="primary">
+                        <span>Wildlife Resources</span>
+                        <ul>
+                            <li class="secondary"><span>Diversity</span></li>
+                            <li class="secondary"><span>Extinction Threats</span></li>
+                            <li class="secondary"><span>Protection Schemes</span></li>
+                            <li class="secondary"><span>Protected Areas</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2 style="font-family: Arial; color: #0275d8;">Test Your Knowledge 📝</h2>
+        <ol>
+            <li>What is vegetation that can be raised naturally without the help of man called?</li>
+            <li>Which type of forest is under the direct control of the Government with restrictions on lumbering?</li>
+            <li>Forests controlled by Local Self Government institutions are known as ______ forests.</li>
+            <li>What is the primary impact of deforestation on the atmosphere?</li>
+            <li>In which year was the Elephant Project started?</li>
+            <li>Which Indian state is the primary home of the One-Horned Rhino?</li>
+            <li>The Rann of Kachchh was declared a Bio-reserve zone in which year?</li>
+            <li>Which of these areas is more protected: a Sanctuary or a National Park?</li>
+            <li>Which animal, once found throughout India, is now totally extinct from Gujarat's forests?</li>
+            <li>What is the common name for the Ganga River Dolphin mentioned in the chapter?</li>
+            <li>Where are sea turtles known to come and lay eggs along the coast?</li>
+            <li>Which project was started in 2004 due to an unusual decrease in the population of a "cleanliness worker of nature"?</li>
+            <li>Which animal is found in the cold forests of the eastern Himalayas and eats bamboo sprouts?</li>
+            <li>How many species of animals and birds are there approximately in the world, according to the text?</li>
+            <li>Which of the following is an aquatic animal hunted for its meat and fat, found along the western coast of India?</li>
+        </ol>
+
+        <div class="answers">
+            <h3 style="font-family: Arial;">Answers</h3>
+            <ol>
+                <li>Virgin vegetation</li>
+                <li>Reserved Forests</li>
+                <li>Communal (or Community) forests</li>
+                <li>Increase in the quantity of carbon dioxide</li>
+                <li>1992</li>
+                <li>Assam</li>
+                <li>2008</li>
+                <li>National Park</li>
+                <li>Tiger</li>
+                <li>Susu (or Sauns, Suis)</li>
+                <li>The sandy coasts of Odisha</li>
+                <li>Vulture Project</li>
+                <li>Red Panda</li>
+                <li>Fifteen lakh (1.5 million)</li>
+                <li>Dugong</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="footer no-print">
+    © Notes By Dr. VarisAli Holda
+</div>
+
+</body>
+</html>
