@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 21 - Social Change</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Roboto&family=Caveat&display=swap');
+
+        body {
+            background-color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            color: #D2691E; /* Chocolate */
+            text-align: center;
+            border-bottom: 3px solid #D2691E;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .main-topic {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #FF8C00; /* DarkOrange */
+            margin-top: 30px;
+            margin-bottom: 15px;
+            page-break-before: auto;
+        }
+
+        .sub-topic {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #008B8B; /* DarkCyan */
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .sub-sub-topic {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #4682B4; /* SteelBlue */
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .main-text ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .main-text li::before {
+            content: "•";
+            color: #333;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .decorative-bullet {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .decorative-bullet li {
+            margin-bottom: 10px;
+        }
+
+        .feature-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .feature-table th, .feature-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+        }
+
+        .feature-table th {
+            background-color: #008B8B;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .feature-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .separator {
+            border-bottom: 2px dashed #FFD700; /* Gold */
+            margin-top: 40px;
+            margin-bottom: 40px;
+            page-break-after: always;
+        }
+        
+        .last-separator {
+             border-bottom: 2px dashed #FFD700;
+             margin-top: 40px;
+             margin-bottom: 40px;
+        }
+
+        .info-box {
+            background-color: #FFF8E1; /* Light Yellow */
+            border-left: 5px solid #FFC107; /* Amber */
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        /* Flowchart Styling */
+        .flowchart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        .flow-box {
+            background: #E3F2FD; /* Light Blue */
+            border: 2px solid #2196F3; /* Blue */
+            padding: 10px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            width: 70%;
+            text-align: center;
+        }
+        .flow-arrow {
+            font-size: 24px;
+            color: #2196F3;
+        }
+
+        /* Mind Map Styling */
+        .mindmap {
+            font-family: 'Caveat', cursive;
+            list-style: none;
+            padding: 0;
+            position: relative;
+        }
+        .mindmap:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background: #ccc;
+        }
+        .mindmap li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 15px;
+        }
+        .mindmap li:before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            width: 20px;
+            height: 2px;
+            background: #ccc;
+        }
+        .mindmap span {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 20px;
+            color: white;
+            font-size: 18px;
+        }
+        .mindmap .central-node { background-color: #D2691E; }
+        .mindmap .main-node { background-color: #FF8C00; }
+        .mindmap .sub-node { background-color: #008B8B; }
+        .mindmap .leaf-node { background-color: #4682B4; }
+
+        /* Test Section */
+        .test-section { page-break-before: always; }
+        .question { margin-top: 15px; font-weight: bold; }
+        .answer { color: #228B22; /* ForestGreen */ margin-left: 15px; }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .container {
+                width: 100%;
+                padding: 10px;
+                box-shadow: none;
+            }
+            .separator {
+                border: none;
+                page-break-after: always;
+            }
+            h1, .main-topic, .sub-topic, .sub-sub-topic {
+                color: #000 !important; /* Print in black for clarity */
+            }
+            .info-box {
+                background-color: #f0f0f0 !important;
+                border-left: 3px solid #888;
+            }
+            .footer {
+                position: fixed;
+                bottom: 0;
+                right: 10px;
+                font-size: 9pt;
+                color: #666;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        .footer {
+            display: none;
+        }
+        @media print {
+            .footer {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>21 - Social Change</h1>
+        
+        <p class="main-topic">🔶 A. Introduction to Social Change and Law</p>
+        <p class="sub-topic">✨ Social Change: Definition</p>
+        <div class="main-text">
+            <ul>
+                <li>Social change refers to the transformation that occurs in the social structure, social institutions, composition of society, and its functions.</li>
+                <li>It's driven by factors like westernization, globalization, and urbanization, which lead to changes in social relations, culture, lifestyle, art, and more.</li>
+            </ul>
+        </div>
+        
+        <p class="sub-topic">✨ General Knowledge of Laws and Its Need</p>
+        <div class="main-text">
+            <ul>
+                <li>Low literacy and lack of awareness often lead people to violate laws unknowingly, resulting in punishment.</li>
+                <li>It's crucial for every citizen to have a basic understanding of day-to-day laws.</li>
+            </ul>
+        </div>
+        
+        <p class="sub-sub-topic">📌 Why is Legal Knowledge Necessary? ⚖️</p>
+        <div class="main-text">
+            <ul>
+                <li>To avoid committing crimes and subsequent punishments.</li>
+                <li>To get guidance against exploitation and injustice.</li>
+                <li>To enjoy constitutional rights and protect individual interests.</li>
+                <li>To increase loyalty towards society, state, and nation.</li>
+                <li>To contribute to society and perform civic duties effectively.</li>
+                <li>To lead a life of esteem and pride.</li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <p class="main-topic">🔶 B. Rights of Citizens</p>
+        
+        <p class="sub-topic">✨ Fundamental Rights of a Citizen</p>
+        <div class="info-box">
+            <b>🧠 Mnemonic to Remember Fundamental Rights:</b><br>
+            "<b>E</b>very <b>F</b>riend <b>E</b>arns <b>C</b>ultural & <b>E</b>ducational <b>R</b>ewards"
+            <br>
+            <b>E</b> - Right to <b>E</b>quality <br>
+            <b>F</b> - Right to <b>F</b>reedom <br>
+            <b>E</b> - Right against <b>E</b>xploitation <br>
+            <b>C</b> - Right to <b>C</b>ultural and <b>E</b>ducational Rights <br>
+            <b>R</b> - Right to Constitutional <b>R</b>emedies
+        </div>
+        <div class="main-text">
+            <ul>
+                <li>The Indian Constitution guarantees six fundamental rights to all citizens without discrimination.</li>
+                <li>The <b>Right to Constitutional Remedies</b> is called the "Soul of the Constitution" as it allows citizens to seek justice from the High Court or Supreme Court if their rights are violated.</li>
+            </ul>
+        </div>
+        
+        <p class="sub-topic">✨ Rights of a Child 👶</p>
+        <div class="main-text">
+            <ul>
+                <li>The UN proclaimed the rights of children in its 1992 Charter, which are also reflected in our Constitution.</li>
+            </ul>
+        </div>
+        <table class="feature-table">
+            <thead>
+                <tr><th>Feature (Child's Right)</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Right to Live without Discrimination</td><td>Every child has the right to live without discrimination based on caste, colour, language, or nationality.</td></tr>
+                <tr><td>Right to Proper Upbringing</td><td>A child has the right to be brought up by parents and cannot be separated without a solid reason.</td></tr>
+                <tr><td>Right to Education</td><td>A legal right to get an education to develop their personality.</td></tr>
+                <tr><td>Right to a Healthy Life</td><td>Includes the right to play, entertainment, and a cheerful life.</td></tr>
+                <tr><td>Right to Protection</td><td>Protection against physical or mental torture, narcotic drugs, and exploitation.</td></tr>
+                <tr><td>Right to Development</td><td>The right to security and a proper standard of living for physical, mental, moral, and social development.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="separator"></div>
+        
+        <p class="main-topic">🔶 C. Social Issues and Protection Measures</p>
+        
+        <p class="sub-topic">✨ Child Labour and Protection Against Exploitation</p>
+        <div class="main-text">
+            <ul>
+                <li><b>Child Abuse:</b> Any deliberate or accidental act that injures a child, including physical punishment, threatening, abusive language, or sexual harassment.</li>
+                <li><b>Child Labour:</b> A global problem involving labourers below 14 years of age. India has the highest number of child labourers. They are found in hotels, factories, construction, agriculture, and as domestic help.</li>
+            </ul>
+        </div>
+        
+        <p class="sub-sub-topic">📌 Reasons for Child Labour</p>
+        <table class="feature-table">
+            <thead>
+                <tr><th>Reason for Supply (Why children work)</th><th>Reason for Demand (Why employers hire)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Poverty, illiteracy among parents, large families.</td><td>Cheapest factor of production; less wages.</td></tr>
+                <tr><td>Unemployment of adults in the family.</td><td>Unorganized, so they cannot protest or raise their voice.</td></tr>
+                <tr><td>Children who are orphans, destitute, or have run away from home.</td><td>Can be forced to work long hours under hazardous conditions.</td></tr>
+                <tr><td>Lack of educational facilities in rural areas.</td><td>Easily available.</td></tr>
+            </tbody>
+        </table>
+        
+        <p class="sub-topic">✨ Protection for the Elderly and Helpless 👴👵</p>
+        <div class="main-text">
+            <ul>
+                <li>The average life span in India has increased, leading to a larger elderly population and associated social/physical problems.</li>
+                <li>Due to western culture and nuclear families, many elderly face neglect and are forced into Old Age Homes.</li>
+            </ul>
+        </div>
+        <p class="sub-sub-topic">📌 Key Initiatives and Laws</p>
+        <div class="main-text">
+            <ul>
+                <li><b>UN Initiatives:</b> Declared 1999 as "International Elderly Year" and 1st October as "World Elderly People Day".</li>
+                <li><b>Government Schemes:</b> "National Policy for the senior citizens" (1999), pension schemes (Indira Gandhi National Senior Citizen Pension Scheme), higher interest on deposits, travel concessions.</li>
+                <li><b>Legal Protection:</b> "Parents and Senior Citizens Care and Welfare related law, 2007" protects them from domestic violence and abuse, and ensures they can get maintenance from their children.</li>
+            </ul>
+        </div>
+
+        <p class="sub-topic">✨ Anti-social Activities and Corruption</p>
+        <div class="main-text">
+            <ul>
+                <li><b>Anti-social Activity:</b> Any individual or group behaviour against the laws of society.</li>
+                <li><b>Corruption:</b> The misuse of a public position for personal benefits. Both the giver and the taker are guilty. It leads to degradation of moral values, black money, and loss of trust in the system.</li>
+            </ul>
+        </div>
+        <p class="sub-sub-topic">📌 Steps to Curb Corruption</p>
+        <div class="main-text">
+            <ul>
+                <li><b>Central Anti-bribery Bureau (1964):</b> Investigates allegations against government officials.</li>
+                <li><b>Anti Corruption Act, 1988:</b> Aims to provide clean public life.</li>
+                <li><b>Other Acts:</b> Right to Information Act (2005), Black Money Act (2005), FEMA, Money Laundering Act.</li>
+                <li><b>Institutions:</b> Appointment of Lokpal and Lokayukt.</li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <p class="main-topic">🔶 D. Key Legislations for Social Reform</p>
+        
+        <p class="sub-topic">✨ Right to Information (RTI) Act, 2005</p>
+        <div class="main-text">
+            <ul>
+                <li>Enacted on 15th June 2005 to promote transparency and accountability in administration.</li>
+                <li>Any citizen can request information about government departments, schemes, or pending work by paying a nominal fee (Rs. 20). BPL families are exempt.</li>
+            </ul>
+        </div>
+        <p class="sub-sub-topic">📌 The RTI Process Flowchart</p>
+        <div class="flowchart">
+            <div class="flow-box">Applicant files an application with a fee to the APIO.</div>
+            <div class="flow-arrow">⬇️</div>
+            <div class="flow-box">APIO must provide information within 30 days.</div>
+            <div class="flow-arrow">⬇️ (If info is denied or unsatisfactory)</div>
+            <div class="flow-box">First Appeal to the Public Information Officer (PIO) within 30 days.</div>
+            <div class="flow-arrow">⬇️ (If still no resolution)</div>
+            <div class="flow-box">Second Appeal to the State's Chief Information Officer within 90 days.</div>
+        </div>
+
+        <p class="sub-topic">✨ Right to Free and Compulsory Education (RTE) Act, 2009 📚</p>
+        <div class="main-text">
+            <ul>
+                <li>Based on the 86th Constitutional Amendment, it makes primary education (6-14 years) a fundamental right.</li>
+            </ul>
+        </div>
+        <table class="feature-table">
+            <thead>
+                <tr><th>Feature</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Admission</td><td>Guaranteed admission in a local school for every child (6-14 years). No birth certificate needed if other proof is available.</td></tr>
+                <tr><td>Forbidden Practices</td><td>No capitation fees, no admission tests/interviews for children or parents.</td></tr>
+                <tr><td>Reservation</td><td>Compulsory 25% admission for children from weaker sections (BPL) in private primary schools (Std 1).</td></tr>
+                <tr><td>Teacher Norms</td><td>Teachers are not allowed to take private tuitions. Under-qualified teachers must gain qualifications within 5 years.</td></tr>
+                <tr><td>No Expulsion</td><td>A child cannot be terminated from school until primary education is complete.</td></tr>
+            </tbody>
+        </table>
+        
+        <p class="sub-topic">✨ National Food Security Act (NFSA), 2013 🍚</p>
+        <div class="main-text">
+            <ul>
+                <li>Aims to provide nutritious food to every person to lead a healthy life.</li>
+            </ul>
+        </div>
+        <table class="feature-table">
+            <thead>
+                <tr><th>Feature</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>"Maa Annapurna Yojna"</td><td>Provides subsidized grain to needy families. Antyodaya families get 35kg of grains free of cost.</td></tr>
+                <tr><td>Subsidized Rates</td><td>Beneficiaries can buy Wheat at ₹2/kg, Rice at ₹3/kg, and Coarse grain at ₹1/kg.</td></tr>
+                <tr><td>Maternity Benefit</td><td>Pregnant women and feeding mothers receive nutritious food and a cash help of ₹6000.</td></tr>
+                <tr><td>Transparency</td><td>PDS is strengthened with bio-metric identity, bar codes, etc. Beneficiary lists are publicly displayed.</td></tr>
+            </tbody>
+        </table>
+        
+        <p class="sub-topic">✨ The Rights of Persons with Disabilities Act, 2016 ♿</p>
+        <div class="main-text">
+            <ul>
+                <li>Published to ensure equal opportunity, dignity, and respect for differently-abled persons.</li>
+                <li>It classifies disabilities into 21 types and provides for their education, skill development, and inclusion.</li>
+            </ul>
+        </div>
+        <table class="feature-table">
+            <thead>
+                <tr><th>Feature</th><th>Description</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Education</td><td>Free education and specific equipment for every child with a benchmark disability up to 18 years.</td></tr>
+                <tr><td>Special Facilities</td><td>In exams: writer facility, extra 30 mins, 20% passing marks, exemption from certain questions (for blind), Braille papers.</td></tr>
+                <tr><td>Reservation</td><td>4% seat reservation in government and private employment; 5% in higher educational institutions.</td></tr>
+                <tr><td>Accessibility</td><td>Ramps in public buildings, sign boards in Braille, accessible libraries, transport for polling booths.</td></tr>
+                <tr><td>Support</td><td>Provision of supportive equipment like Abacus, Crutches, Wheelchairs, Hearing aids, etc.</td></tr>
+                <tr><td>Awareness</td><td>Celebration of 3rd December as 'World Disabled Day'.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="last-separator"></div>
+
+        <p class="main-topic" style="page-break-before: always;">🔶 E. Quick Review Section</p>
+        <p class="sub-topic">✨ One-Mark Facts for Exams</p>
+        <div class="info-box">
+            <ul>
+                <li>The Right to Constitutional Remedies is called the <b>"Soul of the Constitution"</b>.</li>
+                <li>The UN proclaimed the rights of children in its Charter in <b>1992</b>.</li>
+                <li>Labourers below <b>14 years</b> of age are considered child labourers.</li>
+                <li>The UN announced <b>1999</b> as the "International Elderly Year".</li>
+                <li>"World Elderly People Day" is celebrated on <b>1st October</b> every year.</li>
+                <li>The Central Anti-bribery Bureau was established in <b>1964</b>.</li>
+                <li>The Right to Information (RTI) Act was enacted in <b>2005</b>.</li>
+                <li>The Right to Education (RTE) Act was implemented in <b>2009</b>.</li>
+                <li>The National Food Security Act (NFSA) was implemented on <b>5th July, 2013</b>.</li>
+                <li>The Rights of Persons with Disabilities Act (2016) classifies disabilities into <b>21 types</b>.</li>
+                <li>'World Disabled Day' is celebrated on <b>3rd December</b>.</li>
+                <li>Under RTE, private schools must reserve <b>25%</b> of seats for children from weaker sections.</li>
+                <li>Under the Disabilities Act, <b>4%</b> of jobs and <b>5%</b> of seats in higher education are reserved for the disabled.</li>
+            </ul>
+        </div>
+        
+        <div class="info-box" style="background-color: #fce4ec; border-left-color: #e91e63;">
+            <h3 style="color: #c2185b;">A Note to the Student</h3>
+            <p>This summary is designed for quick revision and to highlight the key concepts of the chapter. To gain a thorough understanding and for comprehensive exam preparation, it is highly recommended to read the full chapter from your textbook/PDF. Best of luck! 📖✨</p>
+        </div>
+
+        <div class="separator"></div>
+        
+        <p class="main-topic">🔶 F. Chapter Mind Map</p>
+        <div class="mindmap-container" style="page-break-before: always;">
+            <ul class="mindmap">
+                <li><span class="central-node">Social Change (Ch. 21)</span>
+                    <ul>
+                        <li><span class="main-node">Rights of Citizens</span>
+                            <ul>
+                                <li><span class="sub-node">Fundamental Rights (6)</span></li>
+                                <li><span class="sub-node">Rights of the Child</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="main-node">Social Issues & Protection</span>
+                            <ul>
+                                <li><span class="sub-node">Child Labour</span>
+                                    <ul>
+                                        <li><span class="leaf-node">Causes & Remedies</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="sub-node">Protection of Elderly</span>
+                                    <ul>
+                                        <li><span class="leaf-node">Welfare Act, 2007</span></li>
+                                    </ul>
+                                </li>
+                                <li><span class="sub-node">Corruption</span>
+                                    <ul>
+                                        <li><span class="leaf-node">Anti-Corruption Acts</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="main-node">Key Legislations</span>
+                            <ul>
+                                <li><span class="sub-node">RTI Act, 2005</span></li>
+                                <li><span class="sub-node">RTE Act, 2009</span></li>
+                                <li><span class="sub-node">NFSA, 2013</span></li>
+                                <li><span class="sub-node">Disabilities Act, 2016</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="main-node">Differently Abled (Divyang)</span>
+                             <ul>
+                                <li><span class="sub-node">21 Types of Disabilities</span></li>
+                                <li><span class="sub-node">Educational Facilities</span></li>
+                                <li><span class="sub-node">Reservations & Schemes</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="test-section">
+            <p class="main-topic">🔶 G. Test Your Knowledge</p>
+            <p class="sub-topic">Answer the following questions to check your understanding.</p>
+            
+            <div class="question">1. Which Fundamental Right is known as the "Soul of the Constitution"?</div>
+            <div class="question">2. On which date is "World Elderly People Day" celebrated?</div>
+            <div class="question">3. What is the minimum percentage of seats reserved for children from weaker sections in private schools under the RTE Act?</div>
+            <div class="question">4. The Rights of Persons with Disabilities Act, 2016, classifies how many types of disabilities?</div>
+            <div class="question">5. Under the National Food Security Act, 2013, what is the subsidized price for rice per kg?</div>
+            <div class="question">6. What is the time limit for an APIO to provide information under the RTI Act, 2005?</div>
+            <div class="question">7. The "Parents and Senior Citizens Care and Welfare" law was implemented in which year?</div>
+            <div class="question">8. "World Disabled Day" is celebrated on which date?</div>
+            <div class="question">9. Which organization's report states that India has the highest number of child labourers?</div>
+            <div class="question">10. What is the age group for which free and compulsory education is a right under the RTE Act?</div>
+            <div class="question">11. What financial assistance is provided to mothers under the National Food Security Act?</div>
+            <div class="question">12. What percentage of jobs are reserved for the differently abled under the 2016 Act?</div>
+            <div class="question">13. In which year was the "International Elderly Year" announced by the UN?</div>
+            <div class="question">14. What is the passing percentage for differently-abled students in Gujarat Board exams?</div>
+            <div class="question">15. The Central Anti-bribery Bureau was established in which year?</div>
+            
+            <p class="sub-topic" style="margin-top: 30px;">✨ Answers</p>
+            <div class="answer">1. Right to Constitutional Remedies.</div>
+            <div class="answer">2. 1st October.</div>
+            <div class="answer">3. 25%.</div>
+            <div class="answer">4. 21 types.</div>
+            <div class="answer">5. ₹ 3 per Kg.</div>
+            <div class="answer">6. 30 days.</div>
+            <div class="answer">7. 2007.</div>
+            <div class="answer">8. 3rd December.</div>
+            <div class="answer">9. UNICEF.</div>
+            <div class="answer">10. 6 to 14 years.</div>
+            <div class="answer">11. ₹ 6000.</div>
+            <div class="answer">12. 4%.</div>
+            <div class="answer">13. 1999.</div>
+            <div class="answer">14. 20%.</div>
+            <div class="answer">15. 1964.</div>
+        </div>
+
+    </div>
+    <div class="footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+</body>
+</html>
