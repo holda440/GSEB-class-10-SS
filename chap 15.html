@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 15: Economic Development Summary</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Pacifico&family=Caveat&display=swap');
+
+        body {
+            background-color: #FFFFFF;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 4px solid #d9534f;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .main-topic-heading {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: #f0ad4e; /* Main point orange */
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #fff8e1;
+            border-left: 5px solid #f0ad4e;
+        }
+
+        .sub-topic-heading {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #337ab7; /* Contrasting blue */
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .sub-sub-topic-heading {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #5e42a6; /* Contrasting purple */
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+
+        p, li {
+            font-size: 16px;
+        }
+
+        .main-text {
+            padding-left: 20px;
+        }
+        
+        .main-text li {
+            margin-bottom: 8px;
+        }
+
+        .main-text .bullet::before {
+            content: '🔹'; /* Round shape point mark */
+            margin-right: 8px;
+            color: #0275d8;
+        }
+        
+        .topic-separator {
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(240, 173, 78, 0.75), rgba(0, 0, 0, 0));
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        /* Hierarchical Bullet Points */
+        ul.level1, ul.level2, ul.level3 {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        ul.level1 > li::before {
+            content: '◆ ';
+            color: #f0ad4e; /* Orange */
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        ul.level2 > li::before {
+            content: '✨ ';
+            color: #337ab7; /* Blue */
+            margin-right: 5px;
+        }
+        
+        ul.level3 > li::before {
+            content: '📌 ';
+            color: #5e42a6; /* Purple */
+            margin-right: 5px;
+        }
+
+        /* Infographics & Flowcharts */
+        .infographic, .flowchart {
+            border: 2px dashed #f0ad4e;
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #fcf8e3;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .infographic-title, .flowchart-title {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #c9302c;
+            margin-bottom: 10px;
+        }
+        
+        .flowchart-box {
+            background-color: #d9edf7;
+            border: 1px solid #bce8f1;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 5px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            max-width: 80%;
+        }
+
+        .flowchart-arrow {
+            font-size: 24px;
+            color: #f0ad4e;
+            font-weight: bold;
+        }
+
+        .feature-description-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature-box {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-left: 5px solid #337ab7;
+            padding: 15px;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .feature-box-title {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            color: #337ab7;
+        }
+
+        .mnemonic-box {
+            background-color: #e7f4e7;
+            border: 2px solid #5cb85c;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .mnemonic-title {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            color: #4cae4c;
+        }
+
+        .note-box {
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            color: #a94442;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+
+        /* Mind Map */
+        .mindmap-container {
+            border: 2px solid #5e42a6;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: #f4f2fa;
+            page-break-before: always;
+        }
+
+        .mindmap-title {
+            text-align: center;
+            font-family: 'Caveat', cursive;
+            font-size: 32px;
+            color: #5e42a6;
+        }
+
+        .mindmap {
+            font-family: 'Caveat', cursive;
+            padding-left: 20px;
+        }
+        .mindmap ul {
+            list-style-type: none;
+            position: relative;
+            padding-left: 20px;
+        }
+        .mindmap li {
+            padding: 5px 0;
+            position: relative;
+        }
+        .mindmap li::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -20px;
+            border-left: 2px solid #888;
+            border-bottom: 2px solid #888;
+            width: 20px;
+            height: 25px;
+        }
+        .mindmap li:last-child::before {
+            border-left: 2px solid #888;
+            height: 15px;
+        }
+        .mindmap > ul > li::before {
+            border: none;
+        }
+        .mindmap .level-1 { font-size: 24px; font-weight: bold; color: #d9534f; }
+        .mindmap .level-2 { font-size: 20px; color: #f0ad4e; }
+        .mindmap .level-3 { font-size: 18px; color: #337ab7; }
+        .mindmap .level-4 { font-size: 16px; color: #5cb85c; }
+        
+        /* Test Section */
+        .test-section {
+             margin-top: 30px;
+             page-break-before: always;
+             background-color: #f0f8ff;
+             padding: 20px;
+             border: 1px solid #b0e0e6;
+             border-radius: 8px;
+        }
+        .test-title {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: #0275d8;
+            text-align: center;
+        }
+        .test-questions ol {
+            padding-left: 30px;
+        }
+        .answer-key {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px dashed #0275d8;
+            border-radius: 5px;
+        }
+        
+        /* Print-specific Styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border: none;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            .print-footer {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 10pt;
+                color: #666;
+                text-align: right;
+            }
+            .note-box, .test-section {
+                border: 1px solid #ccc;
+            }
+            .mindmap-container, .test-section {
+                page-break-before: always;
+            }
+            .feature-box, .infographic, .flowchart, .mnemonic-box {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media screen {
+            .print-footer {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>15 - Economic Development</h1>
+
+    <h2 class="main-topic-heading">A. Understanding Economic Development 📈</h2>
+
+    <h3 class="sub-topic-heading">Meaning of Economic Development</h3>
+    <ul class="level1 main-text">
+        <li>
+            Economic Development is a multi-faceted process of social change, not just about money. It has three main goals:
+            <ul class="level2">
+                <li>A constant increase in the **National Income** of a country.</li>
+                <li>An increase in the **Per Capita Income** of a country.</li>
+                <li>An overall **Improvement in the Living Standard** of the people.</li>
+            </ul>
+        </li>
+        <li>
+            Key Terms:
+            <ul class="level2 main-text">
+                <li><span class="bullet"></span><strong>National Income:</strong> The total income of a country (also referred to as GDP).</li>
+                <li><span class="bullet"></span><strong>Per Capita Income:</strong> Calculated by dividing the National Income by the Total Population. It represents the average income per person.</li>
+                <li><span class="bullet"></span><strong>Living Standard:</strong> Includes access to essential facilities like food, clothing, shelter, education, health services, and transportation.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="infographic">
+        <p class="infographic-title">📊 India's Economic Snapshot</p>
+        <p>India's National Income (GDP) shows significant growth, indicating economic development:</p>
+        <p style="font-size: 18px; font-weight: bold;">
+            ₹ 87,36,039 crores (2011-12) <span style="color: green; font-size: 22px;">➔</span> ₹ 1,35,67,192 crores (2015-16)
+        </p>
+    </div>
+
+    <h3 class="sub-topic-heading">Difference between Economic Progress & Economic Development</h3>
+    <div class="flowchart">
+        <p class="flowchart-title">Development vs. Progress: What's the Difference?</p>
+        <div class="flowchart-box" style="background-color: #dff0d8; border-color: #d6e9c6;">
+            <strong>Economic Development</strong><br> (Qualitative Change)
+        </div>
+        <div class="flowchart-arrow">⬇️</div>
+        <p>This is the <strong>first stage</strong> for a nation, focusing on fundamental structural changes.</p>
+        <p>e.g., Increase in farm production due to <strong>new technology</strong> like hybrid seeds.</p>
+        <p>Primarily associated with <strong>Developing Nations</strong>.</p>
+        <br>
+        <div class="flowchart-box" style="background-color: #fcf8e3; border-color: #faebcc;">
+            <strong>Economic Progress</strong><br> (Quantitative Increase)
+        </div>
+        <div class="flowchart-arrow">⬇️</div>
+        <p>This is the stage <strong>after development</strong>, focusing on increasing output.</p>
+        <p>e.g., Increase in farm production due to an <strong>increase in agricultural land</strong>.</p>
+        <p>Primarily associated with <strong>Developed Nations</strong>.</p>
+    </div>
+    
+    <hr class="topic-separator">
+
+    <h2 class="main-topic-heading">B. Features of a Developing Economy 🌍</h2>
+    <p class="main-text"><span class="bullet"></span>According to the World Bank Report (2004), countries with a per capita income of less than <strong>$735</strong> are categorized as developing economies. India exhibits these features to a greater or lesser degree.</p>
+
+    <div class="feature-description-container">
+        <div class="feature-box">
+            <p class="feature-box-title">1. Less Per Capita Income 📉</p>
+            <p>National income is low while population growth is high, leading to low average income and a lower standard of living.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">2. High Population Growth 👨‍👩‍👧‍👦</p>
+            <p>The population growth rate is high, often 2% or more, which puts a strain on resources.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">3. Dependence on Agriculture 🌾</p>
+            <p>More than 60% of the population depends on agriculture for employment, which contributes about 26% to the national income.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">4. Unequal Income Distribution 💰≠🧑</p>
+            <p>A huge gap exists between the rich and poor. The richest 20% often control 40% of the income, while the poorest 20% share only 10%.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">5. High Unemployment  jobless</p>
+            <p>The unemployment rate is high (over 3%), with types like seasonal, disguised, and industrial unemployment being common.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">6. Widespread Poverty 🏚️</p>
+            <p>A large portion of the population (often one-third) cannot meet basic needs like food, shelter, education, and health.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">7. Dual Economy 🏡 vs 🏢</p>
+            <p>A mix of two systems: backward, traditional villages with old machinery coexist with modern cities having advanced industries and lifestyles.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">8. Insufficient Infrastructure 🏗️</p>
+            <p>Crucial facilities like education, transport, communication, electricity, and health services are lacking, which hinders development.</p>
+        </div>
+        <div class="feature-box">
+            <p class="feature-box-title">9. Adverse Foreign Trade ✈️</p>
+            <p>Mainly exports low-value raw materials (agro-products, ores) and imports high-cost industrial goods and machinery, leading to foreign debt.</p>
+        </div>
+    </div>
+    
+    <hr class="topic-separator">
+
+    <h2 class="main-topic-heading">C. Structure of an Economy 🏗️🏭🧑‍💻</h2>
+    
+    <h3 class="sub-topic-heading">Economic vs. Non-Economic Activities</h3>
+    <ul class="level1 main-text">
+        <li><strong>Economic Activities:</strong> Actions involving earning or spending money for goods/services.
+            <ul class="level2">
+                <li>Examples: A farmer farming, a teacher teaching, a businessman trading.</li>
+            </ul>
+        </li>
+        <li><strong>Non-Economic Activities:</strong> Actions not aimed at obtaining income.
+            <ul class="level2">
+                <li>Examples: A mother nurturing her child, a social worker providing free services.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 class="sub-topic-heading">The Three Sectors of the Economy</h3>
+    <div class="infographic">
+        <p class="infographic-title">The Building Blocks of an Economy</p>
+        <div class="feature-description-container">
+            <div class="feature-box" style="border-color: #5cb85c;">
+                <p class="feature-box-title" style="color: #5cb85c;">(1) Primary Sector (Agriculture & Related)</p>
+                <p>Extracts raw materials from nature. Includes agriculture, cattle rearing, fishing, mining, and forestry.</p>
+            </div>
+            <div class="feature-box" style="border-color: #f0ad4e;">
+                <p class="feature-box-title" style="color: #f0ad4e;">(2) Secondary Sector (Industry)</p>
+                <p>Transforms raw materials into finished goods. Includes small to large scale industries, manufacturing, construction, electricity, and gas supply.</p>
+            </div>
+            <div class="feature-box" style="border-color: #5bc0de;">
+                <p class="feature-box-title" style="color: #5bc0de;">(3) Service Sector (Tertiary)</p>
+                <p>Provides services rather than goods. Includes trade, communication, transport, education, health, banking, insurance, and tourism.</p>
+            </div>
+        </div>
+        <p style="margin-top: 20px;"><span class="bullet"></span>In developing countries, the economy typically shifts from being dominated by the Primary sector towards the Secondary and Service sectors as development occurs.</p>
+    </div>
+    
+    <hr class="topic-separator">
+
+    <h2 class="main-topic-heading">D. The Economic Engine: Factors & Allocation ⚙️</h2>
+    
+    <h3 class="sub-topic-heading">Factors of Production</h3>
+    <p class="main-text"><span class="bullet"></span>These are the essential inputs used to produce goods and services.</p>
+    
+    <div class="mnemonic-box">
+        <p class="mnemonic-title">🧠 Remember with MNEMONIC: C.E.L.L.</p>
+        <p style="font-size: 18px; font-weight: bold;">
+            <span style="color: #d9534f;">C</span>apital | <span style="color: #f0ad4e;">E</span>ntrepreneurship | <span style="color: #5cb85c;">L</span>and | <span style="color: #337ab7;">L</span>abour
+        </p>
+    </div>
+    
+    <ul class="level1 main-text">
+        <li><strong>Land:</strong> Not just soil, but all natural resources (rivers, forests, minerals). It's a natural tool for production.</li>
+        <li><strong>Labour:</strong> Mental or physical work done to earn money. It is the living factor of production (e.g., workers, doctors, teachers).</li>
+        <li><strong>Capital:</strong> Man-made instruments used in production (e.g., tools, machinery, buildings, money/investment).</li>
+        <li><strong>Entrepreneurship:</strong> The skill of combining Land, Labour, and Capital effectively to make a profit. The person who does this is an entrepreneur.</li>
+    </ul>
+
+    <h3 class="sub-topic-heading">The Problem of Allocation: Why we must choose</h3>
+    <p class="main-text"><span class="bullet"></span>Every country faces the challenge of allocating its scarce resources because of a fundamental economic problem:</p>
+    <ul class="level1 main-text">
+        <li><strong>Unlimited Wants:</strong> Human wants are endless. Fulfilling one want often leads to another.</li>
+        <li><strong>Limited Resources:</strong> The factors of production (land, labour, capital) are finite.</li>
+        <li><strong>Alternative Uses:</strong> Resources can be used in multiple ways (e.g., a piece of land can be used for farming wheat OR maize, but not both).</li>
+    </ul>
+    <p class="main-text">This forces individuals and nations to <strong>prioritize</strong> their wants and decide how to use limited resources to satisfy the most important ones first.</p>
+    
+    <hr class="topic-separator">
+
+    <h2 class="main-topic-heading">E. How are Resources Managed? Economic Systems 🗺️</h2>
+    <p class="main-text"><span class="bullet"></span>Countries adopt different systems to allocate their resources. The main types are Market, Socialist, and Mixed systems.</p>
+
+    <div class="feature-box" style="border-color: #337ab7;">
+        <h3 class="sub-sub-topic-heading" style="color:#337ab7;">(A) Market System (Capitalism / "Free Economy")</h3>
+        <ul class="level3 main-text">
+            <li><strong>Motive:</strong> Profit is the central driving force.</li>
+            <li><strong>Ownership:</strong> Resources are privately owned.</li>
+            <li><strong>Control:</strong> No government interference. The market is run by the 'invisible hand' of competition and price mechanism.</li>
+            <li><strong>Pros:</strong> Economic freedom, efficiency, innovation, high production, better quality.</li>
+            <li><strong>Cons:</strong> Neglects basic needs for luxury goods, resource wastage, consumer exploitation, income inequality, risk of monopoly.</li>
+            <li><strong>Examples:</strong> USA, Japan.</li>
+        </ul>
+    </div>
+    
+    <div class="feature-box" style="border-color: #d9534f; margin-top:20px;">
+        <h3 class="sub-sub-topic-heading" style="color:#d9534f;">(B) Socialist System</h3>
+        <ul class="level3 main-text">
+            <li><strong>Motive:</strong> Social welfare is the central goal.</li>
+            <li><strong>Ownership:</strong> All resources are owned and managed by the State.</li>
+            <li><strong>Control:</strong> All economic decisions (what to produce, how much, for whom) are made by the State.</li>
+            <li><strong>Pros:</strong> Production for societal needs, no resource wastage, income equality, consumers are not exploited.</li>
+            <li><strong>Cons:</strong> Lack of motivation and encouragement for individuals, no competition leading to stagnation, lack of individual freedom, fear of bureaucracy.</li>
+            <li><strong>Examples:</strong> Russia and China (historically).</li>
+        </ul>
+    </div>
+
+    <div class="feature-box" style="border-color: #5cb85c; margin-top:20px;">
+        <h3 class="sub-sub-topic-heading" style="color:#5cb85c;">(C) Mixed Economy ("Controlled Economic System")</h3>
+        <ul class="level3 main-text">
+            <li><strong>Motive:</strong> A blend of profit and social welfare.</li>
+            <li><strong>Ownership:</strong> Co-existence of public (State) and private sectors. They work as complements, not competitors.
+                <ul>
+                    <li>Private Sector: Agriculture, trade, small consumer industries.</li>
+                    <li>Public Sector: Heavy industries, defence, railways, electricity.</li>
+                </ul>
+            </li>
+            <li><strong>Control:</strong> The market is not completely free. The government uses controls like taxes, subsidies, and economic planning to guide the economy.</li>
+            <li><strong>Pros:</strong> Aims to include the benefits of both systems while removing their limitations.</li>
+            <li><strong>Cons:</strong> Can suffer from economic instability, lack of coordination, inconsistent policies, and slow growth.</li>
+            <li><strong>Examples:</strong> India, France, England.</li>
+        </ul>
+    </div>
+
+    <hr class="topic-separator">
+
+    <div class="mnemonic-box" style="background-color: #fcf8e3; border-color: #f0ad4e;">
+        <p class="mnemonic-title" style="color:#c09853;">💡 Quick Review: One-Mark Facts</p>
+        <ul style="list-style-type: '✔️ '; text-align: left; padding-left: 30px;">
+            <li><strong>Economic Development:</strong> Increase in National Income, Per Capita Income & Living Standards.</li>
+            <li><strong>Economic Progress:</strong> Quantitative increase, associated with developed nations.</li>
+            <li><strong>Developing Economy (2004 World Bank):</strong> Per capita income < $735.</li>
+            <li><strong>Dual Economy:</strong> Co-existence of traditional villages and modern cities.</li>
+            <li><strong>Primary Sector:</strong> Based on natural resources (e.g., farming, mining).</li>
+            <li><strong>Secondary Sector:</strong> Based on manufacturing (industry).</li>
+            <li><strong>Service Sector:</strong> Based on providing services (e.g., banking, tourism).</li>
+            <li><strong>Factors of Production:</strong> Land, Labour, Capital, Entrepreneurship.</li>
+            <li><strong>Market System is also called:</strong> Capitalist System or Free Economy.</li>
+            <li><strong>Socialist System's main motive:</strong> Social Welfare.</li>
+            <li><strong>Mixed Economy is also called:</strong> Controlled Economic System.</li>
+            <li><strong>India follows a:</strong> Mixed Economy system.</li>
+        </ul>
+    </div>
+
+    <div class="note-box">
+        <h4>A Note to the Student 📝</h4>
+        <p>This summary is a powerful tool for quick revision and understanding the core concepts of the chapter. However, for a complete and thorough preparation for your exams, it is highly recommended to read the full PDF chapter provided in your textbook. The original text contains details and nuances that are crucial for comprehensive learning.</p>
+    </div>
+
+    <!-- Mind Map Section -->
+    <div class="mindmap-container">
+        <h2 class="mindmap-title">Chapter 15: Economic Development - A Mind Map</h2>
+        <div class="mindmap">
+            <ul>
+                <li class="level-1">Economic Development
+                    <ul>
+                        <li class="level-2">Definition
+                            <ul>
+                                <li class="level-3">↑ National Income</li>
+                                <li class="level-3">↑ Per Capita Income</li>
+                                <li class="level-3">↑ Living Standards</li>
+                            </ul>
+                        </li>
+                        <li class="level-2">Features of Developing Economy
+                            <ul>
+                                <li class="level-3">Low Per Capita Income</li>
+                                <li class="level-3">High Population Growth</li>
+                                <li class="level-3">Dependence on Agriculture</li>
+                                <li class="level-3">Dual Economy & Poverty</li>
+                            </ul>
+                        </li>
+                        <li class="level-2">Structure of Economy
+                             <ul>
+                                <li class="level-3">Primary Sector (Agri)</li>
+                                <li class="level-3">Secondary Sector (Industry)</li>
+                                <li class="level-3">Service Sector (Tertiary)</li>
+                            </ul>
+                        </li>
+                        <li class="level-2">Factors of Production (CELL)
+                            <ul>
+                                <li class="level-3">Capital</li>
+                                <li class="level-3">Entrepreneurship</li>
+                                <li class="level-3">Land</li>
+                                <li class="level-3">Labour</li>
+                            </ul>
+                        </li>
+                        <li class="level-2">Economic Systems
+                            <ul>
+                                <li class="level-3">Market System (Capitalism)
+                                    <ul>
+                                        <li class="level-4">Profit Motive, Private Ownership</li>
+                                    </ul>
+                                </li>
+                                <li class="level-3">Socialist System
+                                    <ul>
+                                        <li class="level-4">Welfare Motive, State Ownership</li>
+                                    </ul>
+                                </li>
+                                <li class="level-3">Mixed Economy (India)
+                                    <ul>
+                                        <li class="level-4">Co-existence of Public & Private</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Test Section -->
+    <div class="test-section">
+        <h2 class="test-title">✍️ Test Your Knowledge!</h2>
+        <div class="test-questions">
+            <ol>
+                <li>What are the three main indicators of economic development?</li>
+                <li>What is the formula for calculating 'per capita income'?</li>
+                <li>Is economic development a qualitative or quantitative process?</li>
+                <li>According to the 2004 World Bank report, what is the per capita income threshold for a developing country?</li>
+                <li>What is a 'dual economy'?</li>
+                <li>Mining of raw metals is included in which sector of the economy?</li>
+                <li>What are the four factors of production?</li>
+                <li>Which economic system is also known as a "Free Economy"?</li>
+                <li>What is the primary motive in a socialist economic system?</li>
+                <li>Which type of economic system does India follow?</li>
+                <li>An activity done by a social worker for free is an example of what type of activity?</li>
+                <li>When agricultural output increases due to an increase in land, is it called economic progress or economic development?</li>
+                <li >What is the process of coordinating the three factors of production in a profit-making process called?</li>
+                <li>Which sector of the economy includes banking, insurance, and tourism?</li>
+                <li>What is the main demerit of the market system concerning basic needs?</li>
+            </ol>
+        </div>
+        <div class="answer-key">
+            <h3 style="text-align:center; color: #0275d8;">Answer Key</h3>
+            <ol>
+                <li>Constant increase in national income, increase in per capita income, and improvement in the living standard.</li>
+                <li>Per Capita Income = Total National Income / Total Population.</li>
+                <li>Qualitative.</li>
+                <li>Less than $735.</li>
+                <li>An economy where backward, traditional systems (like in villages) co-exist with modern, industrial systems (like in cities).</li>
+                <li>Primary sector.</li>
+                <li>Land, Labour, Capital, and Entrepreneurship.</li>
+                <li>The Market System (or Capitalist System).</li>
+                <li>Social welfare.</li>
+                <li>Mixed Economy.</li>
+                <li>Non-economic activity.</li>
+                <li>Economic progress.</li>
+                <li>Entrepreneurship.</li>
+                <li>Service sector (or Tertiary sector).</li>
+                <li>It may neglect or reduce the production of basic requirements in favor of more profitable luxury goods.</li>
+            </ol>
+        </div>
+    </div>
+
+</div>
+
+<div class="print-footer">
+    © Notes By Dr. VarisAli Holda
+</div>
+
+</body>
+</html>
