@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 10 - India: Agriculture</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            font-size: 28px;
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: orange;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #0275d8; /* Blue for sub-topics */
+        }
+        
+        h4 {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #5cb85c; /* Green for feature headings */
+        }
+
+        /* List and Bullet Styles */
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+        
+        h3 + ul > li::before {
+            content: '🔸'; /* Orange Diamond for main sub-topics */
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 14px;
+        }
+
+        h4 + ul > li::before {
+            content: '🔹'; /* Blue Circle for descriptions */
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 14px;
+        }
+        
+        .feature-list > li::before {
+            content: '✨'; /* Sparkles for feature-description */
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 14px;
+        }
+
+        .mnemonic-box {
+            background-color: #fcf8e3;
+            border-left: 5px solid #f0ad4e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .mnemonic-box li::before {
+            content: '📌'; /* Pushpin for mnemonics */
+            font-size: 16px;
+        }
+        
+        .facts-section li::before {
+             content: '💡';
+             font-size: 16px;
+        }
+
+        /* Feature-Description Format */
+        .feature-desc {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .feature-desc .feature {
+            font-weight: bold;
+            color: #d9534f;
+        }
+        
+        .separator {
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(243, 156, 18, 1), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+
+        /* Infographics and Flowcharts */
+        .flowchart-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .flowchart-box {
+            border: 2px solid;
+            padding: 15px;
+            border-radius: 10px;
+            width: 28%;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .kharif-box { border-color: #5cb85c; background-color: #e8f5e9; }
+        .rabi-box { border-color: #0275d8; background-color: #e7f3fe; }
+        .zaid-box { border-color: #f0ad4e; background-color: #fff9e6; }
+        
+        .flowchart-box h4 {
+            margin-top: 0;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        
+        .flowchart-box ul li { padding-left: 0; }
+        .flowchart-box ul li::before { content: ''; }
+
+        /* Mind Map Styles */
+        .mindmap {
+            padding: 20px;
+            margin-top: 30px;
+            border: 2px dashed #f0ad4e;
+            border-radius: 10px;
+            background-color: #fffaf0;
+        }
+        
+        .mindmap ul {
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .mindmap li {
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.8;
+            list-style: none;
+        }
+        
+        .mindmap li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-left: 1px solid #f0ad4e;
+            height: 100%;
+            width: 10px;
+        }
+        
+        .mindmap li:last-child::before {
+            height: 12px;
+        }
+        
+        .mindmap li::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 0;
+            border-top: 1px solid #f0ad4e;
+            width: 15px;
+        }
+        
+        .mindmap > ul > li::before, .mindmap > ul > li::after {
+            border: none;
+        }
+        
+        .mindmap .topic { font-family: 'Georgia', serif; font-weight: bold; color: #d9534f; }
+        .mindmap .sub-topic { font-family: 'Verdana', sans-serif; color: #0275d8; }
+        .mindmap .detail { font-family: 'Courier New', monospace; font-size: 13px; color: #333; }
+
+        /* Test Section */
+        .test-section {
+            margin-top: 30px;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .test-section ol { padding-left: 30px; }
+        .answers { margin-top: 20px; padding-top: 10px; border-top: 1px solid #ccc; }
+        .answers p { font-weight: bold; }
+        
+        /* Note and Footer */
+        .important-note {
+            background-color: #dff0d8;
+            border-left: 5px solid #5cb85c;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .footer {
+            display: none; /* Hidden by default */
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+                font-size: 12pt;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+            h1 { font-size: 24pt; }
+            h2 { font-size: 16pt; page-break-before: auto; page-break-after: avoid; }
+            h3 { font-size: 14pt; }
+            h4 { font-size: 12pt; }
+            .separator, .test-section button { display: none; }
+            section, .flowchart-container, .mnemonic-box, .important-note, .mindmap, .test-section {
+                page-break-inside: avoid;
+            }
+            .footer {
+                display: block;
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                font-size: 9pt;
+                color: #888;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chapter 10 - India: Agriculture 🌱</h1>
+
+        <section>
+            <h2>A. Introduction to Indian Agriculture</h2>
+            <h3>Importance & Status</h3>
+            <ul>
+                <li>Agriculture is a prime economic activity and the main support for the Indian economy.</li>
+                <li><strong>Workforce:</strong> About 60% of India's labour power is engaged in agriculture.</li>
+                <li><strong>National Product:</strong> Occupies about 22% of the national product.</li>
+                <li><strong>Exports:</strong> Farm products contribute about 18% to exports, earning foreign exchange.</li>
+                <li><strong>Identity:</strong> India is primarily an agrarian country.</li>
+            </ul>
+            <h3>Challenges in Indian Agriculture 😥</h3>
+            <ul>
+                <li><strong>Farmer Condition:</strong> Generally poor and uneducated.</li>
+                <li><strong>Low Production:</strong> Output is less compared to the world average.</li>
+                <li><strong>Key Reasons:</strong>
+                    <ul class="feature-list">
+                        <li>Inadequate irrigation facilities.</li>
+                        <li>Irregular and uncertain rain.</li>
+                        <li>High population pressure & large families leading to small, fragmented farms.</li>
+                        <li>Lack of interest in experimentation and modern methods.</li>
+                        <li>Low usage of chemical fertilizers and modern machinery.</li>
+                        <li>Educated class moving away from agriculture.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <hr class="separator">
+
+        <section>
+            <h2>B. Types of Farming</h2>
+            <h3>(1) Subsistence Farming</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Farming for self-consumption.</li>
+                <li><span class="feature">Description:</span> Production is just enough to maintain the farmer's family. Caused by weak economic conditions, small farm holdings, and the inability to afford costly seeds, fertilizers, and insecticides.</li>
+            </ul>
+            <h3>(2) Dry Farming</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Rain-dependent farming in areas with inadequate rainfall.</li>
+                <li><span class="feature">Description:</span> A single crop is grown using humidity accumulated in the land. Crops grown require less water.</li>
+                <li><span class="feature">Crops:</span> Jowar, millet, pulses. In Gujarat, wheat and gram are grown in humid soils post-monsoon.</li>
+            </ul>
+            <h3>(3) Wet Farming</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Irrigation-based farming in regions of heavy rain or with adequate irrigation.</li>
+                <li><span class="feature">Description:</span> More than one crop can be grown annually using irrigation if rainfall is insufficient.</li>
+                <li><span class="feature">Crops:</span> Paddy, sugarcane, cotton, wheat, vegetables.</li>
+            </ul>
+            <h3>(4) Shifting (Jhoom) Agriculture</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> "Slash and burn" agriculture.</li>
+                <li><span class="feature">Description:</span> Forests are cleared and burnt for farming. The land is used for 2-3 years until soil fertility reduces, then abandoned for a new plot. Production is low.</li>
+                <li><span class="feature">Crops:</span> Cereals or vegetables.</li>
+            </ul>
+            <h3>(5) Plantation Agriculture</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Large-scale farming of a single crop for commercial purposes.</li>
+                <li><span class="feature">Description:</span> Requires high capital investment, technical knowledge, machinery, fertilizers, and good transportation facilities. Crops are reared with great care.</li>
+                <li><span class="feature">Crops:</span> Rubber, tea, coffee, cocoa, coconut, apple, mango, grapes.</li>
+            </ul>
+            <h3>(6) Intensive Farming (Commercial Farming)</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Mechanized farming with a focus on high yield and economic returns.</li>
+                <li><span class="feature">Description:</span> Utilizes increased irrigation, chemical fertilizers, insecticides, and mechanical equipment. Per-hectare production is very high.</li>
+                <li><span class="feature">Crops:</span> Cash crops are grown more in this type.</li>
+            </ul>
+        </section>
+
+        <hr class="separator">
+
+        <section>
+            <h2>C. Modern Farming Methods</h2>
+            <h3>(1) Organic Farming 🌿</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Farming without chemical fertilizers and pesticides.</li>
+                <li><span class="feature">Description:</span> Uses natural inputs like dung, earthworm fertilizer, cow urine, and neem solvents. Products are nutritious, natural, and in high demand, offering good returns.</li>
+            </ul>
+            <h3>(2) Sustainable Farming</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Farming that maintains long-term soil fertility.</li>
+                <li><span class="feature">Description:</span> Focuses on crop rotation, judicious use of fertilizers, biotic controls for pests, and water conservation.</li>
+            </ul>
+            <h3>(3) Mixed Farming</h3>
+            <ul class="feature-list">
+                <li><span class="feature">Feature:</span> Combining crop cultivation with livestock rearing.</li>
+                <li><span class="feature">Description:</span> Activities like cattle rearing, poultry, sericulture (silk farming), and fishery are carried out alongside farming to supplement income.</li>
+            </ul>
+        </section>
+
+        <hr class="separator">
+
+        <section>
+            <h2>D. Agricultural Products of India (Crop Seasons)</h2>
+            <div class="flowchart-container">
+                <div class="flowchart-box kharif-box">
+                    <h4>Kharif (Monsoon) Crops 🌧️</h4>
+                    <ul>
+                        <li><strong>Sowing:</strong> June-July</li>
+                        <li><strong>Harvest:</strong> Oct-Nov</li>
+                        <li><strong>Crops:</strong> Paddy, Maize, Jowar, Millet, Cotton, Til, Groundnut</li>
+                    </ul>
+                </div>
+                <div class="flowchart-box rabi-box">
+                    <h4>Rabi (Winter) Crops ❄️</h4>
+                    <ul>
+                        <li><strong>Sowing:</strong> Oct-Nov</li>
+                        <li><strong>Harvest:</strong> March-April</li>
+                        <li><strong>Crops:</strong> Wheat, Gram, Barley, Mustard, Linseed</li>
+                    </ul>
+                </div>
+                <div class="flowchart-box zaid-box">
+                    <h4>Zaid (Summer) Crops ☀️</h4>
+                    <ul>
+                        <li><strong>Sowing:</strong> March</li>
+                        <li><strong>Harvest:</strong> June</li>
+                        <li><strong>Crops:</strong> Paddy, Maize, Groundnut, Watermelon, Cucumber, Musk Melon</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mnemonic-box">
+                <h3>🧠 Mnemonics to Remember Crops</h3>
+                <ul>
+                    <li><strong>Kharif (Monsoon):</strong> "Kharif needs Rain". Imagine eating **Rice (Paddy)** and **Maize** roti, wearing **Cotton** clothes during a bad rainy day.</li>
+                    <li><strong>Rabi (Winter):</strong> "Rabi in a Rajaai (Quilt)". Imagine eating warm **Wheat** rotis with **Mustard** greens (Sarson ka Saag) wrapped in a quilt.</li>
+                    <li><strong>Zaid (Summer):</strong> Think of juicy, watery summer fruits! **Watermelon**, **Cucumber**, etc.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <hr class="separator">
+        
+        <section>
+            <h2>E. Major Crops of India 🌾</h2>
+            <h3>Food Grains (Khadya Pak)</h3>
+            <ul>
+                <li><strong>Paddy (Rice):</strong> India is the 2nd largest producer after China. A crop of the torrid zone needing a hot, humid climate, >100 cm rainfall. Major states: WB, TN, AP, Punjab, Haryana.</li>
+                <li><strong>Wheat:</strong> 2nd most important crop. A rabi crop needing fertile loamy soil, >75 cm rainfall. Punjab is called the 'Wheat Bowl of India'. It is the "king of grains".</li>
+                <li><strong>Millets (Jowar, Bajra):</strong> Coarse grains. Jowar is grown in dry regions. Bajra (Millet) is the grain of labourers, grown in sandy soil.</li>
+                <li><strong>Maize:</strong> A kharif crop, used as food, animal fodder, and for industrial products like starch and bio-fuel.</li>
+                <li><strong>Pulses (Tuver, Mung, Gram):</strong> Main source of protein. Grown in all states except high rainfall areas. They fix nitrogen in the soil.</li>
+            </ul>
+            
+            <h3>Oil Seeds (Telibiya)</h3>
+            <ul>
+                <li><strong>Groundnut:</strong> Kharif crop. India is the 2nd largest producer. Gujarat leads in production in India.</li>
+                <li><strong>Sesam (Til):</strong> Used for oil since ancient times. India is a major exporter.</li>
+                <li><strong>Mustard:</strong> A rabi crop, important in North India.</li>
+                <li><strong>Castor Oil (Divela):</strong> Both kharif and rabi crop. India is the largest producer in the world (64% share).</li>
+            </ul>
+
+            <h3>Beverages (Pina)</h3>
+            <ul>
+                <li><strong>Tea:</strong> Tropical/temperate plant. India is the 2nd largest producer. Requires sloppy land, 200 cm rainfall. Major states: Assam, West Bengal (produce 75% of India's tea).</li>
+                <li><strong>Coffee:</strong> Grown on mountain slopes in shade. Requires 150-200 cm rainfall. Major states: Karnataka, Kerala, Tamil Nadu. Coorg in Karnataka is famous for coffee.</li>
+                <li><strong>Cocoa:</strong> Used to make beverages and chocolate. Requires hot, humid climate.</li>
+            </ul>
+
+            <h3>Cash Crops (Rokadiya Pak)</h3>
+            <ul>
+                <li><strong>Cotton:</strong> Kharif crop. Known as 'White Gold'. India is 2nd in the world. Requires black lava soil, hot climate. Gujarat is first in India in production due to BT cotton.</li>
+                <li><strong>Sugarcane:</strong> India ranks 2nd after Brazil. Used for sugar, gur, khandsari, ethanol. UP has the largest area, but Maharashtra leads in production.</li>
+                <li><strong>Jute:</strong> Known as 'Golden Fibre'. India is the largest producer. Requires fertile delta soil. Majorly grown in the Ganga delta (West Bengal).</li>
+                <li><strong>Tobacco:</strong> Kharif crop. India is a major producer and exporter. Charotar region in Gujarat is famous. Sikkim is the first state to ban tobacco-gutkha.</li>
+                <li><strong>Rubber:</strong> Made from latex of trees. Requires hot, humid climate. Malaysia is 1st in the world. In India, Kerala is the leading producer.</li>
+            </ul>
+        </section>
+
+        <hr class="separator">
+
+        <section>
+            <h2>F. Agricultural Reforms in India 🚜</h2>
+            <h3>Technical Reforms</h3>
+            <ul>
+                <li><strong>Irrigation:</strong> Shift from leather buckets to submersible pumps, solar pumps, drip irrigation, and sprinklers.</li>
+                <li><strong>Inputs:</strong> Use of improved seeds (hybrid, BT seeds), chemical fertilizers (DAP, NPK), and bio-fertilizers.</li>
+                <li><strong>Information Dissemination:</strong> Guidance through Radio, TV (DD Kisan), newspapers, Kisan Call Centre (1800 180 1551), and mobile apps (i-khedut).</li>
+                <li><strong>Support:</strong> Farmer training centers and Agricultural Universities (e.g., Dantiwada, Junagadh in Gujarat).</li>
+            </ul>
+            <h3>Institutional Reforms</h3>
+            <ul>
+                <li><strong>Land Reforms:</strong> Abolition of landlordism (Zamindari system) and implementation of the 'Land to the Tiller' and Land Ceiling Acts.</li>
+                <li><strong>Financial Support:</strong> Crop subsidy, Kisan Credit Card, and loans from nationalised banks.</li>
+                <li><strong>Insurance:</strong> Prime Minister Crop Insurance Scheme (Pradhan Mantri Fasal Bima Yojana).</li>
+                <li><strong>Market Support:</strong> Legal support for open auctions in marketing yards (APMC).</li>
+                <li><strong>Organizations:</strong> NAFED, GROFED, and NDDB assist farmers in getting support prices.</li>
+            </ul>
+        </section>
+
+        <hr class="separator">
+
+        <section>
+            <h2>G. Green Revolution & Economic Impact</h2>
+            <h3>Green Revolution (1960s)</h3>
+            <ul>
+                <li><strong>Definition:</strong> An extraordinary increase in agricultural production due to improved seeds, chemical fertilizers, farmer efforts, and better irrigation.</li>
+                <li><strong>Objective:</strong> To increase agricultural production and achieve self-sufficiency in food grains.</li>
+                <li><strong>Impact:</strong>
+                    <ul class="feature-list">
+                        <li>Record production of wheat and paddy.</li>
+                        <li>Created a buffer stock of food grains, mitigating the effects of drought.</li>
+                        <li>Made India self-sufficient in food grains, a landmark achievement.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Role of Agriculture in the Indian Economy 💰</h3>
+            <ul>
+                <li><strong>Employment:</strong> Provides employment to about half of the population.</li>
+                <li><strong>GDP Contribution:</strong> Contributes about 17% to the Gross Domestic Product (GDP).</li>
+                <li><strong>Industrial Raw Material:</strong> Supplies raw materials to industries like cotton textile, sugar, paper, and food processing.</li>
+                <li><strong>Food Security:</strong> Ensures food supply for the nation's vast population. India's food grain production reached a record 265.04 crore tonnes in 2013-14.</li>
+            </ul>
+            <h3>Impact of Globalization</h3>
+            <ul>
+                <li><strong>Positive:</strong> Indian farmers can sell products in world markets. Export/import process simplified. New varieties (e.g., BT seeds) available.</li>
+                <li><strong>Negative:</strong> Farming has become costly. Domestic products face tough competition from imports.</li>
+                <li><strong>Way Forward:</strong> India needs to adopt new technology, focus on quality, and register patents for unique products to compete globally. A "second green revolution" is needed.</li>
+            </ul>
+        </section>
+
+        <hr class="separator">
+        
+        <section>
+            <h2>H. One-Mark Quick Facts 💡</h2>
+            <ul class="facts-section">
+                <li>Percentage of labour in agriculture: ~60%</li>
+                <li>Contribution of agriculture to national product: ~22%</li>
+                <li>Contribution to exports: ~18%</li>
+                <li>'Wheat Bowl of India': Punjab</li>
+                <li>'King of Grains': Wheat</li>
+                <li>'White Gold': Cotton</li>
+                <li>'Golden Fibre': Jute</li>
+                <li>India's rank in Paddy production: 2nd (after China)</li>
+                <li>India's rank in Wheat production: Significant producer (after Green Revolution)</li>
+                <li>India's rank in Groundnut production: 2nd (after China)</li>
+                <li>India's rank in Tea production: 2nd (after China)</li>
+                <li>India's rank in Sugarcane production: 2nd (after Brazil)</li>
+                <li>World's largest producer of Castor: India (64%)</li>
+                <li>World's largest producer of Jute: India</li>
+                <li>First state to ban tobacco-gutkha: Sikkim</li>
+                <li>Crop for which Coorg (Karnataka) is famous: Coffee</li>
+                <li>Region famous for tobacco in Gujarat: Charotar</li>
+                <li>Kisan Call Centre Toll-Free Number: 1800 180 1551</li>
+                <li>Agriculture's contribution to GDP: ~17%</li>
+            </ul>
+        </section>
+
+        <hr class="separator">
+
+        <div class="important-note">
+            <p><strong>Note for Students:</strong> This summary provides a quick overview of the key points for revision. For a thorough understanding and to cover all details for your exams, it is highly recommended to read the complete chapter from the provided PDF or your textbook. Good luck! ✨</p>
+        </div>
+
+        <section class="mindmap">
+            <h2 style="text-align:center; color: #d9534f;">Chapter Mind Map</h2>
+            <ul>
+                <li><span class="topic">INDIA: AGRICULTURE</span>
+                    <ul>
+                        <li><span class="sub-topic">Farming Types</span>
+                            <ul>
+                                <li><span class="detail">Subsistence, Dry, Wet, Shifting, Plantation, Intensive</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-topic">Farming Methods</span>
+                             <ul>
+                                <li><span class="detail">Organic, Sustainable, Mixed</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-topic">Crop Seasons</span>
+                            <ul>
+                                <li><span class="detail">Kharif (Monsoon): Paddy, Cotton</span></li>
+                                <li><span class="detail">Rabi (Winter): Wheat, Mustard</span></li>
+                                <li><span class="detail">Zaid (Summer): Watermelon</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-topic">Major Crops</span>
+                            <ul>
+                                <li><span class="detail">Food Grains: Paddy, Wheat</span></li>
+                                <li><span class="detail">Oil Seeds: Groundnut, Castor</span></li>
+                                <li><span class="detail">Beverages: Tea, Coffee</span></li>
+                                <li><span class="detail">Cash Crops: Cotton, Sugarcane, Jute</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-topic">Reforms</span>
+                            <ul>
+                                <li><span class="detail">Technical: Drip Irrigation, BT Seeds</span></li>
+                                <li><span class="detail">Institutional: Land Reforms, Kisan Credit Card</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="sub-topic">Key Concepts</span>
+                             <ul>
+                                <li><span class="detail">Green Revolution: Self-sufficiency</span></li>
+                                <li><span class="detail">Globalization: Market Access & Competition</span></li>
+                                <li><span class="detail">Economy Role: 17% GDP, 60% employment</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="test-section">
+            <h2>Test Your Knowledge (20 Questions)</h2>
+            <ol>
+                <li>Which type of farming is also known as 'slash and burn' agriculture?</li>
+                <li>What is the approximate contribution of agriculture to India's GDP?</li>
+                <li>Which state in India is known as the 'Wheat Bowl'?</li>
+                <li>Tea and Coffee are examples of which type of agriculture?</li>
+                <li>Which crop is known as 'White Gold'?</li>
+                <li>India is the world's largest producer of which oil seed?</li>
+                <li>In which season are Rabi crops sown?</li>
+                <li>Name a major Zaid crop.</li>
+                <li>The Charotar region of Gujarat is famous for the cultivation of which crop?</li>
+                <li>What is the full form of NAFED?</li>
+                <li>The Green Revolution led to a record production of which two crops?</li>
+                <li>Which farming method avoids the use of chemical fertilizers and pesticides?</li>
+                <li>India ranks second in the world in sugarcane production after which country?</li>
+                <li>Coorg in Karnataka is a well-known region for the production of what?</li>
+                <li>Jute fibre is also known by what name?</li>
+                <li>What is the main objective of Subsistence Farming?</li>
+                <li>Which state leads in the production of Jute in India?</li>
+                <li>The abolition of the Zamindari system is an example of which type of reform?</li>
+                <li>What is the toll-free number for the Kisan Call Centre?</li>
+                <li>Which Indian state was the first to ban tobacco-gutkha?</li>
+            </ol>
+            <div class="answers">
+                <p>Answers:</p>
+                <ol>
+                    <li>Shifting (Jhoom) Agriculture</li>
+                    <li>About 17%</li>
+                    <li>Punjab</li>
+                    <li>Plantation Agriculture</li>
+                    <li>Cotton</li>
+                    <li>Castor</li>
+                    <li>Winter (October-November)</li>
+                    <li>Watermelon / Cucumber / Musk Melon</li>
+                    <li>Tobacco</li>
+                    <li>National Agricultural Co-operative Marketing Federation of India</li>
+                    <li>Wheat and Paddy (Rice)</li>
+                    <li>Organic Farming</li>
+                    <li>Brazil</li>
+                    <li>Coffee</li>
+                    <li>Golden Fibre</li>
+                    <li>To produce just enough for the farmer's family's maintenance.</li>
+                    <li>West Bengal</li>
+                    <li>Institutional Reform</li>
+                    <li>1800 180 1551</li>
+                    <li>Sikkim</li>
+                </ol>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            © Notes By Dr. VarisAli Holda
+        </footer>
+
+    </div>
+</body>
+</html>
