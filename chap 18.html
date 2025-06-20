@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 18: Price Rise and Consumer Awareness</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        
+        .main-heading {
+            font-size: 24px;
+            color: #000;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #FFA500;
+            padding-bottom: 10px;
+        }
+
+        .topic-heading {
+            font-size: 18px;
+            color: #FFA500; /* Orange */
+            margin-top: 30px;
+        }
+
+        .sub-topic-heading {
+            font-size: 16px;
+            color: #007BFF; /* Blue */
+            font-weight: bold;
+        }
+        
+        .sub-sub-topic-heading {
+            font-size: 14px;
+            color: #28a745; /* Green */
+            font-weight: bold;
+        }
+
+        .main-text p {
+            font-size: 14px;
+            font-weight: normal;
+        }
+        
+        .main-text p::before {
+            content: "⚫";
+            color: #FFA500;
+            margin-right: 8px;
+        }
+
+        .feature-description {
+            margin-left: 20px;
+            border-left: 3px solid #eee;
+            padding-left: 15px;
+            margin-top: 10px;
+        }
+
+        .feature {
+            font-size: 14px;
+            color: #d9534f; /* Red */
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .decorative-bullet-1 {
+            list-style: none;
+            padding-left: 0;
+        }
+        .decorative-bullet-1 li::before {
+            content: "🔸 ";
+            color: #FFA500;
+        }
+
+        .decorative-bullet-2 {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .decorative-bullet-2 li::before {
+            content: "✨ ";
+            color: #007BFF;
+        }
+        
+        .decorative-bullet-3 {
+            list-style: none;
+            padding-left: 40px;
+        }
+        .decorative-bullet-3 li::before {
+            content: "📌 ";
+            color: #28a745;
+        }
+
+        .flowchart {
+            border: 2px solid #007BFF;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            background-color: #f0f8ff;
+        }
+        .flowchart-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px auto;
+            border-radius: 5px;
+            width: 80%;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+        .flowchart-arrow {
+            font-size: 24px;
+            color: #007BFF;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .mnemonic-box {
+            background-color: #fff3cd;
+            border: 1px dashed #ffeeba;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .one-mark-facts, .test-section {
+            background-color: #e9f5ff;
+            border: 2px solid #b3d7ff;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+
+        .final-note {
+            background-color: #fff0f0;
+            border: 1px solid #ffd9d9;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 165, 0, 0.75), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+        
+        /* Mind Map Styling */
+        .mindmap {
+            border: 2px dashed #28a745;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            background-color: #f0fff0;
+        }
+
+        .mindmap ul {
+            position: relative;
+            list-style: none;
+            padding-left: 30px;
+        }
+
+        .mindmap li {
+            position: relative;
+            padding: 5px 0 5px 25px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        .mindmap li::before, .mindmap li::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+
+        .mindmap li::before {
+            border-left: 2px solid #28a745;
+            height: 100%;
+            top: 0;
+            width: 1px;
+        }
+        
+        .mindmap li:last-child::before {
+            height: 1.5em; /* Adjust to connect to the text */
+        }
+
+        .mindmap li::after {
+            border-top: 2px solid #28a745;
+            height: 1px;
+            top: 1.5em;
+            width: 20px;
+        }
+        
+        .mindmap .root {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d9534f;
+            padding-left: 0;
+        }
+        .mindmap .root::before, .mindmap .root::after {
+            display: none;
+        }
+
+        .mindmap .level-1 > span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #007BFF;
+            background-color: #e7f3ff;
+            padding: 3px 8px;
+            border-radius: 5px;
+        }
+
+        .mindmap .level-2 > span {
+            font-size: 14px;
+            color: #5a6268;
+            background-color: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 5px;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+            }
+            .footer {
+                position: fixed;
+                bottom: 0;
+                right: 10px;
+                font-size: 9pt;
+                color: #888;
+                display: block; /* Show footer only on print */
+            }
+            .page-break {
+                page-break-after: always;
+            }
+            .no-print {
+                display: none;
+            }
+            .flowchart, .mnemonic-box, .one-mark-facts, .test-section, .mindmap, .final-note {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .footer {
+            display: none; /* Hide footer on screen */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="main-heading">Chapter 18 - Price Rise and Consumer Awareness</h1>
+
+        <h2 class="topic-heading">A. Understanding Price Rise 📈</h2>
+        <ul class="decorative-bullet-1">
+            <li>
+                <span class="sub-topic-heading">Price Rise:</span>
+                <div class="main-text"><p>A continuous and constant increase in the prices of goods and services in different sectors of the economy at a high rate.</p></div>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Stable Price Rise:</span>
+                <div class="main-text"><p>A gradual and stable rise in price is considered beneficial for the economy as it encourages producers to invest and expand, leading to increased production and employment.</p></div>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Inflationary Situation:</span>
+                <div class="main-text"><p>A condition where the money supply increases speedily, but the production of goods and services does not. This leads to "too much money chasing too few goods," causing a sharp and continuous price rise, which hinders economic development.</p></div>
+            </li>
+        </ul>
+        
+        <hr>
+
+        <h2 class="topic-heading">B. Reasons for Price Rise 🧐</h2>
+        <p class="main-text" style="padding-left:20px; font-weight:bold;">⚫ Two main factors: (a) Lack of instantaneous increase in production/supply, and (b) Sharp increase in total demand.</p>
+        
+        <div class="feature-description">
+            <p><span class="feature">1. Increase in Monetary Supply:</span> <span class="description">Money supply increases via (i) deficit financing (printing new money), (ii) increased circulation of money, and (iii) low interest rates on loans. This boosts purchasing power and demand without a corresponding increase in supply.</span></p>
+            <p><span class="feature">2. Population Growth 👨‍👩‍👧‍👦:</span> <span class="description">India's population growth (1.9% annually) creates an imbalance where demand for essential goods constantly outstrips supply.</span></p>
+            <p><span class="feature">3. Increase in Exports:</span> <span class="description">When the government encourages exports, the availability of those goods in the domestic market decreases, creating scarcity and pushing prices up.</span></p>
+            <p><span class="feature">4. High Cost of Raw Materials:</span> <span class="description">Shortages or increased prices of raw materials raise production costs, which are then passed on to consumers as higher prices for finished goods.</span></p>
+            <p><span class="feature">5. Black Money 💰:</span> <span class="description">Unregistered income (black money) is often spent quickly on non-essential items to avoid taxes, creating artificial demand and supporting price rise.</span></p>
+            <p><span class="feature">6. Price Rise by Government:</span> <span class="description">The government increases prices of petroleum products, fertilizers, and agricultural support prices, which has a cascading effect on the prices of other commodities.</span></p>
+            <p><span class="feature">7. Natural & Human Factors:</span> <span class="description">Natural calamities (drought, flood) and man-made factors (war, strikes) disrupt production and supply chains, leading to shortages and price hikes.</span></p>
+            <p><span class="feature">8. Hoarding, Smuggling & Black Marketing:</span> <span class="description">These illegal activities create artificial scarcity. Hoarders stock up on goods expecting future price rises, and black marketers sell them at exorbitant prices. This is also called profiteering.</span></p>
+        </div>
+
+        <div class="flowchart">
+            <div class="flowchart-box">Higher Production Cost / Scarcity</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-box">Price Rise</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-box">Demand for Higher Wages</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-box">Increased Purchasing Power</div>
+            <div class="flowchart-arrow">⬇️</div>
+            <div class="flowchart-box">Increased Demand for Goods (Vicious Cycle Continues)</div>
+        </div>
+
+        <hr>
+
+        <h2 class="topic-heading">C. Why Control Price Rise and How? ⚖️</h2>
+        <ul class="decorative-bullet-1">
+            <li><span class="sub-topic-heading">Adverse Effects of Price Rise:</span>
+                <ul class="decorative-bullet-2">
+                    <li>Decreases savings and capital generation.</li>
+                    <li>Deteriorates the living standards of the poor and middle class.</li>
+                    <li>Reduces exports (as they become expensive) and increases imports.</li>
+                    <li>Hinders production of necessary goods.</li>
+                    <li>Promotes immoral activities like hoarding, black marketing, and corruption.</li>
+                </ul>
+            </li>
+            <li><span class="sub-topic-heading">Steps to Control Price Rise:</span>
+                <ul class="decorative-bullet-2">
+                    <li>
+                        <span class="sub-sub-topic-heading">1. Monetary Measures (by RBI):</span>
+                        <ul class="decorative-bullet-3">
+                            <li>Reduce money circulation by increasing bank interest rates (making loans expensive).</li>
+                            <li>Encourage savings by offering higher interest on deposits.</li>
+                            <li>Increase bank reserve funds to control lending capacity.</li>
+                            <li>Sell government securities to absorb excess cash from the market.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="sub-sub-topic-heading">2. Fiscal Measures (by Government):</span>
+                        <ul class="decorative-bullet-3">
+                            <li>Reduce its own expenditure and postpone non-essential projects.</li>
+                            <li>Increase taxes (income, company, property tax) to reduce public spending power.</li>
+                            <li>Launch public loan policies and savings schemes (e.g., Compulsory Saving Plan) to absorb excess money.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="sub-sub-topic-heading">3. Control on Capital Investment:</span>
+                        <ul class="decorative-bullet-3">
+                            <li>Use licensing/permit systems to discourage investment in luxury items and encourage investment in essential goods.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="sub-sub-topic-heading">4. Price Regulation & Rationing (PDS):</span>
+                        <ul class="decorative-bullet-3">
+                            <li>The Public Distribution System (PDS) provides essential commodities at reasonable prices to the poor through Fair Price Shops (FPS).</li>
+                        </ul>
+                    </li>
+                     <li>
+                        <span class="sub-sub-topic-heading">5. Administered Price Mechanism:</span>
+                         <ul class="decorative-bullet-3">
+                             <li>The government fixes the prices of essential goods under the **Essential Commodities Act, 1955**, and takes legal action against hoarders and black marketers.</li>
+                         </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="page-break"></div>
+
+        <h2 class="topic-heading">D. Consumer Awareness: Jago Grahak Jago! 🛍️</h2>
+        <ul class="decorative-bullet-1">
+            <li>
+                <span class="sub-topic-heading">Consumer Protection:</span>
+                <div class="main-text"><p>A system and movement ensuring that consumers receive goods and services of good quality, proper weight, and at a reasonable price, protecting them from exploitation.</p></div>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Reasons for Consumer Exploitation:</span>
+                <div class="feature-description">
+                    <p><span class="feature">1. Consumer is responsible:</span> <span class="description">Ignorance, illiteracy, and lack of unity among consumers make them easy targets.</span></p>
+                    <p><span class="feature">2. Limited Information:</span> <span class="description">Producers do not provide complete information about product quality, use, and maintenance.</span></p>
+                    <p><span class="feature">3. Limited Supply:</span> <span class="description">Artificial scarcity created by hoarding leads to over-pricing.</span></p>
+                    <p><span class="feature">4. Limited Competition:</span> <span class="description">In a monopoly, a single producer can exploit consumers with high prices and low-quality goods.</span></p>
+                </div>
+            </li>
+             <li>
+                <span class="sub-topic-heading">Key Dates & Acts:</span>
+                 <ul class="decorative-bullet-2">
+                    <li>**15th March:** World Consumer Rights Day.</li>
+                    <li>**24th December:** National Consumer Right Day (India).</li>
+                    <li>**Consumer Protection Act, 1986:** A milestone act in India for protecting consumer rights. Signed on 24th December 1986.</li>
+                 </ul>
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2 class="topic-heading">E. Rights and Duties of the Consumer 🛡️</h2>
+        <ul class="decorative-bullet-1">
+            <li>
+                <span class="sub-topic-heading">The Six Consumer Rights:</span>
+                <div class="mnemonic-box">
+                    🧠 **Mnemonic: SIC-RRE** 🧠<br>
+                    Remember your rights with "SIC-RRE"!<br>
+                    **S**afety, **I**nformation, **C**hoice, **R**epresentation, **R**edressal, **E**ducation
+                </div>
+                <ul class="decorative-bullet-2">
+                    <li>**Right to Safety:** Protection from goods and services that are hazardous to health and life.</li>
+                    <li>**Right to be Informed:** The right to have information about the quality, quantity, purity, price, etc.</li>
+                    <li>**Right to Choose:** The right to access a variety of goods at competitive prices.</li>
+                    <li>**Right to be Heard/Represent:** The right to have consumer interests considered in relevant forums.</li>
+                    <li>**Right to Seek Redressal:** The right to compensation against unfair trade practices or exploitation.</li>
+                    <li>**Right to Consumer Education:** The right to acquire knowledge and skills to be an informed consumer.</li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">Duties of the Consumer:</span>
+                 <ul class="decorative-bullet-2">
+                    <li>Make wise choices; check for quality marks (ISI, Agmark).</li>
+                    <li>Check labels, manufacturing/expiry dates, and other information.</li>
+                    <li>Always insist on an original bill and a filled warranty card.</li>
+                    <li>Do not compromise on quality and safety.</li>
+                    <li>Form or join consumer organizations to fight exploitation collectively.</li>
+                    <li>File a complaint against any malpractice.</li>
+                    <li>Purchase only what is necessary and avoid wastage.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="page-break"></div>
+
+        <h2 class="topic-heading">F. Measures for Consumer Protection 🛠️</h2>
+        <ul class="decorative-bullet-1">
+            <li>
+                <span class="sub-topic-heading">1. Three-Tier Quasi-Judicial System (Tribunal Courts):</span>
+                <div class="flowchart" style="border-color: #28a745; background-color: #f0fff0;">
+                    <div class="flowchart-box" style="width:90%;"><b>District Forum</b> <br> (Compensation up to ₹20 Lakh)</div>
+                    <div class="flowchart-arrow">⬆️ (Appeal within 30 days)</div>
+                    <div class="flowchart-box" style="width:90%;"><b>State Commission</b> <br> (Compensation from ₹20 Lakh to ₹1 Crore)</div>
+                    <div class="flowchart-arrow">⬆️ (Appeal within 30 days)</div>
+                    <div class="flowchart-box" style="width:90%;"><b>National Commission</b> <br> (Compensation above ₹1 Crore)</div>
+                    <div class="flowchart-arrow">⬆️ (Appeal to Supreme Court within 30 days)</div>
+                </div>
+            </li>
+            <li>
+                <span class="sub-topic-heading">2. Consumer Societies (Consumer Protection Councils):</span>
+                <div class="main-text"><p>Voluntary, non-political organizations that create awareness, publish magazines (e.g., "Grahak Suraksha"), and help consumers file cases.</p></div>
+            </li>
+            <li>
+                <span class="sub-topic-heading">3. Public Distribution System (PDS):</span>
+                <div class="main-text"><p>Saves poor consumers from exploitation in the open market by providing essential goods at subsidized rates.</p></div>
+            </li>
+            <li>
+                <span class="sub-topic-heading">4. Certification and Marks of Quality:</span>
+                <ul class="decorative-bullet-2">
+                    <li>**ISI/BIS:** For industrial and consumer goods (textiles, electronics, cement).</li>
+                    <li>**AGMARK:** For agricultural, forest, and horticultural products.</li>
+                    <li>**Hallmark (BIS):** For gold jewellery (e.g., 916 for 22-carat gold).</li>
+                    <li>**FPO (Food Product Order):** For processed fruit products like jams and juices.</li>
+                    <li>**Woolmark:** For woolen products.</li>
+                    <li>**MPO:** For meat and mutton products.</li>
+                    <li>**HACCP:** For processed food, ensuring safety standards.</li>
+                    <li>**ECO:** For environment-friendly products (soap, paper, detergents).</li>
+                </ul>
+            </li>
+            <li>
+                <span class="sub-topic-heading">5. International Organizations:</span>
+                 <ul class="decorative-bullet-2">
+                    <li>**ISO (International Organization for Standardization):** Geneva-based org that provides international standards (e.g., ISO-9000).</li>
+                    <li>**CAC (Codex Alimentarius Commission):** Rome-based org (est. by FAO & WHO) that develops food standards.</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <hr>
+
+        <h2 class="topic-heading">G. Filing a Complaint 📝</h2>
+        <ul class="decorative-bullet-1">
+            <li><span class="sub-topic-heading">Who can file?</span>
+                <div class="main-text"><p>A consumer, any registered consumer association, Central/State Govt., or a representative on behalf of consumers.</p></div>
+            </li>
+            <li><span class="sub-topic-heading">How to file?</span>
+                <ul class="decorative-bullet-2">
+                    <li>Complaint can be handwritten, typed, or emailed.</li>
+                    <li>Include name, address, contact details.</li>
+                    <li>Provide a detailed description of the complaint and the reason.</li>
+                    <li>Attach copies (not originals) of supporting documents: bills, receipts, warranty cards, advertisements, etc.</li>
+                    <li>Lodge the complaint within **2 years** of the cause of action.</li>
+                </ul>
+            </li>
+            <li><span class="sub-topic-heading">Helpline Numbers:</span>
+                <div class="main-text"><p>Gujarat State: 1800-233-0222 | National Level: 1800-11-4000</p></div>
+            </li>
+        </ul>
+        
+        <div class="page-break"></div>
+
+        <div class="one-mark-facts">
+            <h3 style="text-align:center; color:#0056b3;">🧠 Quick Facts for a Quick Review 🧠</h3>
+            <ul class="decorative-bullet-1">
+                <li>Price rise with stability is considered **beneficial** for the economy.</li>
+                <li>An inflationary situation is a **hindrance** to economic development.</li>
+                <li>Two main reasons for price rise are **demand-pull** and **cost-push**.</li>
+                <li>The **Essential Commodities Act** was passed in **1955**.</li>
+                <li>The **Public Distribution System (PDS)** has been in India since **1947**.</li>
+                <li>**Ralph Nader** is called the pioneer of the consumer movement in America.</li>
+                <li>**World Consumer Rights Day** is celebrated on **March 15th**.</li>
+                <li>**National Consumer Right Day** in India is on **December 24th**.</li>
+                <li>The Consumer Protection Act was signed in **1986**.</li>
+                <li>A consumer complaint must be filed within **2 years** of the incident.</li>
+                <li>**ISI** was established in 1947 and is now known as **BIS** (Bureau of Indian Standard) since 1986.</li>
+                <li>**ISO** headquarters are in **Geneva, Switzerland**.</li>
+                <li>**CAC** headquarters are in **Rome, Italy**.</li>
+                <li>**916 Hallmark** on gold signifies **22-carat** purity.</li>
+            </ul>
+        </div>
+        
+        <div class="final-note">
+            <p><strong>⚠️ Important Note:</strong> This summary is a tool for quick revision. For a thorough understanding and to score well in exams, it is highly recommended to read the complete chapter from the PDF/textbook.</p>
+        </div>
+
+        <div class="page-break"></div>
+        
+        <div class="mindmap">
+            <h3 style="text-align:center; color:#28a745;">Chapter 18 - Mind Map</h3>
+            <ul>
+                <li class="root">Price Rise & Consumer Awareness
+                    <ul>
+                        <li class="level-1"><span>Part 1: Price Rise</span>
+                            <ul>
+                                <li class="level-2"><span>Reasons</span>
+                                    <ul>
+                                        <li>Monetary Supply ↑</li>
+                                        <li>Population Growth ↑</li>
+                                        <li>Exports ↑</li>
+                                        <li>Raw Material Cost ↑</li>
+                                        <li>Black Money</li>
+                                        <li>Hoarding & Black Marketing</li>
+                                    </ul>
+                                </li>
+                                <li class="level-2"><span>Effects</span>
+                                    <ul>
+                                        <li>Savings ↓</li>
+                                        <li>Living Standard ↓</li>
+                                        <li>Exports ↓, Imports ↑</li>
+                                    </ul>
+                                </li>
+                                <li class="level-2"><span>Control Measures</span>
+                                    <ul>
+                                        <li>Monetary (by RBI)</li>
+                                        <li>Fiscal (by Govt)</li>
+                                        <li>Control on Investment</li>
+                                        <li>PDS (Rationing)</li>
+                                        <li>Administered Prices</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="level-1"><span>Part 2: Consumer Awareness</span>
+                            <ul>
+                                <li class="level-2"><span>Reasons for Exploitation</span>
+                                    <ul>
+                                        <li>Consumer Ignorance</li>
+                                        <li>Limited Info & Supply</li>
+                                        <li>Limited Competition</li>
+                                    </ul>
+                                </li>
+                                <li class="level-2"><span>6 Consumer Rights (SIC-RRE)</span>
+                                    <ul>
+                                        <li>Safety, Information, Choice</li>
+                                        <li>Representation, Redressal, Education</li>
+                                    </ul>
+                                </li>
+                                <li class="level-2"><span>Consumer Duties</span>
+                                    <ul>
+                                        <li>Be alert, check bills</li>
+                                        <li>Insist on quality</li>
+                                        <li>File complaints</li>
+                                    </ul>
+                                </li>
+                                <li class="level-2"><span>Protection Measures</span>
+                                    <ul>
+                                        <li>3-Tier Courts (D, S, N)</li>
+                                        <li>Consumer Societies</li>
+                                        <li>PDS, Quality Marks (ISI, AGMARK)</li>
+                                        <li>International Orgs (ISO, CAC)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="page-break"></div>
+
+        <div class="test-section">
+            <h3 style="text-align:center; color:#0056b3;">✍️ Test Your Knowledge! ✍️</h3>
+            
+            <p><strong>1. The government decides the prices of which of these products?</strong><br>
+            (A) Vegetables (B) Medical treatment (C) Petrol-diesel (D) Dining in hotel</p>
+
+            <p><strong>2. An increase by the government in the supply of what leads to price rise?</strong><br>
+            (A) Commodities (B) Grains (C) Raw material (D) Money</p>
+
+            <p><strong>3. Due to a prediction that prices are going to rise in the future, what do people do?</strong><br>
+            (A) Black marketing (B) Profiteering (C) Betting (D) Hoarding</p>
+
+            <p><strong>4. 15th March is celebrated as which day?</strong><br>
+            (A) Consumer Right Day (B) World Consumer Day (C) Consumer Awareness Day (D) National Consumer Right Day</p>
+
+            <p><strong>5. Which organization has been set up by the central Government for consumer-related laws and handles cases above ₹1 Crore?</strong><br>
+            (A) Consumer Dispute Removal System (B) National Consumer Commission (C) National Customer Commission (D) Consumer Protection Commission</p>
+            
+            <p><strong>6. Which periodical is published for consumer education and awareness by consumer societies?</strong><br>
+            (A) Insight (B) Consumer awareness forum (C) Consumer education (D) Consumer Act</p>
+
+            <p><strong>7. Which is the international organization regulating the quality of edible items?</strong><br>
+            (A) BIS (B) CAC (C) ISO (D) FPO</p>
+            
+            <p><strong>8. What does the "Essential Commodities Act, 1955" allow the government to do?</strong><br>
+            (A) Export all goods (B) Fix prices of essential goods (C) Give free loans (D) Stop all production</p>
+            
+            <p><strong>9. Within how many years of an incident must a consumer complaint be filed?</strong><br>
+            (A) 1 year (B) 2 years (C) 5 years (D) No limit</p>
+            
+            <p><strong>10. Which mark is used for processed fruit products like jam and juice?</strong><br>
+            (A) ISI (B) AGMARK (C) FPO (D) ECO</p>
+            
+            <br>
+            <h4 style="color:#28a745;">Answers:</h4>
+            <p>1-(C), 2-(D), 3-(D), 4-(B), 5-(B), 6-(A), 7-(B), 8-(B), 9-(B), 10-(C)</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+</body>
+</html>
