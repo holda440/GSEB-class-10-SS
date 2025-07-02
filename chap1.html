@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1 - Heritage of India</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arial&family=Comic+Sans+MS&family=Courier+New&display=swap');
+
+        body {
+            background-color: white;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 3px solid #d9534f;
+            padding-bottom: 10px;
+        }
+
+        .main-topic-heading {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #f0ad4e; /* Orange */
+            margin-top: 30px;
+        }
+
+        .sub-topic-heading-1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #5bc0de; /* Light Blue */
+            margin-left: 20px;
+        }
+        
+        .sub-topic-heading-2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #5cb85c; /* Green */
+            margin-left: 40px;
+        }
+        
+        .main-text {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            margin-left: 40px;
+        }
+
+        .main-text ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .main-text li::before {
+            content: "•";
+            color: #f0ad4e;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .feature-box {
+            border: 1px solid #e7e7e7;
+            border-left: 5px solid #5bc0de;
+            padding: 15px;
+            margin: 15px 40px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        .feature-box strong {
+            color: #d9534f;
+        }
+        
+        .topic-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+            margin: 40px 0;
+        }
+
+        .flowchart {
+            text-align: center;
+            margin: 20px 0;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+        }
+        .flowchart .box {
+            border: 2px solid #5bc0de;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            background: #f0f8ff;
+        }
+        .flowchart .arrow {
+            font-size: 24px;
+            color: #f0ad4e;
+            margin: 0 15px;
+        }
+
+        .mnemonic-box {
+            background-color: #fffbe6;
+            border: 1px dashed #f0ad4e;
+            padding: 15px;
+            margin: 20px 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .mnemonic-box h4 {
+            margin-top: 0;
+            color: #d9534f;
+        }
+        .mnemonic-box p {
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .quick-facts-section, .test-section, .mind-map-section {
+            background-color: #fdfdfd;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .section-title {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #d9534f;
+            margin-bottom: 15px;
+        }
+
+        .fact-list li {
+            list-style-type: '💡';
+            padding-left: 10px;
+            margin-bottom: 8px;
+        }
+        
+        .disclaimer {
+            background-color: #fff9e6;
+            border-left: 5px solid #f0ad4e;
+            padding: 10px 20px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        
+        /* Mind Map Styling */
+        .mindmap {
+            font-family: 'Comic Sans MS', cursive;
+            padding-left: 20px;
+        }
+        .mindmap ul {
+            list-style-type: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        .mindmap li {
+            padding: 5px 0 5px 20px;
+            position: relative;
+        }
+        .mindmap li::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-left: 1px solid #f0ad4e;
+            border-bottom: 1px solid #f0ad4e;
+            width: 20px;
+            height: 1.2em; /* Adjust to align with text */
+        }
+        .mindmap li:last-child::before {
+            height: 1.2em;
+            border-left: 1px solid #f0ad4e;
+        }
+        .mindmap > ul > li::before {
+            border: none;
+        }
+        .mindmap .node {
+            background-color: #e3f2fd;
+            border: 1px solid #5bc0de;
+            border-radius: 5px;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+        .mindmap .node.root {
+            background-color: #ffcdd2;
+            border-color: #d9534f;
+            font-weight: bold;
+        }
+
+        /* Test Questions Styling */
+        .question {
+            margin-bottom: 15px;
+        }
+        details > summary {
+            cursor: pointer;
+            background-color: #5cb85c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        details > div {
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                margin: 0;
+                font-size: 12pt;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+            }
+            h1, .main-topic-heading, .sub-topic-heading-1, .sub-topic-heading-2 {
+                page-break-after: avoid;
+            }
+            .feature-box, .mnemonic-box, .flowchart, .mindmap, .question {
+                page-break-inside: avoid;
+            }
+            .page-footer {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                font-size: 10pt;
+                color: #888;
+                padding: 5px;
+            }
+            details {
+                page-break-inside: avoid;
+            }
+            details[open] > summary {
+                 display: none; /* Hide 'Show Answer' button when printing */
+            }
+            .topic-divider, .disclaimer {
+                display: none;
+            }
+        }
+        
+        .page-footer {
+            display: none;
+        }
+        @media print {
+            .page-footer {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>1 - Heritage of India</h1>
+
+        <p class="main-topic-heading">A. Introduction to India's Ancient Culture 📜</p>
+        <p class="sub-topic-heading-1">🔸 The Vision of 'Vishnu Puran'</p>
+        <div class="main-text">
+            <ul>
+                <li>The ancient scripture "Vishnu Puran" defines India (Bharat) as the land extending from the Himalayas in the North to the Indian Ocean in the South. Its descendants are called Indians.</li>
+                <li>In auspicious ceremonies, names like Bharatvarsha, Bharatkhand, Jambudwip, and Aryavarta are used.</li>
+            </ul>
+        </div>
+        <p class="sub-topic-heading-1">🔸 Geographical & Cultural Melting Pot 🌏</p>
+        <div class="main-text">
+            <ul>
+                <li>India is naturally bounded by the Himalayas (North) and the Sea (East, West, South).</li>
+                <li>Attracted by its prosperity, people from various parts of the world came to trade, settled, and mingled with Indian culture, leading to a rich mutual exchange.</li>
+                <li>India is the 7th largest country by area and 2nd by population.</li>
+            </ul>
+        </div>
+
+        <hr class="topic-divider">
+
+        <p class="main-topic-heading">B. Understanding Culture and Heritage 🤔</p>
+        <p class="sub-topic-heading-1">🔸 What is Culture?</p>
+        <div class="feature-box">
+            <strong>Feature:</strong> Way of Life 🧑‍🤝‍🧑<br>
+            <strong>Description:</strong> Culture is the sum of habits, values, customs, traditions, and ideals that guide humans to the highest level. It reflects the changes in public life and social rules.
+        </div>
+        <p class="sub-topic-heading-1">🔸 What is Heritage?</p>
+         <div class="feature-box">
+            <strong>Feature:</strong> Gift from Forefathers 🎁<br>
+            <strong>Description:</strong> Heritage is a valuable gift passed down from our ancestors. Our school pledge reflects this pride: “I love my country and I am proud of its rich and varied heritage”. It is a precious gift from our motherland to the world.
+        </div>
+
+        <hr class="topic-divider">
+        
+        <p class="main-topic-heading">C. Divisions of Indian Heritage 🌳🏛️</p>
+        <div class="flowchart">
+            <div class="box">Indian Heritage</div>
+            <span class="arrow">➡️</span>
+            <div class="box">1. Natural Heritage<br>(Nature's Gift)</div>
+            <span class="arrow">&</span>
+            <div class="box">2. Cultural Heritage<br>(Man-made)</div>
+        </div>
+
+        <hr class="topic-divider">
+
+        <p class="main-topic-heading">D. Natural Heritage of India 🌿</p>
+        <p class="sub-topic-heading-1">🔸 Relationship with Nature</p>
+        <div class="main-text">
+             <ul>
+                <li>Natural heritage is the result of the close relationship between nature, environment, and human life.</li>
+                <li>It includes mountains, forests, rivers, trees, plants, animals, and varied landscapes.</li>
+                <li>Our reverence for nature is seen in stories of 'Panch Tantra', 'Jataka Tales', and practices like Ayurveda, Unani, and Nature Cure.</li>
+            </ul>
+        </div>
+        
+        <p class="sub-topic-heading-2">✨ (1) Landscapes 🏔️</p>
+        <div class="main-text">
+             <ul>
+                <li>The Himalayas are a prime example, providing useful vegetation, minerals, and being home to diverse wildlife and pilgrimage sites like Amarnath, Badrinath, and Kedarnath.</li>
+            </ul>
+        </div>
+        <p class="sub-topic-heading-2">✨ (2) Rivers 🏞️</p>
+        <div class="main-text">
+             <ul>
+                <li>Called 'Lokmata' (Mother of the people), rivers are the cradle of Indian culture (e.g., Indus, Ravi).</li>
+                <li>Rivers like Ganga, Yamuna, Narmada, Godavari are sources of drinking water, irrigation, electricity, and have inspired artists.</li>
+            </ul>
+        </div>
+        <p class="sub-topic-heading-2">✨ (3) Vegetation 🌲</p>
+        <div class="main-text">
+             <ul>
+                <li>India's love for the environment is seen in the worship of trees like Banyan, Pipal, and Basil (Tulsi).</li>
+                <li>Medicinal plants (Harde, Amla, Neem) and flowers (Rose, Lotus, Jasmine) have enriched our social and religious life.</li>
+            </ul>
+        </div>
+        <p class="sub-topic-heading-2">✨ (4) Wildlife 🐅</p>
+        <div class="main-text">
+             <ul>
+                <li>India has an animal-loving culture. Asian lions are found only in the Gir forest of Gujarat.</li>
+                <li>Animals like the tiger, peacock, and alligator are associated with Gods/Goddesses.</li>
+                <li>Our national currency features the figure of four lions, horse, and bull, highlighting their value.</li>
+            </ul>
+        </div>
+
+        <hr class="topic-divider">
+
+        <p class="main-topic-heading">E. Cultural Heritage of India 🕌</p>
+        <p class="sub-topic-heading-1">🔸 Man-made Marvels</p>
+        <div class="feature-box">
+            <strong>Feature:</strong> Human Creation 🎨<br>
+            <strong>Description:</strong> Anything created by humans with their tact, wisdom, art, and skill. It includes contributions from various tribes and castes like Aryans, Kushans, Huns, Persians, Turks, Mughals, and Britishers who came to India.
+        </div>
+        <div class="main-text">
+             <ul>
+                <li>The art of sculpture and architecture is 5000 years old, with Indus Valley Civilization as evidence (e.g., statue of a bearded man, dancer).</li>
+                <li>Includes palaces, buildings, sculptures, stupas, viharas, temples, mosques, tombs, and historical places from our freedom movement (e.g., Sabarmati Ashram, Dandi).</li>
+                <li>Also covers important discoveries like zero, mathematics, astronomy, literature, and various sciences.</li>
+            </ul>
+        </div>
+        
+        <p class="sub-topic-heading-1">🔸 Cultural Heritage of Gujarat</p>
+        <p class="sub-topic-heading-2">✨ Archaeological Sites</p>
+        <div class="main-text">
+             <ul>
+                <li>Lothal (Dholka), Rangpur (Limbdi), Dholavira (Kutch), Rozadi (Rajkot).</li>
+            </ul>
+        </div>
+        <p class="sub-topic-heading-2">✨ Historical & Pilgrimage Sites</p>
+        <div class="main-text">
+             <ul>
+                <li>Victory Tower (Vadnagar), Stone Inscription of Ashoka (Junagadh), Sun Temple (Modhera), Jama Masjid (Ahmedabad), Jhoolta Minara (Shaking Towers), Sidisaiyed ni Jali (Ahmedabad), Dwarkadhish temple (Dwarka), Somnath temple.</li>
+            </ul>
+        </div>
+        <p class="sub-topic-heading-2">✨ Fairs of Gujarat</p>
+        <div class="main-text">
+             <ul>
+                <li><strong>Tarnetar fair:</strong> Surendranagar</li>
+                <li><strong>Bhavnath fair:</strong> Girnar (Junagadh)</li>
+                <li><strong>Vautha fair:</strong> Dholka (Ahmedabad)</li>
+                <li><strong>Shamlaji fair:</strong> Shamlaji (Aravalli)</li>
+            </ul>
+        </div>
+        
+        <hr class="topic-divider">
+
+        <p class="main-topic-heading">F. India: Land and People 🧍‍♀️🧍‍♂️</p>
+        <div class="main-text">
+             <ul>
+                <li>Modern research suggests six tribes came to India before the Aryans.</li>
+            </ul>
+        </div>
+        <div class="mnemonic-box">
+            <h4>Mnemonic to Remember Ancient Tribes in Order</h4>
+            <p>Naughty Aunt Dora Makes All Arguments</p>
+            <p><strong>N</strong>egrito → <strong>A</strong>ustraloid → <strong>D</strong>ravidian → <strong>M</strong>ongoloid → <strong>A</strong>lpine/Dinarik/<strong>A</strong>rmenoid → <strong>A</strong>ryan</p>
+        </div>
+        
+        <p class="sub-topic-heading-1">🔸 The Tribes of India</p>
+        <div class="feature-box">
+            <strong>Feature:</strong> (1) Negritos (Habsi) 🧑🏿‍🦱<br>
+            <strong>Description:</strong> Considered the most ancient inhabitants. Came from Africa via Baluchistan. Physical features: black skin, 4-5 feet height, curly hair.
+        </div>
+        <div class="feature-box">
+            <strong>Feature:</strong> (2) Australoids (Nishad) 🏹<br>
+            <strong>Description:</strong> Came from South-East Asia. Called 'Nishad' by Aryans. Features: black skin, broad head, flat nose. Contributed to making clay utensils and cotton cloth. Tribes like Kol, Munda, and Khasi have similarities.
+        </div>
+        <div class="feature-box">
+            <strong>Feature:</strong> (3) The Dravidians 🌳<br>
+            <strong>Description:</strong> Creators of Mohenjo-Daro culture (Indus Valley). Gave concepts of Mother as 'Goddess' (Parvati) and Father as 'God' (Shiva). Worshipped nature and used 'Dhup', 'Deep', 'Aarti'. Had a matriarchal family system. Shifted to South India due to Aryan dominance; their languages (Tamil, Telugu, Kannada, Malayalam) are spoken there.
+        </div>
+        <div class="feature-box">
+            <strong>Feature:</strong> (4) Other Tribes (Mongoloid, Alpine, Dinarik, Armenoid) 🌏<br>
+            <strong>Description:</strong> 
+            <ul>
+                <li><strong>Mongoloids:</strong> Came from North China via Tibet. Settled in North Assam, Sikkim, Bhutan. Features: yellow complexion, flat face, chubby cheeks. Known as 'Kirat'.</li>
+                <li><strong>Alpine, Dinarik, Armenoid:</strong> Migrated from Central Asia. Their genes are found in Gujarat, Saurashtra, Maharashtra, Bengal, and Odisha.</li>
+            </ul>
+        </div>
+        <div class="feature-box">
+            <strong>Feature:</strong> (5) The Aryans 🕉️<br>
+            <strong>Description:</strong> Nordic people, creators of Aryan civilization. Also called Hindus. The region they populated was 'Aryavrata' (or 'Sapta Sindhu'). They were nature lovers, worshipping trees, rivers, mountains, and composed hymns (Richas). Their amalgamation with other tribes created the composite Indian culture.
+        </div>
+
+        <hr class="topic-divider">
+
+        <p class="main-topic-heading">G. Preservation and Conservation of Heritage 🛡️</p>
+        <p class="sub-topic-heading-1">🔸 Our Constitutional Duties (Article 51-A)</p>
+        <div class="main-text">
+             <ul>
+                <li>📌 To value and preserve the rich heritage of our composite culture [51A (f)].</li>
+                <li>📌 To protect and improve the natural environment including forests, lakes, rivers, and wildlife, and to have compassion for living creatures [51A (g)].</li>
+                <li>📌 To safeguard public property and to abjure violence [51A (i)].</li>
+            </ul>
+        </div>
+        
+        <hr class="topic-divider">
+
+        <div class="quick-facts-section">
+            <p class="section-title">🚀 One-Mark Quick Facts</p>
+            <ul class="fact-list">
+                <li>The scripture defining India's boundaries is the <strong>Vishnu Puran</strong>.</li>
+                <li>Rivers in India are respectfully called <strong>'Lokmata'</strong>.</li>
+                <li>India ranks <strong>7th</strong> in area and <strong>2nd</strong> in population worldwide.</li>
+                <li>The creators of the Indus Valley Civilization were the <strong>Dravidians</strong>.</li>
+                <li>The Australoid people were called <strong>'Nishad'</strong> by the Aryans.</li>
+                <li>The Mongoloid people were known as <strong>'Kirat'</strong>.</li>
+                <li>Asian lions are found only in the <strong>Gir forest of Gujarat</strong>.</li>
+                <li>The art of architecture and sculpture in India is about <strong>5000 years</strong> old.</li>
+                <li>The constitutional duties for preserving heritage are listed in <strong>Article 51(A)</strong>.</li>
+                <li>Dravidian family languages include <strong>Tamil, Telugu, Kannada, and Malayalam</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Note:</strong> This summary is designed for quick revision and enhanced understanding. For a complete and thorough preparation for exams, it is highly recommended to read the full chapter from the provided PDF or textbook.
+        </div>
+        
+        <div class="mind-map-section">
+            <p class="section-title">🧠 Printable Mind Map</p>
+            <div class="mindmap">
+                <ul>
+                    <li><span class="node root">Heritage of India</span>
+                        <ul>
+                            <li><span class="node">Natural Heritage</span>
+                                <ul>
+                                    <li><span class="node">Landscapes (Himalayas)</span></li>
+                                    <li><span class="node">Rivers (Lokmata)</span></li>
+                                    <li><span class="node">Vegetation (Worship, Medicine)</span></li>
+                                    <li><span class="node">Wildlife (Gir Lions, Sacred Animals)</span></li>
+                                </ul>
+                            </li>
+                            <li><span class="node">Cultural Heritage</span>
+                                <ul>
+                                    <li><span class="node">Man-Made (Art, Science)</span></li>
+                                    <li><span class="node">Gujarat Heritage (Lothal, Modhera)</span></li>
+                                    <li><span class="node">Fairs (Tarnetar, Vautha)</span></li>
+                                </ul>
+                            </li>
+                            <li><span class="node">People of India (Tribes)</span>
+                                <ul>
+                                    <li><span class="node">Negrito (Habsi)</span></li>
+                                    <li><span class="node">Australoid (Nishad)</span></li>
+                                    <li><span class="node">Dravidians (Mohenjo-Daro)</span></li>
+                                    <li><span class="node">Mongoloid (Kirat)</span></li>
+                                    <li><span class="node">Alpine, Dinarik, Armenoid</span></li>
+                                    <li><span class="node">Aryans (Vedic Culture)</span></li>
+                                </ul>
+                            </li>
+                            <li><span class="node">Preservation (Article 51-A)</span>
+                                <ul>
+                                    <li><span class="node">Value Composite Culture</span></li>
+                                    <li><span class="node">Protect Natural Environment</span></li>
+                                    <li><span class="node">Safeguard Public Property</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <p class="section-title">✍️ Test Your Knowledge</p>
+            <div class="question">
+                <p><strong>1. Which ancient scripture states, "उत्तरं यत्समुद्रस्य हिमाद्रेश्चैव दक्षिणम्..."?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Vishnu Puran</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>2. What are rivers reverently called in Indian culture?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Lokmata</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>3. Which tribe is considered the creator of the Mohenjo-Daro civilization?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> The Dravidians</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>4. The Mongoloid people, known for their yellow complexion, were also called ______.</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Kirat</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>5. In which state is the Sun-temple of Modhera located?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Gujarat</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>6. The most ancient inhabitants of India are believed to be the:</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Negritos (Habsi people)</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>7. Which article of the Indian Constitution lists the fundamental duties for preserving heritage?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Article 51(A)</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>8. The Tarnetar fair is held in which district of Gujarat?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Surendranagar</div>
+                </details>
+            </div>
+             <div class="question">
+                <p><strong>9. Which of the following is NOT a Dravidian language? (Tamil, Hindi, Telugu, Malayalam)</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Hindi</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>10. The region densely populated by the Aryans was known as ______.</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Aryavrata</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>11. Where are Asian lions found in the world?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Only in the Gir forest of Gujarat.</div>
+                </details>
+            </div>
+            <div class="question">
+                <p><strong>12. What concept of God and Goddess did the Dravidians introduce?</strong></p>
+                <details>
+                    <summary>Show Answer</summary>
+                    <div><strong>Answer:</strong> Mother as 'Goddess' (Parvati) and Father as 'God' (Shiva).</div>
+                </details>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="page-footer">
+        © Notes By Dr. VarisAli Holda
+    </div>
+
+</body>
+</html>
